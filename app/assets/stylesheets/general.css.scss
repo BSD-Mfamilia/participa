@@ -146,7 +146,6 @@ general
 .content-content-home{
   margin: auto;
   width: 96%;
-  padding: 0 1%;
   max-width: 94em;
   position:relative;
   overflow:hidden;
@@ -174,6 +173,11 @@ general
   overflow:hidden;
 }
 
+
+.logo-footer img {
+  width: 180px;
+}
+
 .row{
   clear:both;
   overflow:hidden;
@@ -191,7 +195,7 @@ general
   text-transform: capitalize;
   color: $verde-claro;
   font-size: 18px;
-  margin: 0 10px;
+  margin: 10px 0px;
 }
 
 .footer-content ul li a {
@@ -204,13 +208,12 @@ general
 home
 ----------------------------------- */
 .main-login{
-  background-image:image-url("img.gente.jpg");
+  background-image:image-url("mesa-de-trabajo.jpg");
   width:100%;
   background-size: cover;
   background-position: center;
 }
 .intro{
-  background:image-url("bg.333-op55.png") 0 0 repeat;
   width:auto;
   padding:1.5em 0 0.5em;
   color:#fff;
@@ -289,7 +292,7 @@ footer
 ----------------------------------- */
 
 .footer{
-  padding:3em 0;
+  padding:2em 0;
 }
 .footer a{
   color:#c3a6cf;
@@ -377,7 +380,7 @@ header & menu
   float:left;
   width:98%;
   max-width:22em;
-  height:3em;
+  height:auto;
   padding:1.5em 0;
 }
 .logo img{
@@ -1982,7 +1985,6 @@ layout 4: 769-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
   .content-content-home{
     margin: auto;
     width: 96%;
-    padding: 0 2%;
     max-width: 96em;
     position:relative;
     overflow:hidden;
@@ -1997,14 +1999,6 @@ layout 4: 769-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
   }
   .login-box{
     margin-top:3em;
-  }
-  .intro:before{
-    display: inline-block;
-    margin: 0 .1em;
-    content:image-url("ico.ropes-white.png");
-    position:absolute;
-    top: 2em;
-    left: 0.5em;
   }
   .intro p{
     padding:0 2.5% 0 25%;
@@ -2138,6 +2132,9 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   // }
 
   /* MAIN LOGIN MIO */
+* {
+  box-sizing: border-box;
+}
 
   .content-content-home{
     margin: auto;
@@ -2151,10 +2148,16 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     display: flex;
   }
 
-  .login-texto-contenedor, .login-form-contenedor {
+  .login-texto-contenedor {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+
+.login-form-contenedor {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .login-texto-contenedor {
@@ -2175,6 +2178,131 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   margin: 30px 0;
 }
 
+.login-texto h4 {
+  font-size: 28px;
+  margin: 30px 0;
+}
+
+.boton1 {
+  display: inline-block;
+  text-align: center;
+  padding: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  width: 200px;
+}
+
+.boton1:hover {
+  opacity: 0.9;
+}
+
+.login-texto a {
+  text-transform: uppercase;
+  background-color: #a93e37;
+}
+
+
+.login-form {
+  display: block;
+  position: relative;
+  background-color: #efaf62;
+  width: 480px;
+  max-width: 480px;
+  padding: 30px;
+  margin: 80px 0;
+}
+
+.login-form h4 {
+  font-size: 22px;
+  color: #004732;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.login-form form legend {
+  font-size: 22px;
+  color: #004732;
+  margin: 20px 0;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.login-form form label {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  color: #004732;
+}
+
+.login-form form input {
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-form form input.boton1 {
+  text-transform: uppercase;
+  border: none;
+  width: 200px!important;
+  font-size: 20px!important;
+  line-height: 20px;
+  padding: 18px!important;
+  margin: 10px auto;
+}
+
+.login-form form input[type="checkbox"] {
+//   border: 3px solid #fff;
+  text-align: left;
+  width: auto;
+//   margin-left: 0px!important;
+//   background-color: #fff;
+//   width: 25px;
+//   height: 25px;
+//   -moz-appearance: none;
+//   -webkit-appearance: none;
+//   -o-appearance: none;
+//   position: relative;
+}
+
+// .login-form form input[type="checkbox"]:checked::before {
+//   content: "✓";
+//   font-size: 24px;
+//   font-weight: bold;
+//   position: absolute;
+//   left: 1px;
+//   top: 0;
+// }
+
+.login-form .boton1 {
+  display: block;
+  margin: 10px auto;
+  width: auto;
+  height: auto;
+  padding: 18px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #004732;
+  cursor: pointer;
+}
+
+.login-form form a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.login-form form a:hover {
+  color: #a93e37;
+}
+
 /* MAIN LOGIN MIO */
 
   /*
@@ -2186,9 +2314,6 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   }
   .login-box{
     margin-top:3em;
-  }
-  .intro:before{
-    left: 1.5em;
   }
   .intro p{
     padding:0 2.5% 0 25%;
