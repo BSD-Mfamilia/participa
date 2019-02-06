@@ -3,6 +3,20 @@ require 'resque/server'
 
 Rails.application.routes.draw do
   get '', to: redirect("/#{I18n.locale}")
+  
+
+
+
+  # Redirecciones añadidas para Más Madrid:
+	get '/registro-censo-militantes', to: redirect("/#{I18n.locale}")
+	get '/es/financiacion', to: redirect("https://www.masmadrid.org/donaciones")
+	get '/es/propuestas', to: redirect("https://www.masmadrid.org/temas")
+	get '/es/impulsa', to: redirect("https://www.masmadrid.org/temas")
+	get '/soporte-votaciones', to: redirect("https://www.masmadrid.org/temas")
+
+
+  
+  
 
   # redsys MerchantURL
   post '/orders/callback/redsys', to: 'orders#callback_redsys', as: 'orders_callback_redsys'
