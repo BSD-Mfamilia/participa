@@ -9,7 +9,7 @@ Version: 1.0
 corporate colours
 ----------------------------------- */
 /*
-Purple 1 (main):   #612d62;
+Purple 1 (main):   $verde-oscuro;
 Purple 2 (interm): #954e99;
 Purple 3 (light):  #c3a6cf;
 Purple 3 (60%):    #9c76a3;
@@ -29,13 +29,19 @@ Transparent black: #333; (opacity 0.55)
 */
 
 
+/* -----------------------------------
+Variables Sass para participa MM
+------------------------------------*/
+$verde-oscuro:#004732;
+$verde-claro:#54efa5;
+
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------
 base
 -------------------------------------------------------------------------------------------------------------------------------------------- */
 
 *,html{margin:0;padding:0;}
-body{font:62.5%/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;text-align:center;color:#333;background:#612d62;}
+body{font:62.5%/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;text-align:center;color:#333;background:$verde-oscuro;}
 ul,ol,dl{margin:0;list-style:none;}
 li,dt,dd{list-style:none;}
 img{border:0;}
@@ -84,7 +90,6 @@ columnas responsive (diseño)
   position:relative;
 }
 
-
 /* -----------------------------------
 general
 ----------------------------------- */
@@ -103,15 +108,18 @@ general
   width: 100%;
   position:relative;
   overflow:hidden;
-  background:#612d62;
+  background:$verde-oscuro;
 }
 .header-content{
+  display: flex;
   margin: auto;
-  width: 96%;
+  width: 100%;
+  max-width: 1200px;
   padding: 0 1%;
-  max-width: 94em;
+  // max-width: 94em;
   position:relative;
   overflow:hidden;
+  color: $verde-claro;
 }
 .content{
   background:#fff;
@@ -121,7 +129,7 @@ general
   overflow:hidden;
 }
 .logged-out .content{
-  background:#612d62;
+  background:$verde-oscuro;
 }
 .content-content{
   margin: auto;
@@ -132,7 +140,7 @@ general
   overflow:hidden;
 }
 .logged-out .content-content{
-  background:#612d62;
+  background:$verde-oscuro;
   padding: 0 1%;
 }
 .content-content-home{
@@ -152,16 +160,16 @@ general
 }
 .footer{
   margin: auto;
-  width: 96%;
+  width: 100%;
   padding: 0 1%;
-  max-width: 94em;
+  max-width: 1200px;
   position:relative;
   overflow:hidden;
 }
 .footer-content{
   margin: auto;
   width: 100%;
-  max-width: 94em;
+  max-width: 1200px;
   position:relative;
   overflow:hidden;
 }
@@ -174,11 +182,28 @@ general
   display:block;
 }
 
+.footer-content .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-content h3 {
+  text-transform: capitalize;
+  color: $verde-claro;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.footer-content ul li a {
+  color: #fff;
+  font-size: 18px!important;
+}
+
 
 /* -----------------------------------
 home
 ----------------------------------- */
-.people-bg{
+.main-login{
   background-image:image-url("img.gente.jpg");
   width:100%;
   background-size: cover;
@@ -195,7 +220,7 @@ home
 .intro p.total{
   padding-top:0.5em;
   padding-bottom:0.5em;
-  background:#612d62;
+  background:$verde-oscuro;
 }
 .intro p.total span{
   font-family:Montserrat,Arial,sans-serif;
@@ -441,7 +466,7 @@ submenu
   display:inline-block;
   padding:0.5em 0.75em;
   background:#d7cad8;
-  color:#612d62;
+  color:$verde-oscuro;
 }
 .submenu li a:hover{
   background:#8e618c;
@@ -453,7 +478,7 @@ submenu
   float:left;
 }
 .submenu li.active a{
-  background:#612d62;
+  background:$verde-oscuro;
   color:#fff;
 }
 
@@ -493,7 +518,7 @@ steps
 }
 .steps3 li span.block{
   display:block;
-  color:#612d62;
+  color:$verde-oscuro;
   width:100%;
   overflow:hidden;
 }
@@ -527,7 +552,7 @@ steps
 }
 .steps3 li:nth-child(1).active{
   text-transform:Montserrat,Arial,sans-serif;
-  background:#612d62 image-url("bg.steps-tip-right.png") right 50% no-repeat;
+  background:$verde-oscuro image-url("bg.steps-tip-right.png") right 50% no-repeat;
   float:left;
 }
 .steps3 li:nth-child(1).active span.block{
@@ -535,7 +560,7 @@ steps
 }
 .steps3 li:nth-child(2).active{
   text-transform:Montserrat,Arial,sans-serif;
-  background:#612d62 image-url("bg.steps-tip-right.png") right 50% no-repeat;
+  background:$verde-oscuro image-url("bg.steps-tip-right.png") right 50% no-repeat;
   float:left;
 }
 .steps3 li:nth-child(2).active span.block{
@@ -544,7 +569,7 @@ steps
 }
 .steps3 li:nth-child(3).active{
   text-transform:Montserrat,Arial,sans-serif;
-  background:#612d62;
+  background:$verde-oscuro;
   float:left;
 }
 .steps3 li:nth-child(3).active span.block{
@@ -568,7 +593,7 @@ pagination
 }
 .pagination li a{
   padding:0.5em;
-  color:#612d62;
+  color:$verde-oscuro;
   background:#d7cad8;
 }
 .pagination li a:hover{
@@ -576,7 +601,7 @@ pagination
   color:#fff;
 }
 .pagination li.active a{
-  background:#612d62;
+  background:$verde-oscuro;
   color:#fff;
 }
 
@@ -593,7 +618,7 @@ tools
   min-height: 5em;
 }
 .content-content .box-vote h3{
-  color:#612d62;
+  color:$verde-oscuro;
   margin:0;
   border:0;
 }
@@ -797,7 +822,7 @@ microcredits
 
   .control-label {
     float: left;
-    color: #612D62;
+    color: $verde-oscuro;
   }
   .radio_options {
     float: left;
@@ -865,7 +890,7 @@ microcredits
 .microcredit_box_header {
     font-family: Montserrat,Arial,sans-serif;
     text-transform: uppercase;
-    color: #612d62;
+    color: $verde-oscuro;
     margin-bottom: 1em;
     font-size: 2.6em !important;
 }
@@ -877,7 +902,7 @@ microcredits
 
 .microcredit-options-radio-button
 {
-  color: #612D62;
+  color: $verde-oscuro;
 }
 .microcredit-options-select2
 {
@@ -902,7 +927,7 @@ proposals
   min-height: 700px;
 
   h1 {
-    color: #612d62;
+    color: $verde-oscuro;
     font-family: Montserrat,Arial,sans-serif;
     font-size: 3em;
     padding: 20px;
@@ -921,8 +946,8 @@ proposals
       margin-right: 20px;
 
       &.active {
-        border-bottom: 3px solid #612d62;
-        color: #612d62;      
+        border-bottom: 3px solid $verde-oscuro;
+        color: $verde-oscuro;      
         padding-bottom: 20px;  
       }
     }
@@ -968,8 +993,8 @@ proposals
     width: 24%;
 
     h2 {
-      border-top: 3px solid #612d62;
-      color: #612d62;
+      border-top: 3px solid $verde-oscuro;
+      color: $verde-oscuro;
       display: inline-block;
       font-size: 1.4em;   
       margin-top: -2px;
@@ -988,9 +1013,9 @@ proposals
         font-size: 1.2em;
         font-weight: bold;
         margin-left: 20px;
-        color: #612d62;
+        color: $verde-oscuro;
         a {
-          color: #612d62;
+          color: $verde-oscuro;
         }
         &:before {
           content:"> ";
@@ -1001,11 +1026,11 @@ proposals
 
   article {
     h2 {
-      color: #612d62;
+      color: $verde-oscuro;
       font-size: 2em;
       margin-top: 6px;
       a {
-        color: #612d62;
+        color: $verde-oscuro;
       }
     }
   }
@@ -1094,7 +1119,7 @@ proposals
   }
 
   .button-support {
-    background: #612d62;
+    background: $verde-oscuro;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1193,7 +1218,7 @@ proposals
   }
 
   .support {
-    background: #612d62;
+    background: $verde-oscuro;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1256,7 +1281,7 @@ info page
   padding-bottom: 52px;
 
   h1 {
-    color: #612d62;
+    color: $verde-oscuro;
     font-family: Montserrat,Arial,sans-serif;
     font-size: 2.6em;
     padding: 20px;
@@ -1265,8 +1290,8 @@ info page
   }
 
   h2 {
-    border-top: 3px solid #612d62;
-    color: #612d62;
+    border-top: 3px solid $verde-oscuro;
+    color: $verde-oscuro;
     display: inline-block;
     font-size: 2em;
     text-transform: uppercase;
@@ -1274,7 +1299,7 @@ info page
   }
 
   h3 {
-    color: #612d62;
+    color: $verde-oscuro;
     font-size: 1.4em;   
     padding: 10px 20px;
   }
@@ -1298,7 +1323,7 @@ info page
 
 .generic-wrapper.blog {
   h1 {
-    color: #612D62;
+    color: $verde-oscuro;
     font-family: Montserrat,Arial,sans-serif;
     font-size: 3em;
     padding: 20px 0px;
@@ -1408,7 +1433,7 @@ input.button-danger:hover{
 .content-content h2{
   font-family:Montserrat,Arial,sans-serif;
   text-transform:uppercase;
-  color:#612d62;
+  color:$verde-oscuro;
   margin-bottom:1em;
 }
 .content-content h2 span{
@@ -1430,7 +1455,7 @@ input.button-danger:hover{
   padding:0 0.1em 0 0;
   position:relative;
   top:0.3em;
-  color:#612d62;
+  color:$verde-oscuro;
 }
 
 
@@ -1487,7 +1512,7 @@ layout 1: 0-459 (simple) # # # # # # # # # # # # # # # # # # # # # # # # # # # #
   margin: auto;
   width: 100%;
   padding: 0;
-  max-width: 96em;
+  max-width: 1200px;
   position:relative;
   overflow:hidden;
 }
@@ -2112,15 +2137,45 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   //   width:75%;
   // }
 
+  /* MAIN LOGIN MIO */
+
   .content-content-home{
     margin: auto;
-    width: 96%;
-    padding: 0 2%;
-    max-width: 96em;
+    width: 100%;
+    max-width: 1200px;
     position:relative;
     overflow:hidden;
   }
 
+  .content-content-home .row {
+    display: flex;
+  }
+
+  .login-texto-contenedor, .login-form-contenedor {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-texto-contenedor {
+  width: 49%;
+}
+
+.login-form-contenedor {
+  width: 51%;
+}
+
+.login-texto {
+  color: #fff;
+  padding: 10px;
+}
+
+.login-texto h1 {
+  font-size: 50px;
+  margin: 30px 0;
+}
+
+/* MAIN LOGIN MIO */
 
   /*
   elementos
@@ -2247,7 +2302,7 @@ div.ginput_container.ginput_list {
 
 
 div.help {
-  background:#612D62;
+  background:$verde-oscuro;
   z-index: 1;
   font-family: Montserrat,Arial,sans-serif;
   right: -35px;
@@ -2267,7 +2322,7 @@ div.help {
     line-height: 17px;
     font-family: Montserrat,Arial,sans-serif;
     font-weight: bold;  
-    color: #612D62;
+    color: $verde-oscuro;
     background: white;
     border-radius: 100%;
     transform: rotate(+90deg);

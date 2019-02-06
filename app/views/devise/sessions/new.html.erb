@@ -1,49 +1,12 @@
 <% content_for :title, t("devise.titles.sign_in") %>
 
-<div class="people-bg">
+<div class="main-login">
   <div class="content-content-home">
 
     <div class="row">
-      <div class="col-bhome-9a12">
-        <div class="login-box">
-          <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
-            <fieldset>
-              <legend>
-                <%= t('devise.links.sign_in') %>
-              </legend>
-              <div>
-                <%= f.label :login, class: 'invisible' %>
-                <%= f.text_field :login, autofocus: true, class: 'input-100', placeholder: 'Email o Documento (DNI / NIE / Pasaporte)' %>
-              </div>
-              <div>
-                <%= f.label :password, class: 'invisible' %>
-                <%= f.password_field :password, class: 'input-100', placeholder: 'Contraseña' %>
-              </div>
-
-              <% if devise_mapping.rememberable? %>
-                <div class="remember">
-                  <%= f.label :remember_me %>
-                  <%= f.check_box :remember_me, class: 'remember checkbox' %>
-                </div>
-              <% end %>
-
-              <div class="enter">
-                <%= f.submit t('devise.buttons.sign_in'), class: 'button' %>
-              </div>
-            </fieldset>
-            <p>
-              <a style="font-size:1.3em;" href="/soporte-votaciones">Ayuda para acceder a votar</a>
-            </p>
-            <p>
-              <%= link_to t("devise.links.forgot_password"), new_password_path(resource_name) %>
-            </p>
-          <% end %>
-        </div><!--.login-box-->
-      </div><!--.col-b-9a12-->
-
-      <div class="col-bhome-1a6">
-        <article class="intro">
-        <p>Bienvenido/a al Portal de Participación de Podemos.</p>
+      <div class="login-texto-contenedor">
+        <article class="intro login-texto">
+        <h1>Bienvenido al portal <br> de Participación <br> de Más Madrid</h1>
         <p><em class="podemos">Podemos</em> nace con la voluntad de construir una forma nueva de hacer política, y para ello estamos construyendo una estructura transparente, ciudadana, abierta, democrática y eficaz. Una organización que responda al impulso democratizador de Podemos, en la que discutamos, debatamos y decidamos entre todos y todas.</p>
 
         <% if @upcoming_election %>
@@ -73,7 +36,61 @@
           </div>
         </article><!--.intro-->
 
-      </div><!--.col-b-1a3-->
+      </div><!--login-texto-contenedor-->
+
+      <div class="login-form-contenedor">
+        <div class="login-box">
+          <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
+
+            <fieldset>
+              <legend>
+                <%= t('devise.links.sign_in') %>
+              </legend>
+              <div>
+                <%= f.label :login, class: 'invisible' %>
+                <%= f.text_field :login, autofocus: true, class: 'input-100', placeholder: 'E-mail ' %>
+              </div>
+              <div>
+                <%= f.label :password, class: 'invisible' %>
+                <%= f.password_field :password, class: 'input-100', placeholder: 'Contraseña' %>
+              </div>
+
+              <% if devise_mapping.rememberable? %>
+                <div class="remember">
+                  <%= f.label :remember_me %>
+                  <%= f.check_box :remember_me, class: 'remember checkbox' %>
+                </div>
+              <% end %>
+
+              <div class="enter">
+                <%= f.submit t('devise.buttons.sign_in'), class: 'button' %>
+              </div>
+            </fieldset>
+            <p>
+              <a style="font-size:1.3em;" href="/soporte-votaciones">Ayuda para acceder a votar</a>
+            </p>
+            <p>
+              <%= link_to t("devise.links.forgot_password"), new_password_path(resource_name) %>
+            </p>
+          <% end %>
+        </div><!--.login-box-->
+      </div><!--.login-form-contenedor-->
+
+
+      <div class="login-form-contenedor">
+          <div class="login-form relieve rel-bot-right">
+              <h4>Iniciar sesión</h4>
+              <form action="#" method="post">
+                  <input type="email" placeholder="E-mail">
+                  <input type="password" placeholder="Contraseña">
+                  <input type="checkbox" name="recuerdame" id="recuerdame"> <p>Recuérdame</p>
+                  <input type="submit" value="INICIAR SESIÓN" class="boton">
+                  <a href="#">¿Has olvidado la contraseña?</a>
+              </form>
+          </div>
+      </div>
+
+
 
     </div><!--.row-->
 
