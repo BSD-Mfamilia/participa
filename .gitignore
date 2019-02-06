@@ -36,3 +36,7 @@ dump.rdb
 non-public/
 
 config/secrets-local.yml
+
+Gemfile.lock
+db/schema.rb
+
