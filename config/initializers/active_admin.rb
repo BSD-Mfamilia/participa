@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Participación Podemos"
+  config.site_title = "Participación Más Madrid"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.

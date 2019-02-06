@@ -13,7 +13,7 @@ es:
         message_html: "No pudimos encontrar esa página. Vuelvelo a intentarlo más tarde o <a href='/'>prueba desde la página principal</a>."
       "500":
         title: "Error en el servidor"
-        message_html: "Hubo un error en el servidor. Puedes avisarnos en <a href='https://participa.podemos.info/soporte-votaciones/'>el formulario de soporte</a>."
+        message_html: "Hubo un error en el servidor. Puedes avisarnos en <a href='https://participa.masmadrid.org/soporte-votaciones/'>el formulario de soporte</a>."
     messages:
       not_valid_spanish_vat: El número de identificación fiscal no es válido
       not_valid_nif: El DNI no es válido
@@ -184,7 +184,7 @@ es:
         coofficial_organization_mission: "Misión de la organización traducida"
         coofficial_career: "Trayectoria traducida"
         logo: "Foto o logo"
-        endorsement: "Aval de un Círculo, de un Consejo Ciudadano o de una Secretaría General de Podemos"
+        endorsement: "Aval de un Círculo, de un Consejo Ciudadano o de una Secretaría General de Más Madrid"
         register_entry: "Inscripción de la entidad solicitante en el registro correspondiente"
         statutes: "Copia de los Estatutos de la entidad solicitante debidamente registrados"
         responsible_nif: "NIF del responsable (gestor de proyectos o solicitante)"
@@ -343,8 +343,8 @@ es:
       location_change_blocked: "El cambio de ubicación está bloqueado durante las votaciones. Por favor, espera a que estas acaben para cambiar tu domicilio o lugar de participación."
       recover_password: "Recuperar contraseña"
       cancel_account: "Darme de baja"
-      cancel_account_explain_html: "<p>Al pulsar el botón ‘Darme de baja’ dejarás de ser miembro de Podemos y cancelaremos tus datos personales de conformidad con lo dispuesto en la Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal.</p>
-<p> A partir de este momento tu cuenta de acceso al portal de participación de Podemos quedará eliminada.</p>
+      cancel_account_explain_html: "<p>Al pulsar el botón ‘Darme de baja’ dejarás de ser miembro de Más Madrid y cancelaremos tus datos personales de conformidad con lo dispuesto en la Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal.</p>
+<p> A partir de este momento tu cuenta de acceso al portal de participación de Más Madrid quedará eliminada.</p>
 <p>
 De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Protección de Datos, la cancelación dará lugar al bloqueo de los datos, conservándose únicamente a disposición de las Administraciones públicas, Jueces y Tribunales, para la atención de las posibles responsabilidades nacidas del tratamiento, durante el plazo de prescripción de éstas. Cumplido el citado plazo se procederá a la supresión de los datos.
 </p>
@@ -354,11 +354,11 @@ De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Prot
         hello: "Hola"
         welcome: "Bienvenida"
         lock:
-          p1: "Tu cuenta ha sido bloqueada por un número excesivo de intentos de inicio de sesión fallidos. Si no has sido tú, <a href='https://participa.podemos.info/soporte-votaciones/'>reporta la incidencia</a> para recibir ayuda."
+          p1: "Tu cuenta ha sido bloqueada por un número excesivo de intentos de inicio de sesión fallidos. Si no has sido tú, <a href='https://participa.masmadrid.org/soporte-votaciones/'>reporta la incidencia</a> para recibir ayuda."
           p2: "Haz click en el link de aquí abajo para desbloquear tu cuenta:"
           p3: "Si no funciona el enlace prueba copiando y pegándolo en la barra de direcciones de tu navegador."
         confirm:
-          p1: "Te has dado de alta o has cambiado tu correo electrónico en el entorno PODEMOS. Si no es ese el caso, ignora este correo. Puedes confirmar que esta es tu dirección de correo a través del siguiente enlace:"
+          p1: "Te has dado de alta o has cambiado tu correo electrónico en el entorno Más Madrid. Si no es ese el caso, ignora este correo. Puedes confirmar que esta es tu dirección de correo a través del siguiente enlace:"
           p2: "Si no funciona el enlace prueba copiando y pegándolo en la barra de direcciones de tu navegador."
         password:
           p1: "Alguien ha pedido que cambies tu contraseña. Puedes hacerlo a través del siguiente enlace:"
@@ -371,13 +371,13 @@ De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Prot
       notice: "Avisos"
     home:
       button: "¿No estás inscripto? ¡Inscríbete!"
-      p1: "Podemos nace con la voluntad de construir una forma nueva de hacer política, y para ello necesitamos desarrollar estructuras organizativas diferentes de las tradicionales, para no repetir errores del pasado, para avanzar hacia una sociedad más democrática. Estamos construyendo una estructura transparente, ciudadana, abierta, democrática, eficaz. Una organización que responda al impulso democratizador de Podemos, en la que discutamos, debatamos y decidamos entre todos. "
-      p2: "Pasar a formar parte del censo de inscritos de Podemos, desde el que se realizarán a partir de ahora todas las votaciones. Es un procedimiento sencillo y rápido que te permitirá ser parte activa de la comunidad Podemos. Juntos Podemos, claro que podemos."
+      p1: "Más Madrid nace con la voluntad de construir una forma nueva de hacer política, y para ello necesitamos desarrollar estructuras organizativas diferentes de las tradicionales, para no repetir errores del pasado, para avanzar hacia una sociedad más democrática. Estamos construyendo una estructura transparente, ciudadana, abierta, democrática, eficaz. Una organización que responda al impulso democratizador de Más Madrid, en la que discutamos, debatamos y decidamos entre todos. "
+      p2: "Pasar a formar parte del censo de inscritos de Más Madrid, desde el que se realizarán a partir de ahora todas las votaciones. Es un procedimiento sencillo y rápido que te permitirá ser parte activa de la comunidad."
     valid:
       phone:
         p1: "Introduce tu nuevo número de teléfono móvil."
         p2: "Recibirás el código de verificación para validar el nuevo número en unos segundos."
-        p3: "Si ya has participado en alguna votación de PODEMOS, te enviaremos el código por e-mail."
+        p3: "Si ya has participado en alguna votación de Más Madrid, te enviaremos el código por e-mail."
         p4: "Introduce el texto que aparece en la imagen."
         p5: "Introduce el código que hayas recibido por SMS para confirmarlo"
         valid: "Has validado correctamente."
@@ -388,32 +388,32 @@ De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Prot
         captcha_invalid: "Captcha invalido"
     collaboration:
       title: "Colaboración económica"
-      p1: "Colaborando con Podemos conseguirás que este proyecto siga creciendo mes a mes y garantizarás la independencia necesaria para un proyecto cuyas únicas lealtades van a estar del lado de la gente. Convirtamos la indignación en cambio. Es el momento, estamos preparados: Hagámoslo posible."
+      p1: "Colaborando con Más Madrid conseguirás que este proyecto siga creciendo mes a mes y garantizarás la independencia necesaria para un proyecto cuyas únicas lealtades van a estar del lado de la gente. Convirtamos la indignación en cambio. Es el momento, estamos preparados: Hagámoslo posible."
       ok:
         p1: Tu donación se ha dado de alta correctamente.
-        p2: Gracias por colaborar con Podemos.
+        p2: Gracias por colaborar con Más Madrid.
       ko:
         title: Hubo un error con tu colaboración.
         contact: Por favor intenta realizar el pago nuevamente. Si continúas teniendo problemas contacta a donaciones@podemos.info.
       terms_of_service:
         title: Condiciones Generales
-        p1_title: "Relación entre PODEMOS y el colaborador."
+        p1_title: "Relación entre Más Madrid y el colaborador."
         p1: '
 La realización de aportaciones económicas es totalmente voluntaria, no implica la vinculación
-del colaborador con el partido político PODEMOS ni le confiere la condición legal de afiliado o
+del colaborador con el partido político Más Madrid ni le confiere la condición legal de afiliado o
 simpatizante, ni de derechos frente al partido, ni queda obligado por sus estatutos y demás normas internas.
 
-Para colaborar económicamente con PODEMOS y poder cumplimentar el formulario de alta como colaborador es
-imprescindible disponer de DNI o NIE y estar inscrito en la web http://participa.podemos.info.
+Para colaborar económicamente con Más Madrid y poder cumplimentar el formulario de alta como colaborador es
+imprescindible disponer de DNI o NIE y estar inscrito en la web http://participa.masmadrid.org.
 
 Conforme a lo dispuesto en el artículo 8 de la Ley Orgánica 8/2007 de 4 de julio sobre
 Financiación de los Partidos Políticos, su donativo tendrá la consideración de “aportación
 privada”, distinta de las cuotas de afiliados, adheridos y simpatizantes.'
         p2_title: "Protección de datos de carácter personal."
         p2: '
-PODEMOS Partido Político, de acuerdo con la Ley Orgánica 15/1999 de Protección de
+Más Madrid Partido Político, de acuerdo con la Ley Orgánica 15/1999 de Protección de
 Datos de Carácter Personal, le informa de que sus datos serán incorporados al fichero
-“APORTACIONES”, del que es responsable PODEMOS, que los utilizará para tramitar su
+“APORTACIONES”, del que es responsable Más Madrid, que los utilizará para tramitar su
 colaboración, gestionar los adeudos bancarios, cumplir con la normativa de financiación
 de partidos políticos, para fines estadísticos y hacerle llegar periódicamente información
 sobre sus actividades.
@@ -430,7 +430,7 @@ DNI o documento legal de identificación.'
         p3: '
 A los efectos previstos en la Ley 16/2009, de 13 de Noviembre, de Servicios de Pago, al
 confirmar el alta de la colaboración económica el colaborador autoriza expresamente a
-PODEMOS partido político y a su entidad bancaria para efectuar las operaciones de cobro
+Más Madrid partido político y a su entidad bancaria para efectuar las operaciones de cobro
 mediante adeudos y cargos en la cuenta bancaria o en la tarjeta financiera, por el importe
 y con la frecuencia de pago que ha indicado en el formulario.
 
@@ -442,7 +442,7 @@ mes, trimestre o año, dependiendo de la frecuencia de pago elegida.'
         nie: "El formato deben ser una letra, 7 números y una letra, sin guiones ni espacios."
         passport: "Envía una copia de tu pasaporte a partido@podemos.info para validar la inscripción."
         existing_user_location: "Se ha recuperado tu lugar de participación de un usuario anterior."
-      p1_html: "<p> Rellenando este formulario con tus datos pasarás a formar parte del censo de inscritos de Podemos y podrás participar en todas las votaciones. Es un procedimiento sencillo que te permitirá ser parte activa de Podemos.  </p>
+      p1_html: "<p> Rellenando este formulario con tus datos pasarás a formar parte del censo de inscritos de Más Madrid y podrás participar en todas las votaciones. Es un procedimiento sencillo que te permitirá ser parte activa de Más Madrid.  </p>
 <p> Tus datos se asociarán a un teléfono móvil, en el que recibirás un SMS con tu código de verificación para validar la inscripción.  </p>
 <p><b> ¿Es seguro el sistema de inscripción? </b> </p>
 <p> Totalmente. Hemos intentado buscar el equilibrio entre seguridad y facilidad del proceso, cada inscripción es asociada a un teléfono móvil al que se envía automáticamente el código de verificación personal. Nuestros equipos informáticos han trabajado en el desarrollo de un sistema seguro, fiable y de fácil acceso para todas y todos.  </p>
@@ -455,21 +455,21 @@ si ha llegado a la carpeta de <em>correo electrónico no deseado</em>, <em>promo
         title: 'Condiciones generales'
         p1_html: '
 <h2>Condiciones generales de inscripción y política de privacidad</h2>
-<p><b>Condiciones legales de la inscripción en Podemos Partido Político</b></p>
-<p>Al cumplimentar y enviar el formulario de inscripción pasarás a ser miembro de PODEMOS partido político con CIF G86976941 y serás titular de los derechos y obligaciones reconocidos por la legislación española a todas las personas afiliadas a partidos políticos.</p>
-<p>Al marcar las casillas de aceptación del formulario de inscripción manifiestas haber leído los documentos que puedes descargar en los enlaces que se indican en el formulario y manifiestas tu voluntad afirmativa, libre, específica, informada e inequívoca de ser miembro de Podemos, de aceptar el cumplimiento de las condiciones generales de uso de la web, de las condiciones particulares de este formulario de registro, de los Estatutos, el Código Ético y los Documentos Organizativo, Político, Ético y de Feminismos del partido que se indican en el formulario, así como el empleo de cookies y la política de privacidad de la que te informamos a continuación.</p>
-<p>El acceso a la web <a href="https://participa.podemos.info" target="_blank">https://participa.podemos.info</a> está reservado a las personas inscritas en el partido político PODEMOS que se registren en la misma conforme al procedimiento establecido en estas condiciones generales.</p>
+<p><b>Condiciones legales de la inscripción en Más Madrid Partido Político</b></p>
+<p>Al cumplimentar y enviar el formulario de inscripción pasarás a ser miembro de Más Madrid partido político con CIF G86976941 y serás titular de los derechos y obligaciones reconocidos por la legislación española a todas las personas afiliadas a partidos políticos.</p>
+<p>Al marcar las casillas de aceptación del formulario de inscripción manifiestas haber leído los documentos que puedes descargar en los enlaces que se indican en el formulario y manifiestas tu voluntad afirmativa, libre, específica, informada e inequívoca de ser miembro de Más Madrid, de aceptar el cumplimiento de las condiciones generales de uso de la web, de las condiciones particulares de este formulario de registro, de los Estatutos, el Código Ético y los Documentos Organizativo, Político, Ético y de Feminismos del partido que se indican en el formulario, así como el empleo de cookies y la política de privacidad de la que te informamos a continuación.</p>
+<p>El acceso a la web <a href="https://participa.masmadrid.org" target="_blank">https://participa.masmadrid.org</a> está reservado a las personas inscritas en el partido político Más Madrid que se registren en la misma conforme al procedimiento establecido en estas condiciones generales.</p>
 <p>El nombre de usuario y una contraseña es personal e intransferible.</p>
-<p>La persona inscrita declara y garantiza que los datos personales que ha indicado en el formulario de registro son verdaderos, exactos, completos y actualizados, y se hace responsable de los daños y perjuicios, ya sean directos o indirectos, que pudiera ocasionar a PODEMOS como consecuencia de la utilización de datos falsos.</p>
+<p>La persona inscrita declara y garantiza que los datos personales que ha indicado en el formulario de registro son verdaderos, exactos, completos y actualizados, y se hace responsable de los daños y perjuicios, ya sean directos o indirectos, que pudiera ocasionar a Más Madrid como consecuencia de la utilización de datos falsos.</p>
 <p>Es imprescindible facilitar los datos personales y cumplimentar la verificación que se solicite en cada nivel de registro, incluyendo la recepción de mensajes de correo electrónico y SMS en su teléfono móvil. </p>
 <p>Los usuarios aceptan expresamente la recepción de mensajes y comunicaciones en su dirección de correo electrónico y en su teléfono móvil para tramitar su inscripción y facilitar el uso de los servicios y aplicaciones de la web.</p>
 <p>En el caso de no facilitar o verificar los datos personales requeridos en cada uno de los niveles de registro no se podrá completar la inscripción.</p>
-<h2>Condiciones generales de inscripción en Podemos, acceso a la web y empleo de cookies</h2>
-<p>Puedes consultar las Condiciones generales de inscripción, uso del portal y política de privacidad de Podemos en el enlace que aparece junto a la casilla de aceptación.</p>
-<h2>Información básica sobre protección de datos de las personas inscritas en Podemos</h2>
+<h2>Condiciones generales de inscripción en Más Madrid, acceso a la web y empleo de cookies</h2>
+<p>Puedes consultar las Condiciones generales de inscripción, uso del portal y política de privacidad de Más Madrid en el enlace que aparece junto a la casilla de aceptación.</p>
+<h2>Información básica sobre protección de datos de las personas inscritas en Más Madrid</h2>
 <p><b>1.Responsable del tratamiento</b></p>
 <p><b>PODEMOS PARTIDO POLÍTICO</b></p>
-<p><b>CIF G86976941</b></p>
+<p><b>CIF G86976941 (podemos)</b></p>
 <p><b>2. Finalidades del tratamiento de los datos</b></p>
 <p>Gestionar el censo legal de las personas afiliadas al partido</p>
 <p>Informar sobre las actividades del partido y promocionar la participación mediante comunicaciones electrónicas</p>
@@ -477,7 +477,7 @@ si ha llegado a la carpeta de <em>correo electrónico no deseado</em>, <em>promo
 <p>Gestionar las colaboraciones económicas y efectuar los cobros y pagos a través de entidades financieras</p>
 <p>Gestionar la participación en elecciones de cargos internos, primarias y procesos electorales</p>
 <p>Gestionar las votaciones en las consultas internas</p>
-<p>Gestionar y controlar el acceso a las páginas web de Podemos</p>
+<p>Gestionar y controlar el acceso a las páginas web de Más Madrid</p>
 <p>Gestionar la participación en la Asamblea Ciudadana</p>
 <p>Gestionar la colaboración personal de carácter voluntario</p>
 <p>Tramitar los procedimientos ante las Comisiones de Garantías Democráticas y demás órganos del partido</p>
@@ -488,7 +488,7 @@ si ha llegado a la carpeta de <em>correo electrónico no deseado</em>, <em>promo
 <p>Ejecución de los derechos y obligaciones estatutarias</p>
 <p>Consentimiento de las personas inscritas en los casos de tratamientos que lo requieran</p>
 <p><b>4. Destinatarios de cesiones o transferencias de datos</b></p>
-<p>Podemos no cederá los datos a terceras personas salvo obligación legal y en los siguientes casos:</p>
+<p>Más Madrid no cederá los datos a terceras personas salvo obligación legal y en los siguientes casos:</p>
 <p>Comunicaciones de datos económicos a las entidades bancarias para la gestión de las colaboraciones económicas
 Declaraciones tributarias a la Agencia Tributaria sobre las donaciones recibidas
 Información requerida por el Tribunal de Cuentas, en los casos previstos en la Ley
@@ -504,8 +504,8 @@ Requerimientos de las autoridades.</p>
 <p>Oposición al tratamiento</p>
 <p>Portabilidad de los datos</p>
 <p>Revocar el consentimiento otorgado para alguna finalidad específica</p>
-<p>Como persona inscrita en Podemos puedes acceder a la web de participación participa.podemos.info y consultar y modificar directamente algunos de tus datos personales.</p>
-<p>También puedes solicitar modificaciones, recibir información sobre el tratamiento de tus datos personales y ejercitar tus derechos enviando personalmente una petición, detallando el derecho que quieres ejercitar, por correo electrónico a la dirección <a href="mailto:lopd@podemos.info">lopd@podemos.info</a> o por correo postal al domicilio social de Podemos, en la calle Zurita, núm. 21, CP 28012 MADRID.</p>
+<p>Como persona inscrita en Más Madrid puedes acceder a la web de participación participa.masmadrid.org y consultar y modificar directamente algunos de tus datos personales.</p>
+<p>También puedes solicitar modificaciones, recibir información sobre el tratamiento de tus datos personales y ejercitar tus derechos enviando personalmente una petición, detallando el derecho que quieres ejercitar, por correo electrónico a la dirección <a href="mailto:lopd@podemos.info">lopd@podemos.info</a> o por correo postal al domicilio social de Más Madrid, en la calle Zurita, núm. 21, CP 28012 MADRID.</p>
 <p>En ambos casos deberás acreditar tu identidad adjuntando una copia del documento legal de identificación que hayas utilizado para tu inscripción (DNI, NIE o pasaporte) o cualquier otro documento legal que permita acreditar de forma inequívoca tu identidad.</p>
 <p>Si tienes alguna duda sobre el tratamiento de tus datos personales o quieres formular alguna reclamación puedes ponerte en contacto con el Delegado de Protección de Datos de Podemos a través de la dirección de correo electrónico <a href="mailto:protecciondedatos@podemos.info">protecciondedatos@podemos.info</a></p>
 <p>Si no estás satisfecho con el ejercicio de tus derechos puedes presentar una reclamación ante la Agencia Española de Protección de Datos en la web <a href="www.agpd.es" target="_blank">www.agpd.es</a></p>
@@ -514,7 +514,7 @@ Requerimientos de las autoridades.</p>
 <p>Entidades financieras, cuando nos comunican sus datos bancarios</p>
 <p>Empresas de prestación de servicios de internet y telecomunicaciones</p>
 <p><b>7. Información adicional sobre protección de datos</b></p>
-<p>Puedes consultar la información adicional en materia de protección de datos en el enlace sobre Condiciones generales de inscripción en Podemos, uso del portal de participación, empleo de cookies y política de privacidad de Podemos que aparece junto a la casilla de aceptación.</p>
+<p>Puedes consultar la información adicional en materia de protección de datos en el enlace sobre Condiciones generales de inscripción en Más Madrid, uso del portal de participación, empleo de cookies y política de privacidad de Más Madrid que aparece junto a la casilla de aceptación.</p>
 '
     legacy:
       password:
@@ -524,7 +524,7 @@ Requerimientos de las autoridades.</p>
     guarantees:
       title: "Comisión de Garantías"
     legal:
-      title1: "WEB PARTICIPA.PODEMOS.INFO"
+      title1: "WEB PARTICIPA.MASMADRID.ORG"
       title2: "Aviso legal"
       title3: "CONDICIONES GENERALES DE ACCESO, EMPLEO DE COOKIES Y POLÍTICA DE PRIVACIDAD"
       p1:
@@ -867,7 +867,7 @@ PODEMOS cumple con todas las medidas de seguridad para la protección de datos p
       submit: "Solicitar verificación"
       pending: "Ya hemos recibido una solicitud de verificación de tu usuario que aún no ha sido procesada. Si lo deseas puedes envíar nuevamente este formulario para corregir lo que has enviado anteriormente."
       upload: "Subir"
-      wants_card: "Me gustaría recibir la Credencial de Compañero/a de Podemos."
+      wants_card: "Me gustaría recibir la Credencial de Compañero/a de Más Madrid."
       please_check_details: "Por favor, verifica tu ficha para asegurarte que la credencial llega a tu domicilio y con los datos correctos."
       documentation_received: "Ya hemos recibido tu documentación y la procesaremos próximamente."
       user_already_verified: "Tu usuario ya está verificado."
@@ -879,8 +879,8 @@ PODEMOS cumple con todas las medidas de seguridad para la protección de datos p
           <p>Puedes hacer las fotos directamente con tu teléfono móvil intentado ajustar los bordes del documento dentro de la pantalla.
           <br>Si decides no hacerlo así ten encuenta que sólo admitimos imágenes en formato '.jpg' o '.png'</p>
           <p>Si tienes cualquier problema, puedes ponerte en contacto con nosotros enviando un email a <a href='mailto:verificaciones@soporte.podemos.info'>verificaciones@soporte.podemos.info</a></p>"
-      get_card_text: "Todas las personas que participen en las próximas votaciones podrán solicitar gratuitamente la Credencial de Compañero/a de Podemos."
-      get_card: "Recibe tu Credencial de Compañero/a de Podemos"
+      get_card_text: "Todas las personas que participen en las próximas votaciones podrán solicitar gratuitamente la Credencial de Compañero/a de Más Madrid."
+      get_card: "Recibe tu Credencial de Compañero/a de Más Madrid"
       status:
         pending: Pendiente
         accepted: Verificado

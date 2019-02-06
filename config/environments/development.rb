@@ -41,7 +41,18 @@ Rails.application.configure do
 
   # mailcatcher for testing purposes 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  #Si se quiere usar el mailcatcher hay que descomentar la siguiente línea:
+  #config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  #Añadido lo siquiente para usar una cuenta smtp real
+  ActionMailer::Base.smtp_settings = {
+    :address              => Rails.application.secrets.smtp["address"],
+    :user_name            => Rails.application.secrets.smtp["user_name"],
+    :password             => Rails.application.secrets.smtp["password"],
+    :domain               => Rails.application.secrets.smtp["domain"],
+    :port                 => 587,
+    :authentication       => :login,
+    :enable_starttls_auto => true
+  }
   
   BetterErrors::Middleware.allow_ip! Rails.application.secrets.trusted_ip if Rails.application.secrets.trusted_ip
 
