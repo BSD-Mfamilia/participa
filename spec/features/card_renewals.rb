@@ -12,8 +12,8 @@ feature 'CardRenewal' do
       email.deliver_now
     end
 
-    assert_equal ['administracion@podemos.info'], email.from
-    assert_equal ['ggalancs@yahoo.com'], email.to
+    assert_equal ['informatica@masmadrid.org'], email.from
+    assert_equal ['mdemouch@gmail.com'], email.to
     assert_equal 'Problema en el pago con tarjeta de su colaboración', email.subject
     assert_equal read_fixture('creditcard_error').join, email.body.to_s
   end
@@ -25,8 +25,8 @@ feature 'CardRenewal' do
       email.deliver_now
     end
 
-    assert_equal ['administracion@podemos.info'], email.from
-    assert_equal ['ggalancs@yahoo.com'], email.to
+    assert_equal ['informatica@masmadrid.org'], email.from
+    assert_equal ['mdemouch@gmail.com'], email.to
     assert_equal 'Problema en el pago con tarjeta de su colaboración', email.subject
     assert_equal read_fixture('creditcard_expired').join, email.body.to_s
   end
@@ -38,8 +38,8 @@ feature 'CardRenewal' do
       email.deliver_now
     end
 
-    assert_equal [ 'administracion@podemos.info'], email.from
-    assert_equal ['ggalancs@yahoo.com'], email.to
+    assert_equal [ 'informatica@masmadrid.org'], email.from
+    assert_equal ['mdemouch@gmail.com'], email.to
     assert_equal 'Problema en la domiciliación del recibo de su colaboración', email.subject
     assert_equal read_fixture('receipt_returned').join, email.body.to_s
   end
@@ -51,8 +51,8 @@ feature 'CardRenewal' do
       email.deliver_now
     end
 
-    assert_equal ['administracion@podemos.info'], email.from
-    assert_equal ['ggalancs@yahoo.com'], email.to
+    assert_equal ['informatica@masmadrid.org'], email.from
+    assert_equal ['mdemouch@gmail.com'], email.to
     assert_equal 'Problema en la domicilación de sus recibos, colaboración suspendida temporalmente', email.subject
     assert_equal read_fixture('receipt_suspended').join, email.body.to_s
   end
