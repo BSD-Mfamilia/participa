@@ -9,7 +9,7 @@ Version: 1.0
 /* --------------------------------------------------------------------------------------------------------------------------------------------
 base
 -------------------------------------------------------------------------------------------------------------------------------------------- */
-
+@import "variables-mm";
 
 /* -----------------------------------
 box info & alerts
@@ -17,28 +17,33 @@ box info & alerts
 .box{
   position:relative;
 }
+
 .box-info{
-  background:#d7cad8;
+  background:$verde-oscuro;
   padding:1.5em 3em 1.5em 9em;
   margin:0 0 1.5em
 }
-.box-info:before{
-  display: inline-block;
-  margin: 0;
-  content:image-url("ico.ropes-purple.png");
-  position:absolute;
-  top: -0.5em;
-  left: -0.5em;
+
+.box-info a {
+  text-decoration: underline;
+  color: $verde-claro;
 }
+
+
 .box p{
-  color:#612d62;
+  color:$verde-claro;
 }
 
 .box-ko{
-  background:#f5bfc9 image-url("ico.alert-circle.png") 2.5em 1.25em no-repeat;
+  background:$background-error image-url("ico.alert-circle.png") 2.5em 1.25em no-repeat;
   padding:1.5em 3em 1.5em 9em;
   margin:0 0 1.5em
 }
+
+.box-ko p {
+  color: $verde-oscuro;
+}
+
 .box-ok{
   background:#d0e0c9 image-url("ico.alert-circle.png") 2.5em 1.25em no-repeat;
   padding:1.5em 3em 1.5em 9em;
@@ -49,8 +54,13 @@ box info & alerts
 
 }
 .box-info p{
-  color:#612d62;
+  color:#fff;
 }
+
+.box-info p b{
+  color:$verde-claro;
+}
+
 .box-ko p:last-of-type,
 .box-ok p:last-of-type,
 .box-info p:last-of-type{
@@ -124,7 +134,7 @@ legend span{
   padding:0 0.1em 0 0;
   position:relative;
   top:0.3em;
-  color:#612d62;
+  color:$verde-claro;
 }
 
 fieldset .inputlabel-box{
@@ -154,7 +164,7 @@ fieldset .inputlabel-box span.no-label,
   background:none;
   float:left;
   border:none;
-  color:#612d62;
+  color:$verde-oscuro;
   padding:0.55em 0;
 }
 .content-content span.no-input{
@@ -170,7 +180,7 @@ fieldset .inputlabel-box input, fieldset .inputlabel-box textarea {
 
 fieldset .inputlabel-box .error {
   input, textarea, select, label.choice {
-    background: #F5BFC9;
+    background: $background-error;
   }
 }
 
@@ -263,7 +273,7 @@ fieldset .alert-nexttolabel{
 }
 fieldset .alert-nexttolabel .alert-ico{
   padding:2.5em 1.5em;
-  background:#612d62 image-url("ico.alert-exclam.png") 50% 50% no-repeat;
+  background:$verde-claro image-url("ico.alert-exclam.png") 50% 50% no-repeat;
   display:inline-block;
   float:right;
   position:relative;
@@ -278,7 +288,7 @@ fieldset .alert-nexttolabel .alert-ico span{
   right:-1em;
 }
 fieldset .alert-nexttolabel p{
-  color:#612d62;
+  color:$verde-claro;
   margin:1.1em 0 0.5em 3%;
   width:75%;
   text-align:center;
@@ -346,7 +356,7 @@ fieldset .inputlabel-box label.choice {
   float:left;
   clear:right;
   border:none;
-  color:#612d62;
+  color:$verde-claro;
   padding:0.55em 0;
 }
 fieldset .inputlabel-box input{
@@ -369,7 +379,7 @@ fieldset .inputlabel-box input{
 .table-collaborations th,
 .table-collaborations td{
   margin:0;
-  color:#612d62;
+  color:$verde-claro;
   border:none;
   padding:0.55em 0;
 }

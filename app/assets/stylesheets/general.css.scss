@@ -32,14 +32,15 @@ Transparent black: #333; (opacity 0.55)
 /* -----------------------------------
 Variables Sass para participa MM
 ------------------------------------*/
-$verde-oscuro:#004732;
-$verde-claro:#54efa5;
+@import "variables-mm";
 
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------
 base
 -------------------------------------------------------------------------------------------------------------------------------------------- */
-
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 *,html{margin:0;padding:0;}
 body{font:62.5%/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;text-align:center;color:#333;background:$verde-oscuro;}
 ul,ol,dl{margin:0;list-style:none;}
@@ -286,6 +287,191 @@ home
   text-align:right;
 }
 
+/* MAIN LOGIN MIO */
+* {
+  box-sizing: border-box;
+}
+
+.content-content-home{
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  position:relative;
+  overflow:hidden;
+}
+
+.content-content-home .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.login-texto-contenedor {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-contenedor {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-texto-contenedor {
+  width: 100%;
+  padding: 5px; 
+}
+
+.login-form-contenedor {
+  width: 100%;
+  padding: 10px; 
+}
+
+.login-texto {
+  color: #fff;
+  padding: 2px;
+}
+
+.login-texto h1 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.login-texto h4 {
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.boton-unete {
+  border: none;
+  color: transparent;
+  position: absolute;
+  background: url(boton-unete.svg);
+  background-repeat: no-repeat;
+  width: 170px;
+  height: 60px;
+  background-size: auto;
+  cursor: pointer;
+  transform: translateX(50%);
+}
+
+.boton1 {
+  display: inline-block;
+  text-align: center;
+  padding: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  width: 200px;
+}
+
+.boton1:hover {
+  opacity: 0.9;
+}
+
+.login-form {
+  display: block;
+  position: relative;
+  background-color: $ocre-login;
+  width: 480px;
+  max-width: 480px;
+  padding: 30px;
+  margin: 80px 0;
+}
+
+.login-form h4 {
+  font-size: 22px;
+  color: #004732;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.login-form form legend {
+  font-size: 22px;
+  color: #004732;
+  margin: 20px 0;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.login-form form label {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  color: #004732;
+}
+
+.login-form form input {
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-form form input.boton1 {
+  text-transform: uppercase;
+  border: none;
+  width: 200px!important;
+  font-size: 20px!important;
+  line-height: 20px;
+  padding: 18px!important;
+  margin: 10px auto;
+}
+
+.login-form form input[type="checkbox"] {
+//   border: 3px solid #fff;
+  text-align: left;
+  width: auto;
+//   margin-left: 0px!important;
+//   background-color: #fff;
+//   width: 25px;
+//   height: 25px;
+//   -moz-appearance: none;
+//   -webkit-appearance: none;
+//   -o-appearance: none;
+//   position: relative;
+}
+
+// .login-form form input[type="checkbox"]:checked::before {
+//   content: "✓";
+//   font-size: 24px;
+//   font-weight: bold;
+//   position: absolute;
+//   left: 1px;
+//   top: 0;
+// }
+
+.login-form .boton1 {
+  display: block;
+  margin: 10px auto;
+  width: auto;
+  height: auto;
+  padding: 18px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #004732;
+  cursor: pointer;
+}
+
+.login-form form a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.login-form form a:hover {
+  color: $marron-unete;
+}
+
+/* MAIN LOGIN MIO */
+
 
 /* -----------------------------------
 footer
@@ -378,10 +564,10 @@ header & menu
 
 .logo{
   float:left;
-  width:98%;
+  width:40%;
   max-width:22em;
   height:auto;
-  padding:1.5em 0;
+  padding:0.5em 0;
 }
 .logo img{
   max-width:100%;
@@ -1402,6 +1588,7 @@ input.button{
   cursor:pointer;
   cursor:hand;
 }
+
 .button:hover,
 a.button:hover,
 input.button:hover{
@@ -2146,6 +2333,7 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
   .content-content-home .row {
     display: flex;
+    flex-wrap: nowrap;
   }
 
   .login-texto-contenedor {
@@ -2181,6 +2369,7 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 .login-texto h4 {
   font-size: 28px;
   margin: 30px 0;
+  text-align: left;
 }
 
 .boton1 {
@@ -2197,16 +2386,35 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   opacity: 0.9;
 }
 
-.login-texto a {
-  text-transform: uppercase;
-  background-color: #a93e37;
+
+.boton-enviar {
+  border: none;
+  color: transparent;
+  background: url(boton-enviar.svg);
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 60px;
+  background-size: auto;
+  cursor: pointer;
 }
 
+.boton-unete {
+  border: none;
+  color: transparent;
+  position: absolute;
+  background: url(boton-unete.svg);
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 60px;
+  background-size: auto;
+  cursor: pointer;
+  transform: translateX(0%);
+}
 
 .login-form {
   display: block;
   position: relative;
-  background-color: #efaf62;
+  background-color: $ocre-login;
   width: 480px;
   max-width: 480px;
   padding: 30px;
@@ -2300,10 +2508,24 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 }
 
 .login-form form a:hover {
-  color: #a93e37;
+  color: $marron-unete;
 }
 
 /* MAIN LOGIN MIO */
+
+/*  FOOTER MIO */
+
+  .redes-footer ul {
+    display: flex;
+    justify-content: flex-start;
+  } 
+  .redes-footer li {
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+  }
+
+/*  FOOTER MIO */
 
   /*
   elementos

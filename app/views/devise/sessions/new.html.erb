@@ -8,31 +8,8 @@
         <article class="intro login-texto">
         <h1>Bienvenido al portal <br> de Participación <br> de Más Madrid</h1>
         <h4>¿Todavía no te has inscrito?</h4>
-
-      <!--  <% if @upcoming_election %>
-          <% cache("current_active_census", expires_in: 5.minutes) do %>
-            <% if @upcoming_election.meta_description %>
-              <p><%=@upcoming_election.meta_description%></p>
-            <% else %>
-              <p>Accede al portal de participación y vota en "<%=@upcoming_election.title%>". Del <%=l(@upcoming_election.starts_at, format: if @upcoming_election.starts_at.month==@upcoming_election.ends_at.month then "%-d" else "%-d de %B" end )%> al <%=l(@upcoming_election.ends_at, format: "%-d de %B")%>.</p>
-            <% end %>
-            <% if @upcoming_election.user_created_at_max %>
-              <p>El censo válido para esta votación está cerrado desde el día <%=l(@upcoming_election.user_created_at_max, format: "%-d de %B de %Y a las %H:%M horas")%>.</p>
-            <% end %>
-            <p class="total">Personas inscritas activas: <span><%=number_with_delimiter @upcoming_election.current_active_census%></span></p>
-            <p>Censo total llamado al voto: <%=number_with_delimiter @upcoming_election.current_total_census%></p>
-          <% end %>
-        <% else %>
-          <p class="total">Ya somos
-          <span>
-            <% cache("total_users", expires_in: 30.minutes) do %>
-              <%= number_with_delimiter User.confirmed.count %>
-            <% end %>
-          </span>
-          personas inscritas.</p>
-        <% end %> -->
           <div class="buttonbox">
-            <%= link_to "Únete", new_user_registration_path, class: 'boton1' %>
+            <%= link_to "Únete", new_user_registration_path, class: 'boton-unete' %>
           </div>
         </article><!--.intro-->
 
@@ -64,9 +41,6 @@
                 <%= f.submit t('devise.buttons.sign_in'), class: 'boton1' %>
               </div>
             </fieldset>
-            <!--<p>
-              <a style="font-size:1.3em;" href="/soporte-votaciones">Ayuda para acceder a votar</a>
-            </p> -->
             <p>
               <%= link_to t("devise.links.forgot_password"), new_password_path(resource_name) %> <!-- poner "¿Has olvidado la contraseña?" -->
             </p>

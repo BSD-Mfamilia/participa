@@ -95,7 +95,7 @@
     
     <% if action == "new" %>
 
-
+   
       <div class="inputlabel-box">
         <% if resource.errors.include?(:document_type) %>
             <%= field_notice_box %>
@@ -284,10 +284,11 @@
             <%= f.input :captcha, as: :simple_captcha, input_html: {class: "input-m"} %>
           </div>
         </div>
-
-        <%= f.actions class: 'enter' do %>
-            <%= f.action :submit, label: t("devise.buttons.sign_up"), button_html: {class: "button"} %>
-        <% end %>
+        <div class="boton-enviar">
+          <%= f.actions class: 'enter' do %>
+              <%= f.action :submit, label: t("devise.buttons.sign_up"), button_html: {class: "boton-enviar"} %>
+          <% end %>
+        </div>
     <% end %> <%# if action == "new" %>
 
     <% if action == "edit" %>
