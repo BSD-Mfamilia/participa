@@ -49,6 +49,11 @@ box info & alerts
   padding:1.5em 3em 1.5em 9em;
   margin:0 0 1.5em
 }
+
+.box .box-ok p {
+  color: $verde-oscuro;
+}
+
 .logged-out .content-content .col-b-4a12{
   width:100%;
 

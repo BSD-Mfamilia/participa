@@ -14,7 +14,6 @@
         </article><!--.intro-->
 
       </div><!--login-texto-contenedor-->
-
       <div class="login-form-contenedor">
         <div class="login-form relieve rel-bot-right">
           <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
@@ -32,8 +31,8 @@
 
               <% if devise_mapping.rememberable? %>
                 <div class="remember">
-                  <%= f.label :remember_me %>
-                  <%= f.check_box :remember_me, class: 'remember checkbox' %> <!-- poner "Recuérdame" -->
+                  <%= f.check_box :remember_me, class: 'remember checkbox' %> 
+                  <%= f.label :remember_me %><!-- poner "Recuérdame" -->
                 </div>
               <% end %>
 
