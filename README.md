@@ -13,26 +13,22 @@ Votaciones (integración con [Agora Voting](http://agoravoting.org/)), Colaborac
 
 ### Elecciones
 
-Permite integrado un censo con Agora Voting: *Agora Voting es un software libre de votaciones que permite a cualquier organización realizar procesos electorales de forma segura, flexible, transparente y a un precio competitivo*. Permite que las elecciones se realicen en función a la localización del inscrito. En el caso de Podemos, se hace para diferenciar las elecciones de los ámbitos Municipales, Provinciales, Autonómicas y Estatales. A través de esta herramienta se han realizado todas las votaciones vinculantes de Podemos desde hace más de un año, más de 30 votaciones: documentos organizativos, eticos y políticos, elecciones de cargos internos (secretario general, consejos ciudadanos estatales, autonómicos y minicipales), las distintas fases e iniciativas del proyecto Impulsa, etc.
+Permite integrado un censo con Agora Voting: *Agora Voting es un software libre de votaciones que permite a cualquier organización realizar procesos electorales de forma segura, flexible, transparente y a un precio competitivo*. Permite que las elecciones se realicen en función a la localización del inscrito. En el caso de Más Madrid, se hace para diferenciar las elecciones de los ámbitos Municipales, Provinciales, Autonómicas y Estatales. A través de esta herramienta se han realizado todas las votaciones vinculantes de Más Madrid desde hace más de un año, más de 30 votaciones: documentos organizativos, eticos y políticos, elecciones de cargos internos (secretario general, consejos ciudadanos estatales, autonómicos y minicipales), las distintas fases e iniciativas del proyecto Impulsa, etc.
 
 * https://agoravoting.com/
 
 ### Colaboraciones económicas
 
-Permite que los usuarios inscritos puedan suscribir donaciones de forma periódica (mensual, trimestral o anual) por el importe que deseen. Permite que esta colaboración se produzca a través de transferencia bancaria o con tarjeta de crédito (conexión con Redsys). 
-
-* http://transparencia.podemos.info/cuentas-claras/partido/ingresos
-* http://transparencia.podemos.info/preguntas-frecuentes
+Permite que los usuarios inscritos puedan suscribir donaciones de forma periódica (mensual, trimestral o anual) por el importe que deseen. Permite que esta colaboración se produzca a través de transferencia bancaria o con tarjeta de crédito (conexión con Redsys).
 
 ### Microcréditos
 
 Permite que usuarios (inscritos o no) den de alta microcréditos a la organización de forma puntual. 
 
-* http://transparencia.podemos.info/preguntas-frecuentes
 
 ### Iniciativas Ciudadanas
 
-Sistema de llegada de propuestas filtradas por votaciones con +1 bottom-up tomando como modelo el sistema planteado en el documento Organizativo de Podemos. Toma iniciativas de una categoría ("Propuestas") en la Plaza Podemos (subreddit de Podemos). 
+Sistema de llegada de propuestas filtradas por votaciones con +1 bottom-up tomando como modelo el sistema planteado en el documento Organizativo de Más Madrid. Toma iniciativas de una categoría ("Propuestas") en el subreddit de Más Madrid. 
 
 ### Equipos de Participación
 
@@ -40,7 +36,7 @@ Permite a los inscritos darse de alta como interesado en formar parte de equipos
 
 ### Verificación por SMS
 
-Método de verificación utilizado por Podemos. Cuando un usuario se inscribe debe confirmar su correo electrónico y su teléfono móvil con un código que se le envía. 
+Método de verificación utilizado por Más Madrid. Cuando un usuario se inscribe debe confirmar su correo electrónico y su teléfono móvil con un código que se le envía. 
 
 ### Blog (Brújula)
 
@@ -61,8 +57,6 @@ Sistema de integración con formularios basados en Wordpress (con el plugin Grav
 ### Notificaciones móviles
 
 Se ha hecho una aplicación en Android que puede enviar notificaciones a los dispositivos móviles. Se trata de una aplicación realizada con Phonegap, por lo que está planificado su desarrollo para IOS (iPhone e iPad).
-
-* https://play.google.com/store/apps/details?id=info.podemos.participa&hl=en
 
 ### OpenID
 
@@ -101,7 +95,7 @@ Todos deberían dar OK o SKIP (significa que se ipasa de alto, y que hay que pro
 
 ## APIs externas
 
-* Para las votaciones de los usuarios usamos [Agora Voting](https://agoravoting.com/), que han realizado una integración con la plataforma de Podemos. La configuración del secreto compartido se encuentra en una clave de `secrets.yml`. Documentación: [Sobre la integración, al momento de escribir esto](https://github.com/agoravoting/agora-core-view/blob/9dfbbf5252b2eb119463d2dcaa2c01391b232653/INTEGRATION.md), [Sobre la integración, versión más actualizada](https://github.com/agoravoting/agora-core-view/blob/master/INTEGRATION.md), [Sobre la API REST general de AgoraVoting](https://agora-ciudadana.readthedocs.org/).
+* Para las votaciones de los usuarios usamos [Agora Voting](https://agoravoting.com/), que han realizado una integración con la plataforma de Más Madrid. La configuración del secreto compartido se encuentra en una clave de `secrets.yml`. Documentación: [Sobre la integración, al momento de escribir esto](https://github.com/agoravoting/agora-core-view/blob/9dfbbf5252b2eb119463d2dcaa2c01391b232653/INTEGRATION.md), [Sobre la integración, versión más actualizada](https://github.com/agoravoting/agora-core-view/blob/master/INTEGRATION.md), [Sobre la API REST general de AgoraVoting](https://agora-ciudadana.readthedocs.org/).
 
 * Para el envío de SMS usamos [esendex](http://esendex.es/). Puede comprobarse con el comando `rake esendex:validate[username,password,account_reference]`. La configuración de la autenticación se encuentra en unas claves de `secrets.yml`.
 
@@ -113,7 +107,7 @@ Todos deberían dar OK o SKIP (significa que se ipasa de alto, y que hay que pro
 
 * Para el envío de correo en producción usamos [Amazon SES](http://aws.amazon.com/es/ses/). La configuración va en `config/secrets.yml`.
 
-* Para descargar las últimas iniciativas ciudadanas en Plaza Podemos ejecutamos el comando: `rake podemos:reddit`
+* Para descargar las últimas iniciativas ciudadanas en Más Madrid ejecutamos el comando: `rake masmadrid:reddit`
 
 ## Dependencias
 

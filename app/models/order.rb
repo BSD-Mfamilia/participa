@@ -143,7 +143,7 @@ class Order < ActiveRecord::Base
   end
 
   def url_source
-    # URL FUENTE  "Este campo no se si existira en el nuevo entorno. Si no es asi poner por defecto https://podemos.info/participa/colaboraciones/colabora/
+    # URL FUENTE  "Este campo no se si existira en el nuevo entorno. Si no es asi poner por defecto https://pasticipa.masmadrid.org/colaboraciones/colabora/
     # TODO url_source
     new_collaboration_url
   end

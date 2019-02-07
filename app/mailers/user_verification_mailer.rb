@@ -2,9 +2,9 @@ class UserVerificationMailer < ActionMailer::Base
   def on_accepted(user_id)
     @user_email = User.find(user_id).email
     mail(
-        from: "verificaciones@soporte.podemos.info",
+        from: "informatica@masmadrid.org",
         to: @user_email,
-        subject: 'Podemos, Datos verificados'
+        subject: 'Más Madrid, Datos verificados'
     )
   end
 
@@ -12,9 +12,9 @@ class UserVerificationMailer < ActionMailer::Base
     @user_email = User.find(user_id).email
 
     mail(
-        from: "verificaciones@soporte.podemos.info",
+        from: "informatica@masmadrid.org",
         to: @user_email,
-        subject: 'Podemos, no hemos podido realizar la verificación'
+        subject: 'Más Madrid, no hemos podido realizar la verificación'
     )
   end
 end

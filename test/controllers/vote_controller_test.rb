@@ -18,7 +18,7 @@ class VoteControllerTest < ActionController::TestCase
     sign_in @user
     get :create, election_id: @election.id
     assert_response :success
-    #assert response.header["Location"].starts_with? "https://vota.podemos.info/"
+    #assert response.header["Location"].starts_with? "https://vota.masmadrid.org/"
   end
 
   test "should give invalid date limit if election is not active" do
