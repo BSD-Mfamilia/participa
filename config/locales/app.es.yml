@@ -451,6 +451,13 @@ mes, trimestre o año, dependiendo de la frecuencia de pago elegida.'
 <p><strong>Si no recibes el correo electrónico para completar la inscripción, recuerda comprobar
 si ha llegado a la carpeta de <em>correo electrónico no deseado</em>, <em>promociones</em> o <em>spam</em>.</strong></p>
 "
+      p1_html: "<p>Si completas este formulario con tus datos pasarás a formar parte del censo de Más Madrid y podrás participar en todos los procesos de votación de manera sencilla e intuitiva.</p>
+<p><b>¿En qué consiste el procedimiento?</b></p>
+<p>Tus datos se asociarán a un teléfono móvil, en el que recibirás un SMS con tu código de verificación que te permitirá validar la inscripción y pasar a formar parte de Más Madrid.</p>
+<p><b>¿Es seguro el sistema de inscripción?</b></p>
+<p>Absolutamente. Hemos trabajado para que el proceso sea sencillo, eficaz y seguro al mismo tiempo. Por ello cada inscripción está asociada a un teléfono móvil al que se envía automáticamente el código de verificación personal. Nuestros equipos informático se han esforzado para implementar un sistema seguro, fiable y de fácil acceso para todos y todas.</p>
+<p><b>¿Qué hacer si tienes problemas con la inscripción?</b></p>
+<p>En el caso de que no recibas un correo electrónico que te permita completar el proceso de inscripción recuerda comprobar las carpetas de correo no deseado, promociones y spam por si hubiera llegado a alguna de ellas.</p>"
       terms_of_service:
         title: 'Condiciones generales'
         p1_html: '
