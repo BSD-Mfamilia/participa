@@ -355,7 +355,7 @@ ActiveAdmin.register ImpulsaProject do
     json.each do |answer|
       id_proyecto = 0
       answer["urls"].each do |url|
-        id_proyecto_aux = url["url"].gsub('https://participa.podemos.info/impulsa/proyecto/','').to_i
+        id_proyecto_aux = url["url"].gsub('https://participa.masmadrid.org/impulsa/proyecto/','').to_i
         id_proyecto = id_proyecto_aux if id_proyecto_aux > 0
       end
       votes = answer["total_count"]

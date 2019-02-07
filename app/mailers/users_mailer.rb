@@ -22,7 +22,7 @@ class UsersMailer < ActionMailer::Base
     mail(
       from: Rails.application.secrets["default_from_email"],
       to: @user.email,
-      subject: '[participa.podemos.info] Has intentado registrarte de nuevo'
+      subject: '[participa.masmadrid.org] Has intentado registrarte de nuevo'
     )
   end
 end

@@ -1,6 +1,6 @@
-role :app, %w{capistrano@betaparticipa.podemos.info}
-role :web, %w{capistrano@betaparticipa.podemos.info}
-role :db,  %w{capistrano@betaparticipa.podemos.info}
+role :app, %w{capistrano@betaparticipa.masmadrid.org}
+role :web, %w{capistrano@betaparticipa.masmadrid.org}
+role :db,  %w{capistrano@betaparticipa.masmadrid.org}
 
 set :rvm_ruby_version, '2.4.2'
 set :repo_url, 'git@github.com:insomniaproyectos/participa.git'

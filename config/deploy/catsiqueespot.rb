@@ -1,6 +1,6 @@
-role :app, %w{capistrano@catsiqueespot.podemos.info}
-role :web, %w{capistrano@catsiqueespot.podemos.info}
-role :db,  %w{capistrano@catsiqueespot.podemos.info}
+role :app, %w{capistrano@catsiqueespot.masmadrid.org}
+role :web, %w{capistrano@catsiqueespot.masmadrid.org}
+role :db,  %w{capistrano@catsiqueespot.masmadrid.org}
 
 set :rvm_ruby_version, '2.4.2'
 set :repo_url, 'git@github.com:insomniaproyectos/participa.git'
