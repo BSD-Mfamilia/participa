@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   # Redirecciones añadidas para Más Madrid:
 	get '/registro-censo-militantes', to: redirect("/#{I18n.locale}")
+	get '/es/comision-de-garantias-democraticas', to: redirect("/#{I18n.locale}")
 	get '/es/financiacion', to: redirect("https://www.masmadrid.org/donaciones")
+	get '/es/colabora', to: redirect("https://www.masmadrid.org/donaciones")
 	get '/es/propuestas', to: redirect("https://www.masmadrid.org/temas")
 	get '/es/impulsa', to: redirect("https://www.masmadrid.org/temas")
 	get '/soporte-votaciones', to: redirect("https://www.masmadrid.org/temas")

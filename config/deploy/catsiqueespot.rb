@@ -3,10 +3,10 @@ role :web, %w{capistrano@catsiqueespot.podemos.info}
 role :db,  %w{capistrano@catsiqueespot.podemos.info}
 
 set :rvm_ruby_version, '2.4.2'
-set :repo_url, 'git@github.com:podemos-info/participa.git'
+set :repo_url, 'git@github.com:insomniaproyectos/participa.git'
 set :branch, :catsiqueespot
 set :rails_env, :production
-set :deploy_to, '/var/www/participa.podemos.info'
+set :deploy_to, '/var/www/participa.masmadrid.org'
 
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do

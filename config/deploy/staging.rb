@@ -3,9 +3,9 @@ role :web, %w{capistrano@betaparticipa.podemos.info}
 role :db,  %w{capistrano@betaparticipa.podemos.info}
 
 set :rvm_ruby_version, '2.4.2'
-set :repo_url, 'git@github.com:podemos-info/participa.git'
+set :repo_url, 'git@github.com:insomniaproyectos/participa.git'
 set :branch, :staging
-set :deploy_to, '/var/www/betaparticipa.podemos.info'
+set :deploy_to, '/var/www/betaparticipa.masmadrid.org'
 
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do

@@ -3,7 +3,7 @@ role :web, %w{capistrano@microcreditos.lamorada.org}
 role :db,  %w{capistrano@microcreditos.lamorada.org}
 
 set :rvm_ruby_version, '2.4.2'
-set :repo_url, 'git@github.com:podemos-info/participa.git'
+set :repo_url, 'git@github.com:insomniaproyectos/participa.git'
 set :branch, :lamorada
 set :rails_env, :production
 set :deploy_to, '/var/www/microcreditos.lamorada.org'
