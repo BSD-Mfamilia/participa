@@ -574,9 +574,6 @@ layout 3: 600-768 (intermedia 2) # # # # # # # # # # # # # # # # # # # # # # # #
 
 @media only screen and (min-width: 600px) and (max-width: 768px)
 {
-  
-
-
   /*
   elementos
   */
@@ -586,6 +583,10 @@ layout 3: 600-768 (intermedia 2) # # # # # # # # # # # # # # # # # # # # # # # #
     width:32%;
     margin-right:2%;
     clear:none;
+  }
+
+  .content-content label {
+    width: 180px;
   }
   .content-content span.no-input,
   fieldset .inputlabel-box .input-box,
@@ -669,6 +670,11 @@ layout 4: 769-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
     margin-right:2%;
     clear:none;
   }
+
+  .content-content label {
+    width: 180px;
+  }
+
   .content-content span.no-input,
   fieldset .inputlabel-box .input-box,
   fieldset .inputlabel-box .form-wrapper{
@@ -748,6 +754,11 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     margin-right:2%;
     clear:none;
   }
+
+  .content-content label {
+    width: 180px;
+  }
+
   .content-content span.no-input,
   fieldset .inputlabel-box .input-box,
   fieldset .inputlabel-box .form-wrapper{
