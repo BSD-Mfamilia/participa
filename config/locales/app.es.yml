@@ -13,7 +13,7 @@ es:
         message_html: "No pudimos encontrar esa página. Vuelvelo a intentarlo más tarde o <a href='/'>prueba desde la página principal</a>."
       "500":
         title: "Error en el servidor"
-        message_html: "Hubo un error en el servidor. Puedes avisarnos en <a href='https://participa.masmadrid.org/soporte-votaciones/'>el formulario de soporte</a>."
+        message_html: "Hubo un error en el servidor. Puedes avisarnos en <a href='mailto:contacto@masmadrid.org'>el formulario de soporte</a>."
     messages:
       not_valid_spanish_vat: El número de identificación fiscal no es válido
       not_valid_nif: El DNI no es válido
@@ -881,11 +881,11 @@ PODEMOS cumple con todas las medidas de seguridad para la protección de datos p
       user_not_valid_to_verify: "Gracias por tu interés pero, de momento, no es necesario que verifiques tu identidad."
       format_directions_1: "Puedes hacer las fotos directamente con tu teléfono móvil intentado ajustar los bordes del documento dentro de la pantalla."
       format_directions_2: "Si decides no hacerlo así ten encuenta que sólo admitimos imágenes en formato '.jpg' o '.png'"
-      support: "Si tienes cualquier problema, puedes ponerte en contacto con nosotros enviando un email a <a href='mailto:verificaciones@soporte.podemos.info'>verificaciones@soporte.podemos.info</a>"
+      support: "Si tienes cualquier problema, puedes ponerte en contacto con nosotros enviando un email a <a href='mailto:contacto@masmadrid.org'>contacto@masmadrid.org</a>"
       full_directions: "<p>Pincha en las imágenes de ejemplo para subir fotos de tu documento, así podremos verificar tu identidad.</p>
           <p>Puedes hacer las fotos directamente con tu teléfono móvil intentado ajustar los bordes del documento dentro de la pantalla.
           <br>Si decides no hacerlo así ten encuenta que sólo admitimos imágenes en formato '.jpg' o '.png'</p>
-          <p>Si tienes cualquier problema, puedes ponerte en contacto con nosotros enviando un email a <a href='mailto:verificaciones@soporte.podemos.info'>verificaciones@soporte.podemos.info</a></p>"
+          <p>Si tienes cualquier problema, puedes ponerte en contacto con nosotros enviando un email a <a href='mailto:contacto@masmadrid.org'>contacto@masmadrid.org</a></p>"
       get_card_text: "Todas las personas que participen en las próximas votaciones podrán solicitar gratuitamente la Credencial de Compañero/a de Más Madrid."
       get_card: "Recibe tu Credencial de Compañero/a de Más Madrid"
       status:
