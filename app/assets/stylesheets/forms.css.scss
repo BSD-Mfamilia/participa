@@ -20,7 +20,7 @@ box info & alerts
 
 .box-info{
   background:$verde-oscuro;
-  padding:1.5em 3em 1.5em 9em;
+  padding:1.5em 2em 1.5em 2em;
   margin:0 0 1.5em
 }
 
@@ -139,7 +139,8 @@ legend span{
   padding:0 0.1em 0 0;
   position:relative;
   top:0.3em;
-  color:$verde-claro;
+  color:$morado-legend;
+  text-transform: capitalize;
 }
 
 fieldset .inputlabel-box{
@@ -573,6 +574,7 @@ layout 3: 600-768 (intermedia 2) # # # # # # # # # # # # # # # # # # # # # # # #
 
 @media only screen and (min-width: 600px) and (max-width: 768px)
 {
+  
 
 
   /*
@@ -651,6 +653,11 @@ layout 4: 769-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 @media only screen and (min-width: 769px)
 {
 
+  .box-info{
+    background:$verde-oscuro;
+    padding:1.5em 5em 1.5em 5em;
+    margin:0 0 1.5em
+  }
 
   /*
   elementos

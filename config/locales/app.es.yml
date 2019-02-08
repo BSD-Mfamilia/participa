@@ -310,7 +310,7 @@ es:
         country: "País"
         password: "Contraseña"
         password_confirmation: "Contraseña (repetir)"
-        remember_me: "Recordarme"
+        remember_me: "Recuérdame"
         wants_newsletter: 'Newsletter'
         terms_of_service: "He leído y acepto las condiciones generales"
         over_18: "Declaro ser mayor de 18 años"

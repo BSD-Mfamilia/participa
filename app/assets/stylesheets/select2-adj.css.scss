@@ -5,7 +5,7 @@ Description: Responsive theme by wakalaka for Juntos Podemos
 Version: 1.0
 */
 
-
+@import "variables-mm";
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------
 base
@@ -22,7 +22,7 @@ select 2
   float: left;
 }
 .select2-results .select2-highlighted {
-  background-color:#954e99;
+  background-color:$verde-medio;
 }
 .select2-container{
   width:63%;

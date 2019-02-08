@@ -1,7 +1,7 @@
 <%= semantic_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {novalidate: true}) do |f| %>
   <fieldset>
-    <legend class="invisible">
-      <span>Completar perfil</span>
+    <legend class="">
+      <span>Datos Personales</span>
     </legend>
 
     <% if action == "edit" && current_user.verified? %>
@@ -15,7 +15,7 @@
         de la nueva modificación de dichos datos.
         </p>
       </div>
-
+      <legend><span>Datos personales</span></legend>
       <div class="inputlabel-box">
         <% if resource.errors.include?(:first_name) %>
           <%= field_notice_box %>

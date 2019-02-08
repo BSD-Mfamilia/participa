@@ -26,10 +26,10 @@ SimpleCaptcha.setup do |sc|
   # possible values: 'none', 'low', 'medium', 'high'
   sc.implode = 'medium'
 
-  sc.image_style = 'podemos'
-  sc.add_image_style('podemos', [
-      "-background '#612d62'",
+  sc.image_style = 'simply_green'
+  sc.add_image_style('simply_green', [
+      "-background '#004732;'",
       "-fill '#FFFFFF'",
-      "-border 2",
-      "-bordercolor '#269283'"])
+      "-border 3",
+      "-bordercolor '#54efa5'"])
 end

@@ -472,6 +472,13 @@ home
   color: $marron-unete;
 }
 
+/* Nuevo usuario */
+.content-content h2.unirme {
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+/* Fin nuevo usuario */
 /* MAIN LOGIN MIO */
 
 /*  FOOTER MIO */
@@ -595,20 +602,31 @@ header & menu
   height:auto;
   padding:0.5em 0;
 }
-.logo img{
+.logo img {
   max-width:100%;
 }
 
 .menu {
   min-width:90%;
+  width: 98%;
+  height: 100%;
   float: right;
   font-family: Montserrat,Arial,sans-serif;
 }
+
+.menu ul li a.salir-icono span {
+  font-size: 1.5em;
+}
+
+.menu ul li a.salir-icono::before {
+  font-size: 1.5em;
+  position: relative;
+  content: "poner iconito";
+  left: -25%;
+}
+
 .menu ul li{
   font-size: 10px;
-  margin-top: 8px;
-  width:12.22%;
-  float:left;
   text-align: center;
   position: relative;
 
@@ -616,26 +634,36 @@ header & menu
     display:block;
     margin:0em auto;
     color: white;
-    width: 8em;
-    opacity: 0.7;
+    width: 100%;
+    opacity: 1;
 
     .fa {
       display: block;
-      font-size: 2em;
+      font-size: 3.5em;
       color: white;
       width: 4em;
-      margin-bottom: 2px;
+      margin-bottom: -22px;
+      bottom: -16px;
+      position: absolute;
     }
     span {
+      margin: 0 auto;
       display: table-cell;
       text-align: center;
       vertical-align: middle;
       height: 25px;
-      width: 8em;
-      font-size: 1.1em;
+      width: 100%;
+      line-break: loose;
+      font-size: 1.9em;
+      font-weight: bold;
+      color: $verde-claro;
       line-height: 1.05em;
+      &:hover {
+        color: #fff;
+      }
     }
     &:hover {
+      color: #fff;
       opacity: 1;
     }
   }
@@ -1652,7 +1680,7 @@ input.button-danger:hover{
 
 .content-content h2{
   font-family:Montserrat,Arial,sans-serif;
-  text-transform:uppercase;
+  text-transform:capitalize;
   color:$verde-oscuro;
   margin-bottom:1em;
 }
@@ -2358,6 +2386,13 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     padding:1.3em 0;
   }
 
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
   /*  HEADER MIO */
   /* MAIN LOGIN MIO */
 * {
@@ -2552,6 +2587,19 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 .login-form form a:hover {
   color: $marron-unete;
 }
+/* Nuevo usuario */
+.content-content h2.unirme {
+  text-align: left;
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+.content-content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Fin nuevo usuario */
 
 /* MAIN LOGIN MIO */
 
@@ -2607,6 +2655,13 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   }
   .menu ul li{
     display:block;
+    text-align: center;
+  }
+  .menu ul li a {
+    text-align: center;
+  }
+  .menu ul li a:hover {
+    color: #fff!important;
   }
   .menu ul li.menu-hamb{
     display:none;
