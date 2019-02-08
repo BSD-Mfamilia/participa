@@ -8,15 +8,27 @@ module RegistrationsHelper
 
   # lists of countries, current country provinces and current province towns, sorted with spanish collation
   def get_countries
-    Carmen::Country.all.sort &RegistrationsHelper.region_comparer
+    #Carmen::Country.all.sort &RegistrationsHelper.region_comparer
+    sacar_solo_espania &RegistrationsHelper.region_comparer
   end
+
+	def sacar_solo_espania
+		Carmen::Country.all.select{|c| %w{ES}.include?(c.code)}
+	end
+
+	def sacar_solo_madrid
+		c = Carmen::Country.coded('ES')
+		c.subregions.select{|c| %w{M}.include?(c.code)}
+	end
 
   def get_provinces country
     c = Carmen::Country.coded(country)
+    
     if not (c and c.subregions)
       []
     else
-      c.subregions.sort &RegistrationsHelper.region_comparer
+      #c.subregions.sort &RegistrationsHelper.region_comparer
+      sacar_solo_madrid &RegistrationsHelper.region_comparer
     end
   end
 
