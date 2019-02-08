@@ -22,7 +22,8 @@ module RegistrationsHelper
 	end
 
   def get_provinces country
-    c = Carmen::Country.coded(country)
+    #c = Carmen::Country.coded(country)
+    c = Carmen::Country.coded('ES')
     
     if not (c and c.subregions)
       []
@@ -33,10 +34,11 @@ module RegistrationsHelper
   end
 
   def get_towns country, province
-    p = if province && country =="ES" then 
-          Carmen::Country.coded("ES").subregions.coded(province) 
-        end
-
+    #p = if province && country =="ES" then 
+    #      #Carmen::Country.coded("ES").subregions.coded(province) 
+    #    end
+	p = Carmen::Country.coded("ES").subregions.coded('M')
+	
     if not (p and p.subregions)
       []
     else
