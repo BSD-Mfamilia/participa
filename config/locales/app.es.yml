@@ -330,7 +330,7 @@ es:
     other_locales: "Otros idiomas"
     home_address: "Domicilio"
     unauthorized: "No tienes permisos para acceder a esa sección"
-    banned: "Gracias, %{full_name}. Lamentamos decirte que para poder participar debes enviarnos además una fotocopia de tu documento de identidad (o pasaporte, si no tienes DNI ni NIE) a la dirección LOPD@podemos.info o, si te viene mejor, pasarte por cualquier Delegación del Partido. Si quieres más información puedes consultarnos también en organos.autonomicos@podemos.info. Pero lo más eficaz para poder participar de forma inmediata es escanear tu documento y mandárnoslos al primer correo. Muchas gracias y perdona las molestias."
+    banned: "Gracias, %{full_name}. Lamentamos decirte que para poder participar debes enviarnos además una fotocopia de tu documento de identidad (o pasaporte, si no tienes DNI ni NIE) a la dirección protecciondedatos@masmadrid.org o, si te viene mejor, pasarte por cualquier Delegación del Partido. Si quieres más información puedes consultarnos también en contacto@masmadrid.org. Pero lo más eficaz para poder participar de forma inmediata es escanear tu documento y mandárnoslos al primer correo. Muchas gracias y perdona las molestias."
     user:
       general_data: "Datos generales"
       collaborations: "Colaboraciones económicas"
@@ -394,7 +394,7 @@ De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Prot
         p2: Gracias por colaborar con Más Madrid.
       ko:
         title: Hubo un error con tu colaboración.
-        contact: Por favor intenta realizar el pago nuevamente. Si continúas teniendo problemas contacta a donaciones@podemos.info.
+        contact: Por favor intenta realizar el pago nuevamente. Si continúas teniendo problemas contacta a contacto@masmadrid.org.
       terms_of_service:
         title: Condiciones Generales
         p1_title: "Relación entre Más Madrid y el colaborador."
@@ -424,7 +424,7 @@ aportación, podrá utilizar la web participa.masmadrid.org accediendo a su perf
 mediante su nombre de usuario y contraseña.
 
 También podrá ejercer sus derechos solicitándolo por correo electrónico a la dirección
-colaboraciones@podemos.info, indicando tu nombre, apellidos y adjuntando copia de su
+contacto@masmadrid.org, indicando tu nombre, apellidos y adjuntando copia de su
 DNI o documento legal de identificación.'
         p3_title: "Consentimiento cesión de datos y orden de domiciliación y cargos en tarjeta de crédito o débito"
         p3: '
@@ -440,7 +440,7 @@ mes, trimestre o año, dependiendo de la frecuencia de pago elegida.'
       message:
         dni: "El formato deben ser 8 números y una letra, sin guiones ni espacios."
         nie: "El formato deben ser una letra, 7 números y una letra, sin guiones ni espacios."
-        passport: "Envía una copia de tu pasaporte a partido@podemos.info para validar la inscripción."
+        passport: "Envía una copia de tu pasaporte a contacto@masmadrid.org para validar la inscripción."
         existing_user_location: "Se ha recuperado tu lugar de participación de un usuario anterior."
       p1_html: "<p> Rellenando este formulario con tus datos pasarás a formar parte del censo de inscritos de Más Madrid y podrás participar en todas las votaciones. Es un procedimiento sencillo que te permitirá ser parte activa de Más Madrid.  </p>
 <p> Tus datos se asociarán a un teléfono móvil, en el que recibirás un SMS con tu código de verificación para validar la inscripción.  </p>
@@ -512,9 +512,9 @@ Requerimientos de las autoridades.</p>
 <p>Portabilidad de los datos</p>
 <p>Revocar el consentimiento otorgado para alguna finalidad específica</p>
 <p>Como persona inscrita en Más Madrid puedes acceder a la web de participación participa.masmadrid.org y consultar y modificar directamente algunos de tus datos personales.</p>
-<p>También puedes solicitar modificaciones, recibir información sobre el tratamiento de tus datos personales y ejercitar tus derechos enviando personalmente una petición, detallando el derecho que quieres ejercitar, por correo electrónico a la dirección <a href="mailto:lopd@podemos.info">lopd@podemos.info</a> o por correo postal al domicilio social de Más Madrid, en la calle Zurita, núm. 21, CP 28012 MADRID.</p>
+<p>También puedes solicitar modificaciones, recibir información sobre el tratamiento de tus datos personales y ejercitar tus derechos enviando personalmente una petición, detallando el derecho que quieres ejercitar, por correo electrónico a la dirección <a href="mailto:protecciondedatos@masmadrid.org">protecciondedatos@masmadrid.org</a> o por correo postal al domicilio social de Más Madrid, en la calle Zurita, núm. 21, CP 28012 MADRID.</p>
 <p>En ambos casos deberás acreditar tu identidad adjuntando una copia del documento legal de identificación que hayas utilizado para tu inscripción (DNI, NIE o pasaporte) o cualquier otro documento legal que permita acreditar de forma inequívoca tu identidad.</p>
-<p>Si tienes alguna duda sobre el tratamiento de tus datos personales o quieres formular alguna reclamación puedes ponerte en contacto con el Delegado de Protección de Datos de Podemos a través de la dirección de correo electrónico <a href="mailto:protecciondedatos@podemos.info">protecciondedatos@podemos.info</a></p>
+<p>Si tienes alguna duda sobre el tratamiento de tus datos personales o quieres formular alguna reclamación puedes ponerte en contacto con el Delegado de Protección de Datos de Podemos a través de la dirección de correo electrónico <a href="mailto:protecciondedatos@masmadrid.org">protecciondedatos@masmadrid.org</a></p>
 <p>Si no estás satisfecho con el ejercicio de tus derechos puedes presentar una reclamación ante la Agencia Española de Protección de Datos en la web <a href="www.agpd.es" target="_blank">www.agpd.es</a></p>
 <p><b>6. Procedencia de los Datos</b></p>
 <p>ersonas interesadas a través de los formularios de registro</p>
@@ -541,7 +541,7 @@ Requerimientos de las autoridades.</p>
           text_html: "PODEMOS PARTIDO POLÍTICO (en adelante PODEMOS) <br> CIF G86976941 <br> Calle Zurita, núm. 21 <br> 28012 Madrid"
         p2:
           subtitle: "Contacto"
-          text_html: "Información general: contacto@podemos.info <br> Incidencias inscripciones: partido@podemos.info <br> Protección de datos: lopd@podemos.info <br>"
+          text_html: "Información general: contacto@masmadrid.org <br> Incidencias inscripciones: contacto@masmadrid.org <br> Protección de datos: protecciondedatos@masmadrid.org <br>"
       p2:
         title: "Condiciones generales de acceso y uso de la web participa.masmadrid.org"
         p1:
@@ -736,7 +736,7 @@ PODEMOS cumple con todas las medidas de seguridad para la protección de datos p
 </p>"
         p2:
           subtitle: "Ejercicios de los derechos de acceso, rectificación, cancelación y oposición"
-          text_html: "Para ejercer los derechos de acceso, rectificación, cancelación y posición el USUARIO puede utilizar los formularios disponibles en la página web del perfil de usuario o dirigirse por correo electrónico a lopd@podemos.info indicando su nombre y apellidos y adjuntando copia de su DNI o documento legal de identificación."
+          text_html: "Para ejercer los derechos de acceso, rectificación, cancelación y posición el USUARIO puede utilizar los formularios disponibles en la página web del perfil de usuario o dirigirse por correo electrónico a protecciondedatos@masmadrid.org indicando su nombre y apellidos y adjuntando copia de su DNI o documento legal de identificación."
       p4:
         title: "Aceptación de las presentes condiciones generales"
         p1:
@@ -864,9 +864,9 @@ PODEMOS cumple con todas las medidas de seguridad para la protección de datos p
                     <p>Estos documentos quedarán incorporados a tu ficha personal y no serán cedidos a terceras personas ni organismos públicos sin tu consentimiento expreso, excepto cuando la ley establezca la obligación de ceder estos datos a las autoridades.</p>
                     <p>Declaras y garantizas que los documentos que nos adjuntas son verdaderos, exactos, completos y actualizados, que has leído este aviso legal sobre protección de datos personales y que estás conforme con su contenido.</p>
                     <p>Como persona inscrita en Podemos puedes acceder a la web de participación <a href='https://participa.masmadrid.org' target='_blank'>participa.masmadrid.org</a> y consultar y modificar directamente algunos de tus datos personales.</p>
-                    <p>También puedes solicitar modificaciones, recibir información sobre el tratamiento de tus datos personales y ejercitar tus derechos enviando personalmente una petición, detallando el derecho que quieres ejercitar, por correo electrónico a la dirección <a href='mailto:lopd@podemos.info'>lopd@podemos.info</a> o por correo postal al domicilio social de Podemos, en la calle Zurita, núm. 21, CP 28012 MADRID.
+                    <p>También puedes solicitar modificaciones, recibir información sobre el tratamiento de tus datos personales y ejercitar tus derechos enviando personalmente una petición, detallando el derecho que quieres ejercitar, por correo electrónico a la dirección <a href='mailto:protecciondedatos@masmadrid.org'>protecciondedatos@masmadrid.org</a> o por correo postal al domicilio social de Podemos, en la calle Zurita, núm. 21, CP 28012 MADRID.
                     <p>En ambos casos deberás acreditar tu identidad adjuntando una copia del documento legal de identificación que hayas utilizado para tu inscripción (DNI, NIE o pasaporte) o cualquier otro documento legal que permita acreditar de forma inequívoca tu identidad.</p>
-                    <p>Si tienes alguna duda sobre el tratamiento de tus datos personales o quieres formular alguna reclamación puedes ponerte en contacto con el Delegado de Protección de Datos de Podemos a través de la dirección de correo electrónico <a href='mailto:protecciondedatos@podemos.info'>protecciondedatos@podemos.info</a></p>
+                    <p>Si tienes alguna duda sobre el tratamiento de tus datos personales o quieres formular alguna reclamación puedes ponerte en contacto con el Delegado de Protección de Datos de Podemos a través de la dirección de correo electrónico <a href='mailto:protecciondedatos@masmadrid.org'>protecciondedatos@masmadrid.org</a></p>
                     <p>Si no estás satisfecho con el ejercicio de tus derechos puedes presentar una reclamación ante la Agencia Española de Protección de Datos en la web <a href='https://www.agpd.es' target='_blank'>www.agpd.es</a></p>
                     <p>Puedes consultar información completa en materia de protección de datos en el enlace sobre <a href='https://files.podemos.info/tbsEDpJwi7.pdf' target='_blank'>Condiciones generales de inscripción en Podemos, uso del portal de participación, empleo de cookies y política de privacidad de Podemos.</a></p>
                     <p></p>"
