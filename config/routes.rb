@@ -31,7 +31,7 @@ Rails.application.routes.draw do
       end
     end
   end
-  scope "/(:locale)", locale: /es|ca|eu/ do
+  scope "/(:locale)", locale: /es/ do
 
     if Rails.application.secrets.openid.try(:[], "enabled")
       # WARNING!!

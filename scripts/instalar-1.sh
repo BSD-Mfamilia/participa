@@ -10,6 +10,7 @@ sudo apt-get upgrade -y
 
 
 #Instalación de dependencias:
+sudo apt-get install dirmngr -y
 sudo apt-get install curl -y
 sudo apt-get install libicu52 -y                       # para manejar cadenas Unicode correctamente
 sudo apt-get install postgres -y                       # para la base de datos, o mysql-server si lo prefieres
