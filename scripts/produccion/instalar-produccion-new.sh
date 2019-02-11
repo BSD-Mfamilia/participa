@@ -5,6 +5,10 @@
 
 
 
+#ttps://www.phusionpassenger.com/library/install/nginx/install/oss/stretch/
+
+
+
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
 
 sudo touch /etc/apt/sources.list.d/passenger.list
