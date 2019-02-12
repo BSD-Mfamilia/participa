@@ -35,7 +35,9 @@
             <%= nav_menu_link_to "Iniciativas", proposals_path, [proposals_path], title: "Iniciativas" %>
           </li>
           <li>
-            <%= nav_menu_link_to "Tienda", impulsa_path, [impulsa_path], title: "Tienda" %>
+            <%= nav_menu_link_to "Tienda", impulsa_path, [impulsa_path], title: "Tienda" 
+            # Habrá que ver a donde se dirige este enlace, porque en los otro no había tienda
+            %>
           </li>
           <li>
             <%= nav_menu_link_to "Salir", destroy_user_session_path, [destroy_user_session_path], method: :delete, title: "Cerrar sesión", class: "salir-icono" %>
