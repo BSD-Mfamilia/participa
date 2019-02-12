@@ -6,6 +6,8 @@ module SMS
         sms = Esendex::Account.new
         sms.send_message( to: to, body: "Tu código de activación es #{code}") 
       when "development", "test"
+	sms = Esendex::Account.new
+        sms.send_message( to: to, body: "Tu código de activación es #{code}")
         Rails.logger.info "ACTIVATION CODE para #{to} == #{code}"
       else
         Rails.logger.info "ACTIVATION CODE para #{to} == #{code}"
