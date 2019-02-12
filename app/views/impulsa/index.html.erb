@@ -16,10 +16,10 @@
       <% else %>
         <h3 style="margin-top:30px;">¿Qué es IMPULSA?</h3>
 
-        <p>IMPULSA nace para facilitar el desarrollo de proyectos emprendedores con proyección social. El apoyo ofrecido desde Podemos consiste en una dotación económica para los proyectos más votados por la gente, y en la posibilidad de utilizar el Banco de Talentos de Podemos para así abrir sus proyectos a nuevos colaboradores, y especialmente a aquellos de los que más necesitados están de sus habilidades. La dotación económica del Proyecto IMPULSA procede del remanente de los cargos públicos electos de Podemos, quienes con el compromiso de ser gente corriente y hacer de la política un servicio a la sociedad, tienen un límite salarial, de cuyo excedente procede la financiación de los proyectos ganadores. La existencia de un fondo común y de un sistema democrático, participativo y transparente de selección de proyectos permitirá evitar el desarrollo de vínculos entre los cargos públicos electos y las iniciativas concursantes que desvirtúen los objetivos del proyecto.</p>
+        <p>IMPULSA nace para facilitar el desarrollo de proyectos emprendedores con proyección social. El apoyo ofrecido desde Más Madrid consiste en una dotación económica para los proyectos más votados por la gente, y en la posibilidad de utilizar el Banco de Talentos de Más Madrid para así abrir sus proyectos a nuevos colaboradores, y especialmente a aquellos de los que más necesitados están de sus habilidades. La dotación económica del Proyecto IMPULSA procede del remanente de los cargos públicos electos de Más Madrid, quienes con el compromiso de ser gente corriente y hacer de la política un servicio a la sociedad, tienen un límite salarial, de cuyo excedente procede la financiación de los proyectos ganadores. La existencia de un fondo común y de un sistema democrático, participativo y transparente de selección de proyectos permitirá evitar el desarrollo de vínculos entre los cargos públicos electos y las iniciativas concursantes que desvirtúen los objetivos del proyecto.</p>
       <% end %>
 
-      <p style="text-align:right;"><%= link_to "Ver más información", "http://podemos.info/impulsa" %></p> 
+      <p style="text-align:right;"><%= link_to "Ver más información", "http://masmadrid.info/impulsa" %></p> 
 
       <% if @edition && @edition.active? %>
         <% if @edition.allow_creation? && (current_user.nil? || (@project && !@project.persisted?)) %>
