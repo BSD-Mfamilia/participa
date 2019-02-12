@@ -197,6 +197,11 @@ general
   color: $verde-claro;
   font-size: 18px;
   margin: 10px 0px;
+  text-align: left;
+}
+
+.footer-content ul li {
+  text-align: left;
 }
 
 .footer-content ul li a {
@@ -345,17 +350,59 @@ home
 }
 
 .boton-unete {
-  border: none;
-  color: transparent;
-  position: absolute;
-  background: url(boton-unete.svg);
-  background-repeat: no-repeat;
-  width: 170px;
-  height: 60px;
-  background-size: auto;
   cursor: pointer;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.boton-unete {
+  text-transform: uppercase;
+  cursor: pointer;
+  left: 0px;
+  transform: translateX(40%);
+  margin: 0 auto;
+  background-color: $marron-unete!important;
+  font-size: 18px!important;
+  position: relative;
+  border: none;
+  border-radius: 0px!important;
+  display: inline-block;
+  opacity: 1!important;
+  text-align: center;
+  width: 170px!important;
+  height: 48px;
+  padding: 10px!important;
+  font-weight: bold;
+  color: #fff!important;
+  text-decoration: none;
+  font-size: 20px;
+
+  .boton-unete:hover {
+    opacity: 0.9!important;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -15px;
+    height: 15px;
+    width: 100%;
+    left: -8px;
+    transform: skewX(-45deg);
+    background-color: $borde-unete;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: -15px;
+    height: 100%;
+    width: 15px;
+    bottom: -8px;
+    transform: skewY(-45deg);
+    background-color: $borde-unete;
+  }
+
 }
 
 .boton1 {
@@ -428,7 +475,7 @@ home
   
     &::after {
       position: absolute;
-      content: '';  
+      content: '';
       right: -15px;
       height: 100%;
       width: 15px;
@@ -436,6 +483,79 @@ home
       transform: skewY(45deg);
       background-color: $marron-unete;
     }
+
+}
+
+.img-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px!important;
+}
+
+.btn-rel {
+  padding: 10px 25px 25px 10px!important;
+}
+
+.boton-ocre-verde input {
+  margin: 0 auto;
+  background-color: $ocre-login!important;
+  font-size: 18px!important;
+  position: relative;
+  border-radius: 0px!important;
+  display: inline-block;
+  opacity: 1!important;
+  text-align: center;
+  width: auto!important;
+  padding: 10px!important;
+  font-weight: bold;
+  color: $verde-oscuro!important;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.boton-ocre-verde {
+  margin: 0 auto;
+  background-color: $ocre-login!important;
+  font-size: 18px!important;
+  position: relative;
+  border-radius: 0px!important;
+  display: inline-block;
+  opacity: 1!important;
+  text-align: center;
+  width: 220px!important;
+  padding: 10px!important;
+  font-weight: bold;
+  color: $verde-oscuro!important;
+  text-decoration: none;
+  font-size: 20px;
+
+  .boton-ocre-verde:hover {
+    opacity: 0.9!important;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -15px;
+    height: 15px;
+    width: 100%;
+    left: 8px;
+    transform: skewX(45deg);
+    background-color: $verde-medio;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';  
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    bottom: -8px;
+    transform: skewY(45deg);
+    background-color: $verde-medio;
+  }
 
 }
 
@@ -509,8 +629,11 @@ home
 
 /* Inicio */
 .img-whatsapp {
-  display: block;
-  width: 98%;
+  min-height: 190px;
+  min-width: 560px;
+  height: 110%;
+  width: 70%;
+  display: inline-block;
   margin: 0 auto;
 }
 
@@ -769,6 +892,11 @@ submenu
   color:#fff;
 }
 
+.darme-baja {
+  background-color: transparent!important;
+  color: $verde-medio!important;
+}
+
 #personal-data-content .row {
   overflow: inherit;
 }
@@ -793,11 +921,11 @@ steps
   margin:0;
   padding:0;
   overflow:hidden;
-  background:#d7cad8;
+  background:$ocre-login;
 }
 .steps3 li:nth-child(1),
 .steps3 li:nth-child(2){
-  background:#d7cad8 image-url("bg.steps-tip-right.png") right 50% no-repeat;
+  background:$ocre-login image-url("bg.steps-tip-right.png") right 50% no-repeat;
 }
 .steps3 li:nth-child(2) span.block,
 .steps3 li:nth-child(3) span.block{
@@ -881,10 +1009,10 @@ pagination
 .pagination li a{
   padding:0.5em;
   color:$verde-oscuro;
-  background:#d7cad8;
+  background:$verde-claro;
 }
 .pagination li a:hover{
-  background:#8e618c;
+  background:$verde-oscuro;
   color:#fff;
 }
 .pagination li.active a{
@@ -921,7 +1049,7 @@ tools
   clear:both;
 }
 .box-poll div{
-  background:#d7cad8;
+  background:#d4d4d4;
   border-radius:3px;
   overflow:hidden;
   margin:0;
@@ -1201,7 +1329,7 @@ proposals
 
 .generic-wrapper {
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 1200px;
   min-height: 700px;
 
   h1 {
@@ -1372,27 +1500,27 @@ proposals
   }
   
   .finish:before {
-    content:image-url("ico.proposal-time.png");
+    content:image-url("#");
     padding-right: 5px;
   }
   
   .support:before {
-    content:image-url("ico.proposal-clipboard.png");
+    content:image-url("#");
     padding-right: 5px;
   }
 
   .check:before {
-    content:image-url("ico.proposal-check.png");
+    content:image-url("#");
     padding-right: 5px;
   }
 
   .times:before {
-    content:image-url("ico.proposal-times.png");
+    content:image-url("#");
     padding-right: 5px;
   }
 
   .time-left:before {
-    content:image-url("ico.proposal-time-left.png");
+    content:image-url("#");
     display: inherit;
   }
 
@@ -1462,7 +1590,7 @@ proposals
     padding-bottom: 10px;
 
     .name {
-      color: #954e99;
+      color: $verde-medio;
       padding-left: 50px;
     }
     
@@ -1712,7 +1840,7 @@ input.button-danger:hover{
 }
 
 .content-content h2{
-  font-family:Montserrat,Arial,sans-serif;
+  font-family: Arial,sans-serif;
   text-transform:capitalize;
   color:$verde-oscuro;
   margin-bottom:1em;
@@ -2136,6 +2264,13 @@ layout 3: 600-768 (intermedia 2) # # # # # # # # # # # # # # # # # # # # # # # #
   /*
   elementos
   */
+
+
+  .boton-ocre-verde {
+    padding: 16px!important;
+    width: 260px;
+  }
+
   .intro{
     margin:0;
     padding-bottom:2em;
@@ -2461,6 +2596,9 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   width: 49%;
 }
 
+.boton-unete {
+  left: -35px;
+}
 .login-form-contenedor {
   width: 51%;
 }
@@ -2530,20 +2668,6 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   height: 60px;
   background-size: auto;
   cursor: pointer;
-}
-
-.boton-unete {
-  border: none;
-  color: transparent;
-  position: absolute;
-  background: url(boton-unete.svg);
-  background-repeat: no-repeat;
-  width: 170px;
-  height: 60px;
-  background-size: auto;
-  cursor: pointer;
-  left: 0;
-  transform: translateX(40%);
 }
 
 .login-form {
@@ -2662,9 +2786,7 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 /* Inicio */
   .img-whatsapp {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
+
   }
 
 /* Inicio */
@@ -2947,7 +3069,6 @@ body.noheader {
   background: white;
 }
 
-
 .funding ul{
   position:relative;
 
@@ -2964,17 +3085,8 @@ body.noheader {
       position:relative;
     }
 
-    div.funding-text{
+    div.funding-text {
       padding-top:7em;
-    }
-
-    div.box-funding:before{
-      display: inline-block;
-      margin: 0;
-      content:image-url("ico.ropes-purple.png");
-      position:absolute;
-      top: -1.7em;
-      left: -1.7em;
     }
 
     .button{
