@@ -124,6 +124,16 @@ box info & alerts
 /* -----------------------------------
 form elements
 ----------------------------------- */
+/* Estilo para reducir anchura del formulario de editar usuario */
+
+div.js-personal-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+nav#personal-data-submenu {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 fieldset legend{
   font-family:Montserrat,Arial,sans-sefif;
@@ -511,7 +521,7 @@ layout 2: 460-600 (intermedia 1) # # # # # # # # # # # # # # # # # # # # # # # #
   .content-content span.no-input,
   fieldset .inputlabel-box .input-box,
   fieldset .inputlabel-box .form-wrapper{
-    width:63%;
+    width:100%;
     clear:none;
   }
   .table-collaborations{
@@ -591,7 +601,7 @@ layout 3: 600-768 (intermedia 2) # # # # # # # # # # # # # # # # # # # # # # # #
   .content-content span.no-input,
   fieldset .inputlabel-box .input-box,
   fieldset .inputlabel-box .form-wrapper{
-    width:63%;
+    width:100%;
     clear:none;
   }
   .table-collaborations{
@@ -678,7 +688,7 @@ layout 4: 769-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
   .content-content span.no-input,
   fieldset .inputlabel-box .input-box,
   fieldset .inputlabel-box .form-wrapper{
-    width:63%;
+    width:100%;
     clear:none;
   }
   .table-collaborations{
@@ -762,7 +772,7 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   .content-content span.no-input,
   fieldset .inputlabel-box .input-box,
   fieldset .inputlabel-box .form-wrapper{
-    width:63%;
+    width:100%;
     clear:none;
   }
   .table-collaborations{

@@ -892,6 +892,11 @@ submenu
   color:#fff;
 }
 
+.darme-baja {
+  background-color: transparent!important;
+  color: $verde-medio!important;
+}
+
 #personal-data-content .row {
   overflow: inherit;
 }
@@ -1835,7 +1840,7 @@ input.button-danger:hover{
 }
 
 .content-content h2{
-  font-family:Montserrat,Arial,sans-serif;
+  font-family: Arial,sans-serif;
   text-transform:capitalize;
   color:$verde-oscuro;
   margin-bottom:1em;
@@ -3064,7 +3069,6 @@ body.noheader {
   background: white;
 }
 
-
 .funding ul{
   position:relative;
 
@@ -3081,17 +3085,8 @@ body.noheader {
       position:relative;
     }
 
-    div.funding-text{
+    div.funding-text {
       padding-top:7em;
-    }
-
-    div.box-funding:before{
-      display: inline-block;
-      margin: 0;
-      content:image-url("ico.ropes-purple.png");
-      position:absolute;
-      top: -1.7em;
-      left: -1.7em;
     }
 
     .button{

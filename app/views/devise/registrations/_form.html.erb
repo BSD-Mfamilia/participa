@@ -300,6 +300,13 @@
         <%= f.actions class: 'enter' do %>
             <%= f.action :submit, label: t("devise.buttons.edit"), button_html: {class: "button"} %>
         <% end %>
+        <ul class="submenu">
+          <li>
+            <a href="#cancel-account" class="js-change-tab darme-baja">
+              <span><%= t("podemos.user.cancel_account") %></span>
+            </a>
+          </li>
+        </ul>
     <% end %><%# if action == "edit" %>
   </fieldset>
 <% end %>
