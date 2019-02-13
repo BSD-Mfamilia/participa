@@ -9,4 +9,4 @@ rvm use 2.4.2
 rvm use 2.4.2
 gem search '^rails$' --all
 gem install rails -v 5.2.2
-gem install mailcatcher # para probar en desarrollo
+#gem install mailcatcher # para probar en desarrollo
