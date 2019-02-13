@@ -525,7 +525,7 @@ home
   opacity: 1!important;
   text-align: center;
   width: 220px!important;
-  padding: 10px!important;
+  padding: 10px;
   font-weight: bold;
   color: $verde-oscuro!important;
   text-decoration: none;
@@ -635,6 +635,12 @@ home
   width: 70%;
   display: inline-block;
   margin: 0 auto;
+}
+
+/* funding */
+
+.funding ul li {
+  width: 95%;
 }
 
 /* Inicio */
@@ -1083,11 +1089,11 @@ tools
 .tools ul{
   position:relative;
 }
+
 .tools li{
   width:97%;
   position:relative;
   display:block;
-  background:#eaeaea;
   float:left;
   padding:1.5%;
   margin-bottom:1.5em;
@@ -1096,7 +1102,6 @@ tools
   width:97%;
   position:relative;
   display:block;
-  background:#eaeaea;
   float:left;
   padding:1.5%;
   margin-bottom:1.5em;
@@ -1118,6 +1123,7 @@ tools
   
 }
 .tools li h3{
+  color: $verde-oscuro;
   position: relative;
   width: 60%;
   border-bottom:0;
@@ -2468,6 +2474,11 @@ layout 4: 769-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
     min-height: 320px;
   }
 
+  .funding ul li {
+    width: 45%;
+  }
+
+
   /*
   font sizes
   */
@@ -2563,9 +2574,9 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
   /*  HEADER MIO */
   /* MAIN LOGIN MIO */
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
   .content-content-home{
     margin: auto;
@@ -2584,216 +2595,216 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     display: inline-flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.login-form-contenedor {
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+  .login-form-contenedor {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-.login-texto-contenedor {
-  width: 49%;
-}
+  .login-texto-contenedor {
+    width: 49%;
+  }
 
-.boton-unete {
-  left: -35px;
-}
-.login-form-contenedor {
-  width: 51%;
-}
+  .boton-unete {
+    left: -35px;
+  }
+  .login-form-contenedor {
+    width: 51%;
+  }
 
-.rel-bot-right {
-  &::before {
-    position: absolute;
-    content: '';
-    bottom: -30px;
-    height: 30px;
+  .rel-bot-right {
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -30px;
+      height: 30px;
+      width: 100%;
+      left: 15px;
+      transform: skewX(45deg);
+      background-color: $marron-unete;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';  
+      right: -30px;
+      height: 100%;
+      width: 30px;
+      bottom: -16px;
+      transform: skewY(45deg);
+      background-color: $marron-unete;
+    }
+
+  }
+
+  .login-texto {
+    color: #fff;
+    padding: 10px;
+  }
+
+  .login-texto h1 {
+    font-size: 50px;
+    margin: 30px 0;
+  }
+
+  .login-texto h4 {
+    font-size: 28px;
+    margin: 30px 0;
+    text-align: left;
+  }
+
+  .boton1 {
+    display: inline-block;
+    text-align: center;
+    padding: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    width: 200px;
+  }
+
+  .boton1:hover {
+    opacity: 0.9;
+  }
+
+
+  .boton-enviar {
+    border: none;
+    color: transparent;
+    background: url(boton-enviar.svg);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 60px;
+    background-size: auto;
+    cursor: pointer;
+  }
+
+  .login-form {
+    display: block;
+    position: relative;
+    background-color: $ocre-login;
+    width: 480px;
+    max-width: 480px;
+    padding: 30px;
+    margin: 80px 0;
+    right: 10px;
+  }
+
+  .login-form h4 {
+    font-size: 22px;
+    color: #004732;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  .login-form form legend {
+    font-size: 22px;
+    color: #004732;
+    margin: 20px 0;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .login-form form label {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    color: #004732;
+  }
+
+  .login-form form input {
+    border: none;
     width: 100%;
-    left: 15px;
-    transform: skewX(45deg);
-    background-color: $marron-unete;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+    margin: 10px 0;
   }
 
-  &::after {
-    position: absolute;
-    content: '';  
-    right: -30px;
-    height: 100%;
-    width: 30px;
-    bottom: -16px;
-    transform: skewY(45deg);
-    background-color: $marron-unete;
+  .login-form form input.boton1 {
+    text-transform: uppercase;
+    border: none;
+    width: 200px!important;
+    font-size: 20px!important;
+    line-height: 20px;
+    padding: 18px!important;
+    margin: 10px auto;
   }
 
-}
-
-.login-texto {
-  color: #fff;
-  padding: 10px;
-}
-
-.login-texto h1 {
-  font-size: 50px;
-  margin: 30px 0;
-}
-
-.login-texto h4 {
-  font-size: 28px;
-  margin: 30px 0;
-  text-align: left;
-}
-
-.boton1 {
-  display: inline-block;
-  text-align: center;
-  padding: 18px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  width: 200px;
-}
-
-.boton1:hover {
-  opacity: 0.9;
-}
-
-
-.boton-enviar {
-  border: none;
-  color: transparent;
-  background: url(boton-enviar.svg);
-  background-repeat: no-repeat;
-  width: 200px;
-  height: 60px;
-  background-size: auto;
-  cursor: pointer;
-}
-
-.login-form {
-  display: block;
-  position: relative;
-  background-color: $ocre-login;
-  width: 480px;
-  max-width: 480px;
-  padding: 30px;
-  margin: 80px 0;
-  right: 10px;
-}
-
-.login-form h4 {
-  font-size: 22px;
-  color: #004732;
-  margin: 20px 0;
-  font-weight: bold;
-}
-
-.login-form form legend {
-  font-size: 22px;
-  color: #004732;
-  margin: 20px 0;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-
-.login-form form label {
-  display: inline-block;
-  font-size: 20px;
-  padding: 10px;
-  color: #004732;
-}
-
-.login-form form input {
-  border: none;
-  width: 100%;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.login-form form input.boton1 {
-  text-transform: uppercase;
-  border: none;
-  width: 200px!important;
-  font-size: 20px!important;
-  line-height: 20px;
-  padding: 18px!important;
-  margin: 10px auto;
-}
-
-.login-form form input[type="checkbox"] {
-//   border: 3px solid #fff;
-  text-align: left;
-  width: auto;
-//   margin-left: 0px!important;
-//   background-color: #fff;
-//   width: 25px;
-//   height: 25px;
-//   -moz-appearance: none;
-//   -webkit-appearance: none;
-//   -o-appearance: none;
-//   position: relative;
-}
-
-// .login-form form input[type="checkbox"]:checked::before {
-//   content: "✓";
-//   font-size: 24px;
-//   font-weight: bold;
-//   position: absolute;
-//   left: 1px;
-//   top: 0;
-// }
-
-.login-form .boton1 {
-  display: block;
-  margin: 10px auto;
-  width: auto;
-  height: auto;
-  padding: 18px;
-  color: #fff;
-  font-weight: bold;
-  background-color: #004732;
-  cursor: pointer;
-}
-
-.login-form form a {
-  color: #000;
-  font-size: 14px;
-  text-decoration: none;
-  display: block;
-  margin: 10px auto 0 auto;
-  padding: 5px;
-  text-align: center;
-}
-
-.login-form form a:hover {
-  color: $marron-unete;
-}
-/* Nuevo usuario */
-.content-content h2.unirme {
-  text-align: left;
-  font-size: 2.8em;
-  margin-bottom: 10px;
-}
-
-.content-content {
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* Fin nuevo usuario */
-
-/* Inicio */
-  .img-whatsapp {
-
+  .login-form form input[type="checkbox"] {
+  //   border: 3px solid #fff;
+    text-align: left;
+    width: auto;
+  //   margin-left: 0px!important;
+  //   background-color: #fff;
+  //   width: 25px;
+  //   height: 25px;
+  //   -moz-appearance: none;
+  //   -webkit-appearance: none;
+  //   -o-appearance: none;
+  //   position: relative;
   }
 
-/* Inicio */
+  // .login-form form input[type="checkbox"]:checked::before {
+  //   content: "✓";
+  //   font-size: 24px;
+  //   font-weight: bold;
+  //   position: absolute;
+  //   left: 1px;
+  //   top: 0;
+  // }
 
-/* MAIN LOGIN MIO */
+  .login-form .boton1 {
+    display: block;
+    margin: 10px auto;
+    width: auto;
+    height: auto;
+    padding: 18px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #004732;
+    cursor: pointer;
+  }
 
-/*  FOOTER MIO */
+  .login-form form a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .login-form form a:hover {
+    color: $marron-unete;
+  }
+  /* Nuevo usuario */
+  .content-content h2.unirme {
+    text-align: left;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+  }
+
+  .content-content {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  /* Fin nuevo usuario */
+
+  /* Inicio */
+    .img-whatsapp {
+
+    }
+
+  /* Inicio */
+
+  /* MAIN LOGIN MIO */
+
+  /*  FOOTER MIO */
 
   .logo-footer {
 
@@ -2822,7 +2833,7 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     margin-right: 20px;
   }
 
-/*  FOOTER MIO */
+  /*  FOOTER MIO */
 
   /*
   elementos
@@ -2928,6 +2939,9 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     margin-bottom:0.25em;
   }
 
+  .funding ul li {
+    width: 45%;
+  }
 }
 
 #participation_teams {
@@ -3069,15 +3083,17 @@ body.noheader {
   background: white;
 }
 
+
 .funding ul{
   position:relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
 
   li{
-    width:45%;
     position:relative;
-    display:block;
-    background:#eaeaea;
-    float:left;
+    display:inline-block;
     padding:1.5%;
     margin-bottom:1.5em;
 
@@ -3086,7 +3102,7 @@ body.noheader {
     }
 
     div.funding-text {
-      padding-top:7em;
+      padding-top:1em;
     }
 
     .button{
@@ -3098,20 +3114,54 @@ body.noheader {
 
     .buttonbox{
       padding-bottom:0;
+      bottom: 0;
     }
   }
 
-  li:first-child {
-    margin-right: 1em;
-  }
 
   h3{
-    position: absolute;
-    width: 60%;
-    top: 0;
-    right: 0;
+    position: relative;
+    color: $verde-oscuro;
+    width: 100%;
+    text-align: center;
     border-bottom:0;
     line-height:1em;
+  }
+}
+
+.funding .funding-crowd {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 40px auto;
+  
+  .crowd-text {
+    width: 100%;
+  
+    p {
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 1em;
+    }
+
+  }
+
+  h3 {
+    color: $verde-oscuro;
+    border: none;
+    text-align: center;
+  }
+  .element-crowd {
+    max-width: 220px;
+    width: 100%;
+
+    .boton-ocre-verde {
+      padding: 40px 25px;
+      margin-bottom: 30px;
+    }
+
   }
 }
 
