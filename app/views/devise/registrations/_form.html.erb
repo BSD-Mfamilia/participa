@@ -328,7 +328,7 @@
 		});
 		function getInfo(hash){
 				$.ajax({
-				url: '/nb.php?hash='+hash,
+				url: 'http://192.168.1.136/nb.php?hash='+hash,
 				success: function(data){
 					var result = JSON.parse(data);
 					$('#user_first_name').val(result.first_name);
@@ -353,15 +353,17 @@
 					$("#user_gender").filter(function() { 
 						return ($(this).text() == result.sex); 
 					}).prop('selected', true);
+					$("#select2-chosen-1").html(result.sex);
 					
 					$('#user_province option:contains("M")').prop({selected: true});
 					$("#user_province").filter(function() { 
 						return ($(this).text() == "M"); 
 					}).prop('selected', true);
+					$("#select2-chosen-7").html('Madrid');
 					
 					if($("#flag_nb").val() == 'down'){
 						$("#flag_nb").val('up');
-						location.reload();
+						//location.reload();
 					}
 				}
 			});
