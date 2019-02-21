@@ -310,3 +310,37 @@
     <% end %><%# if action == "edit" %>
   </fieldset>
 <% end %>
+
+<script type="text/javascript" src="/assets/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var $_GET = {};
+		document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function(){
+			function decode(s) {
+				return decodeURIComponent(s.split("+").join(" "));
+			}
+
+			$_GET[decode(arguments[1])] = decode(arguments[2]);
+			getInfo($_GET["hash"]);
+		});
+		function getInfo(hash){
+				$.ajax({
+				url: '/nb.php?hash='+hash,
+				success: function(data){
+					var result = JSON.parse(data);
+					$('#user_first_name').val(result.first_name);
+					$('#user_last_name').val(result.last_name);
+					$('#user_email').val(result.email);
+					$('#user_email_confirmation').val(result.email);
+					$('#user_address').val(result.address1+' '+result.address2+' '+result.address3);
+					
+					$('#user_gender option:contains(' + result.sex + ')').prop({selected: true});
+					$("#user_gender").filter(function() { 
+						return ($(this).text() == result.sex); 
+					}).prop('selected', true);
+				}
+			});
+		}
+	});
+</script>
