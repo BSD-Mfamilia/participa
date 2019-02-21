@@ -333,7 +333,7 @@
 					$('#user_last_name').val(result.last_name);
 					$('#user_email').val(result.email);
 					$('#user_email_confirmation').val(result.email);
-					$('#user_address').val(result.address1+' '+result.address2+' '+result.address3);
+					//$('#user_address').val(result.address1+' '+result.address2+' '+result.address3);
 					
 					$('#user_gender option:contains(' + result.sex + ')').prop({selected: true});
 					$("#user_gender").filter(function() { 
