@@ -311,6 +311,8 @@
   </fieldset>
 <% end %>
 
+<input type="hidden" id="flag_nb" value="down" />
+
 <script type="text/javascript" src="/assets/jquery-1.7.1.min.js"></script>
 
 <script type="text/javascript">
@@ -333,17 +335,17 @@
 					$('#user_last_name').val(result.last_name);
 					$('#user_email').val(result.email);
 					$('#user_email_confirmation').val(result.email);
-					$('#user_postal_code').val(result.zip);
+					$('#user_postal_code').val(result.primary_address.zip);
 					
 					var direccion = '';
-					if(result.address1 != null){
-						direccion = result.address1;
+					if(result.primary_address.address1 != null){
+						direccion = result.primary_address.address1;
 					}
-					if(result.address2 != null){
-						direccion = direccion+' '+result.address2;
+					if(result.primary_address.address2 != null){
+						direccion = direccion+' '+result.primary_address.address2;
 					}
 					if(result.address3 != null){
-						direccion = direccion+' '+result.address3;
+						direccion = direccion+' '+result.primary_address.address3;
 					}
 					$('#user_address').val(direccion);
 					
@@ -351,6 +353,16 @@
 					$("#user_gender").filter(function() { 
 						return ($(this).text() == result.sex); 
 					}).prop('selected', true);
+					
+					$('#user_province option:contains("M")').prop({selected: true});
+					$("#user_province").filter(function() { 
+						return ($(this).text() == "M"); 
+					}).prop('selected', true);
+					
+					if($("#flag_nb").val() == 'down'){
+						$("#flag_nb").val('up');
+						location.reload();
+					}
 				}
 			});
 		}
