@@ -353,7 +353,14 @@
 					$("#user_gender").filter(function() { 
 						return ($(this).text() == result.sex); 
 					}).prop('selected', true);
-					$("#select2-chosen-1").html(result.sex);
+					if(result.sex == 'M'){
+						$("#select2-chosen-1").html('Masculino');
+					}elseif(result.sex == 'M'){
+						$("#select2-chosen-1").html('Femenino');
+					}else{
+						$("#select2-chosen-1").html('Otro');
+					}
+				
 					
 					$('#user_province option:contains("M")').prop({selected: true});
 					$("#user_province").filter(function() { 
