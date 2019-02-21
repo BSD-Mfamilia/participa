@@ -328,7 +328,7 @@
 		});
 		function getInfo(hash){
 				$.ajax({
-				url: '/nb.php?hash='+hash,
+				url: 'http://192.168.1.136/nb.php?hash='+hash,
 				success: function(data){
 					var result = JSON.parse(data);
 					$('#user_first_name').val(result.first_name);
@@ -353,9 +353,10 @@
 					$("#user_gender").filter(function() { 
 						return ($(this).text() == result.sex); 
 					}).prop('selected', true);
+					
 					if(result.sex == 'M'){
 						$("#select2-chosen-1").html('Masculino');
-					}elseif(result.sex == 'F'){
+					}else if(result.sex == 'F'){
 						$("#select2-chosen-1").html('Femenino');
 					}else{
 						$("#select2-chosen-1").html('Otro');
