@@ -8,6 +8,13 @@
         <article class="intro login-texto">
         <h1>Bienvenido a <br/> Más Madrid</h1>
         <h4>Participa, suma, decide <br> Manuela e Íñigo, te necesitan</h4>
+        <p>Ya somos
+          <span>
+            <% cache("total_users", expires_in: 30.minutes) do %>
+              <%= number_with_delimiter User.confirmed.count %>
+            <% end %>
+          </span>
+          personas inscritas.</p>
           <div class="buttonbox">
             <%= link_to "Únete", new_user_registration_path, class: 'boton-unete' %>
           </div>
