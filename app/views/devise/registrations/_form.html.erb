@@ -170,7 +170,7 @@
       <% if resource.errors.include?(:province) %>
           <%= field_notice_box %>
       <% end %>
-      <%= render partial: 'subregion_select', locals:{country: @user_location[:country], province: @user_location[:province], disabled: false, required: true, field: :province, title:"Provincia", options_filter: (resource.can_change_vote_location? ? User.blocked_provinces : nil ) } %>
+      <%= render partial: 'subregion_select', locals:{country: "ES", province: @user_location[:province], disabled: false, required: true, field: :province, title:"Provincia", options_filter: (resource.can_change_vote_location? ? User.blocked_provinces : nil ) } %>
     </div>
     <div class="inputlabel-box">
       <% if resource.errors.include?(:town) %>
@@ -310,3 +310,71 @@
     <% end %><%# if action == "edit" %>
   </fieldset>
 <% end %>
+
+<input type="hidden" id="flag_nb" name="flag_nb" value="down" />
+
+<script type="text/javascript" src="/assets/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var $_GET = {};
+		document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function(){
+			function decode(s) {
+				return decodeURIComponent(s.split("+").join(" "));
+			}
+
+			$_GET[decode(arguments[1])] = decode(arguments[2]);
+			getInfo($_GET["hash"]);
+		});
+		function getInfo(hash){
+				$.ajax({
+				url: '/nb.php?hash='+hash,
+				success: function(data){
+					var result = JSON.parse(data);
+					$('#user_first_name').val(result.first_name);
+					$('#user_last_name').val(result.last_name);
+					$('#user_email').val(result.email);
+					$('#user_email_confirmation').val(result.email);
+					$('#user_postal_code').val(result.primary_address.zip);
+					
+					var direccion = '';
+					if(result.primary_address.address1 != null){
+						direccion = result.primary_address.address1;
+					}
+					if(result.primary_address.address2 != null){
+						direccion = direccion+' '+result.primary_address.address2;
+					}
+					if(result.address3 != null){
+						direccion = direccion+' '+result.primary_address.address3;
+					}
+					$('#user_address').val(direccion);
+					
+					$('#user_gender option:contains(' + result.sex + ')').prop({selected: true});
+					$("#user_gender").filter(function() { 
+						return ($(this).text() == result.sex); 
+					}).prop('selected', true);
+					
+					if(result.sex == 'M'){
+						$("#select2-chosen-1").html('Masculino');
+					}else if(result.sex == 'F'){
+						$("#select2-chosen-1").html('Femenino');
+					}else{
+						$("#select2-chosen-1").html('Otro');
+					}
+				
+					
+					$('#user_province option:contains("M")').prop({selected: true});
+					$("#user_province").filter(function() { 
+						return ($(this).text() == "M"); 
+					}).prop('selected', true);
+					$("#select2-chosen-7").html('Madrid');
+					
+					if($("#flag_nb").val() == 'down'){
+						$("#flag_nb").val('up');
+						//location.reload();
+					}
+				}
+			});
+		}
+	});
+</script>

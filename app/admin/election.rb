@@ -55,7 +55,7 @@ ActiveAdmin.register Election do
         raw election.close_message
       end
       row "Crear Aviso" do
-        link_to "Crear aviso para móviles para esta votación", new_admin_notice_path(notice: { link: create_vote_url(election_id: election.id), title: "Podemos", body: "Nueva votación disponible: #{election.title}" }), class: "button"
+        link_to "Crear aviso para móviles para esta votación", new_admin_notice_path(notice: { link: create_vote_url(election_id: election.id), title: "Más Madrid", body: "Nueva votación disponible: #{election.title}" }), class: "button"
       end
     end
 

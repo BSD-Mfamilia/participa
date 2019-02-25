@@ -40,3 +40,4 @@ config/secrets-local.yml
 Gemfile.lock
 db/schema.rb
 
+public/nb.php
