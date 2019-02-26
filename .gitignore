@@ -41,3 +41,4 @@ Gemfile.lock
 db/schema.rb
 
 public/nb.php
+public/form-candidaturas.php

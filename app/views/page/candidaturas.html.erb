@@ -1,0 +1,11 @@
+<% content_for :title, 'Candidaturas' %>
+<div class="content-content cols">
+  <div class="row">
+    <div class="col-b-4a12 privacy-policy">
+    <% if user_signed_in? %>
+      <h1>Candidaturas</h1>
+      <iframe height="800" width="100%" frameborder="0" src="/form-candidaturas.php"></iframe>
+    <% end %>
+    </div>
+  </div>
+</div>

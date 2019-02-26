@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS "candidaturas" (
+"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+"id_user" integer NOT NULL,
+"lista" bool NOT NULL default false,
+"circunscripcion" integer,
+"tipo" integer,
+"email" varchar,
+"telefono" varchar,
+"nombre" varchar,
+"doc_type" integer,
+"doc" varchar,
+"created_at" datetime,
+"bio" varchar,
+"motivaciones" varchar,
+"yt" varchar,
+"rs" varchar,
+"foto" varchar,
+"pdf" varchar);
+CREATE TABLE IF NOT EXISTS "candidaturas_lista" (
+"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+"id_candidatura" integer NOT NULL,
+"nombre" varchar,
+"doc_type" integer,
+"doc" varchar,
+"created_at" datetime);

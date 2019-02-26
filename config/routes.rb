@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 	get '/es/propuestas', to: redirect("https://www.masmadrid.org/temas")
 	get '/es/impulsa', to: redirect("https://www.masmadrid.org/temas")
 	get '/soporte-votaciones', to: redirect("https://www.masmadrid.org/temas")
+	get '/candidaturas-example.php', to: redirect("https://participa.masmadrid.org/")
+	get '/nb-example.php', to: redirect("https://participa.masmadrid.org/")
 
 
   
@@ -48,6 +50,7 @@ Rails.application.routes.draw do
     end
 
     get '/privacy-policy', to: 'page#privacy_policy', as: 'page_privacy_policy'
+    get '/candidaturas', to: 'page#candidaturas', as: 'page_candidaturas'
     get '/preguntas-frecuentes', to: 'page#faq', as: 'faq'
 
     get '/comision-de-garantias-democraticas', to: 'page#guarantees', as: 'guarantees'
@@ -68,7 +71,6 @@ Rails.application.routes.draw do
 
     get '/responsables-organizacion-municipales', to: 'page#responsables_organizacion_municipales', as: 'responsables_organizacion_municipales'
     get '/responsables-municipales-andalucia', to: 'page#responsables_municipales_andalucia', as:'responsables_municipales_andalucia'
-    get '/plaza-podemos-municipal', to: 'page#plaza_podemos_municipal', as:'plaza_podemos_municipal'
     get '/portal-transparencia-cc-estatal', to: 'page#portal_transparencia_cc_estatal', as:'portal_transparencia_cc_estatal'
     get '/mujer-igualdad', to: 'page#mujer_igualdad', as:"mujer_igualdad"
     get '/solicitud-consulta-ciudadana-candidatura-unidad-popular', to: 'page#alta_consulta_ciudadana', as:"alta_consulta_ciudadana"
