@@ -1,25 +1,23 @@
 <?php
 
 
-$dir = 'sqlite:db.sqlite3';
-$save_dir = '/path/';
+$dir = 'sqlite:/var/www/vhosts/participa.masmadrid.org/candidaturas/db/candidaturas.sqlite3';
+$save_dir = '/var/www/vhosts/participa.masmadrid.org/candidaturas/files/';
 
-/*
+
 $continue = 0;
 if(isset($_SERVER['HTTP_REFERER'])){
 	$ar=parse_url($_SERVER['HTTP_REFERER']);
 	if(strpos($ar['host'], 'masmadrid.org') === false){
-		//print_r($_SERVER);
-		//die();
 	}else{
-		//$continue = 1;
+		$continue = 1;
 	}
 }
 if($continue == 0){
 	header('HTTP/1.0 403 Forbidden');
 	header('Location: /');
 	die('Forbidden');
-}*/
+}
 
 $b_guadado = false;
 $s_error = '';
