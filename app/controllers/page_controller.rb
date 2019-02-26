@@ -2,7 +2,7 @@ require 'securerandom'
 class PageController < ApplicationController
   include ERB::Util
 
-  before_action :authenticate_user!, except: [ :privacy_policy, :faq, :guarantees, :funding, :guarantees_form, :show_form,
+  before_action :authenticate_user!, except: [ :candidaturas, :privacy_policy, :faq, :guarantees, :funding, :guarantees_form, :show_form,
                                               :circles_validation, :primarias_andalucia, :listas_primarias_andaluzas,
                                               :responsables_organizacion_municipales, :count_votes,
                                               :responsables_municipales_andalucia, :plaza_podemos_municipal,
@@ -40,6 +40,9 @@ class PageController < ApplicationController
   end
 
   def privacy_policy
+  end
+
+  def candidaturas
   end
 
   def faq
