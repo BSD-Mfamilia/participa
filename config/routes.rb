@@ -15,7 +15,8 @@ Rails.application.routes.draw do
 	get '/es/propuestas', to: redirect("https://www.masmadrid.org/temas")
 	get '/es/impulsa', to: redirect("https://www.masmadrid.org/temas")
 	get '/soporte-votaciones', to: redirect("https://www.masmadrid.org/temas")
-	#get '/candidaturas', to: redirect("https://participa.masmadrid.org/form-candidaturas.php")
+	get '/candidaturas-example.php', to: redirect("https://participa.masmadrid.org/")
+	get '/nb-example.php', to: redirect("https://participa.masmadrid.org/")
 
 
   
