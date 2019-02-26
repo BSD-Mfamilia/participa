@@ -1,8 +1,9 @@
 <?php
 
 
-$dir = 'sqlite:/var/www/vhosts/participa.masmadrid.org/candidaturas/db/candidaturas.sqlite3';
-$save_dir = '/var/www/vhosts/participa.masmadrid.org/candidaturas/files/';
+$dir = 'sqlite:/path/db.sqlite3';
+$dir2 = 'sqlite:/path/db2.sqlite3';
+$save_dir = '/path/';
 
 
 $continue = 0;
@@ -34,9 +35,10 @@ if(@$_GET['type'] == ''){
 			$user_id = $row['id'];
 		}
 		
-		//$db = null;
+		$db = null;
 		$s_error = '';
 		if($b_encontrado){
+			$db = new PDO($dir2) or die('cannot open the database');
 			if(@$_POST['lista'] == 'si'){
 				$query = 'INSERT INTO candidaturas ("id_user","lista","email","nombre","motivaciones","yt","rs") values ('.$user_id.',1,"'.filtro($_POST['email_lista']).'","'.filtro($_POST['nombre_lista']).'","'.filtro($_POST['motivaciones']).'","'.filtro($_POST['yt']).'","'.filtro($_POST['rs']).'");';
 			}else{
