@@ -51,7 +51,7 @@ if(@$_GET['type'] == ''){
 		if($b_encontrado){
 			$db = new PDO($dir2) or die('cannot open the database');
 			if(@$_POST['lista'] == 'si'){
-				$query = 'INSERT INTO candidaturas ("id_user","lista","email","nombre","motivaciones","yt","rs") values ('.$user_id.',1,"'.filtro($_POST['email_lista']).'","'.filtro($_POST['nombre_lista']).'","'.filtro($_POST['motivaciones']).'","'.filtro($_POST['yt']).'","'.filtro($_POST['rs']).'");';
+				$query = 'INSERT INTO candidaturas ("id_user","lista","tipo","email","nombre","motivaciones","yt","rs") values ('.$user_id.',1,'.filtro($_POST['tipo']).',"'.filtro($_POST['email_lista']).'","'.filtro($_POST['nombre_lista']).'","'.filtro($_POST['motivaciones']).'","'.filtro($_POST['yt']).'","'.filtro($_POST['rs']).'");';
 			}else{
 				$query = 'INSERT INTO candidaturas ("id_user","lista","circunscripcion","tipo","email","telefono","nombre","doc_type","doc","bio","motivaciones","yt","rs") values ('.$user_id.',0,'.filtro($_POST['circunscripcion']).','.filtro($_POST['tipo']).',"'.filtro($_POST['email']).'","'.filtro($_POST['telefono']).'","'.filtro($_POST['nombre']).'",'.filtro($_POST['doc_type']).',"'.filtro($_POST['doc']).'","'.filtro($_POST['bio']).'","'.filtro($_POST['motivaciones']).'","'.filtro($_POST['yt']).'","'.filtro($_POST['rs']).'");';
 			}
@@ -134,16 +134,16 @@ if($type == 0){ ?>
 		<?php } ?>
 			<div class="form-group"><label>Teléfono*:</label> <input id="telefono" name="telefono" required="required" type="text" value="<?php echo @$_POST['telefono']?>" /></div>
 			<div class="form-group"><label>Foto*:</label> <input type="file" required="required" accept=".gif,.jpg,.jpeg,.png" id="foto" name="foto"></div>
+			<div class="form-group"><label>Tipo de candidatura*:</label> <select name="tipo" id="tipo" required="required">
+					<option value="">-</option>
+					<option value="1">Lista con responsabilidades de gobierno (sólo personas que conformen equipos con candidat@ y programa)</option>
+					<option value="2">Lista sin responsabilidades de gobierno</option>
+			</select></div>
 		<?php if($type == 1){ ?>
 			<div class="form-group"><label>Circunscripción*:</label> <select name="circunscripcion" id="circunscripcion" required="required">
 					<option value="">-</option>
 					<option value="1">Ayuntamiento de Madrid</option>
 					<option value="2">Comunidad de Madrid</option>
-			</select></div>
-			<div class="form-group"><label>Tipo de candidatura*:</label> <select name="tipo" id="tipo" required="required">
-					<option value="">-</option>
-					<option value="1">Lista con responsabilidades de gobierno (sólo personas que conformen equipos con candidat@ y programa)</option>
-					<option value="2">Lista sin responsabilidades de gobierno</option>
 			</select></div>
 			<div class="form-group"><label>Biografía*:</label></div>
 			<div class="form-group"><textarea id="bio" name="bio" required="required" cols="60" rows="6" maxlength="1000"><?php echo @$_POST['bio']?></textarea></div>
