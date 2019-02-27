@@ -101,7 +101,7 @@ if(@$_GET['type'] == ''){
 
 
 if($b_guadado == true){
-	die("<h1>Se han guardado los datos</h1>".$s_error);
+	die("<div style='text-align:center;background-color:#3cae6c;padding:20px;margin20px;font-size:22px;'>Enhorabuena! Ya estás inscrito para participar!</div>".$s_error);
 }
 
 
@@ -134,7 +134,7 @@ if($type == 0){ ?>
 		<?php } ?>
 			<div class="form-group"><label>Teléfono*:</label> <input id="telefono" name="telefono" required="required" type="text" value="<?php echo @$_POST['telefono']?>" /></div>
 			<div class="form-group"><label>Foto*:</label> <input type="file" required="required" accept=".gif,.jpg,.jpeg,.png" id="foto" name="foto"></div>
-			<div class="form-group"><label>Tipo de candidatura*:</label> <select name="tipo" id="tipo" required="required">
+			<div class="form-group"><label>Tipo de candidatura:</label> <select name="tipo" id="tipo">
 					<option value="">-</option>
 					<option value="1">Lista con responsabilidades de gobierno (sólo personas que conformen equipos con candidat@ y programa)</option>
 					<option value="2">Lista sin responsabilidades de gobierno</option>
