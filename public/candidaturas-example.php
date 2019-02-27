@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulario Candidaturas</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
 <?php
 
 
@@ -19,6 +29,7 @@ if($continue == 0){
 	header('Location: /');
 	die('Forbidden');
 }
+
 
 $b_guadado = false;
 $s_error = '';
@@ -89,87 +100,81 @@ if(@$_GET['type'] == ''){
 }
 
 
-
 if($b_guadado == true){
 	die("<h1>Se han guardado los datos</h1>".$s_error);
 }
+
 
 function filtro($str){
 	return htmlentities(strip_tags(trim($str),''), ENT_COMPAT, "UTF-8");
 }
 
 
-
-
-
-
-
 if($type == 0){ ?>
 	<p><input type="button" onClick="javascript:window.location='form-candidaturas.php?type=1'" value="Individual"> <input type="button" onClick="javascript:window.location='form-candidaturas.php?type=2'" value="Lista"></p>
 <?php }else{ ?>
 	<?php echo $s_error; ?>
-	<form id="form-candidaturas" name="form-candidaturas" action="#" method="POST" enctype="multipart/form-data">
-<?php if($type == 2){ ?>
-	<p>Tus datos de inscrito en participa.masmadrid.org:</p>
-<?php } ?>
-	<p><b>Nombre y apellidos*:</b> <input id="nombre" name="nombre" required="required" autofocus="autofocus" type="text" value="<?php echo @$_POST['nombre']?>" /></p>
-	<p><b>Documento*:</b> <select name="doc_type" id="doc_type" required="required">
-			<option value="">-</option>
-			<option value="1">DNI</option>
-			<option value="2">NIE</option>
-			<option value="3">Pasaporte</option>
-		</select> <input id="doc" name="doc" required="required" type="text" value="<?php echo @$_POST['doc']?>" />
-	</p>
-	<p><b>Correo Electrónico*:</b> <input id="email" name="email" required="required" type="text" value="<?php echo @$_POST['email']?>" /></p>
-<?php if($type == 2){ ?>
-	<p>Los datos de la lista:</p>
-	<p><b>Nombre*:</b> <input id="nombre_lista" name="nombre_lista" required="required" autofocus="autofocus" type="text" value="<?php echo @$_POST['nombre_lista']?>" /></p>
-	<p><b>Correo Electrónico*:</b> <input id="email_lista" name="email_lista" required="required" type="text" value="<?php echo @$_POST['email_lista']?>" /></p>
-<?php } ?>
-	<p><b>Teléfono*:</b> <input id="telefono" name="telefono" required="required" type="text" value="<?php echo @$_POST['telefono']?>" /></p>
-	<p><b>Foto*:</b> <input type="file" required="required" accept=".gif,.jpg,.jpeg,.png" id="foto" name="foto"></p>
-<?php if($type == 1){ ?>
-	<p><b>Circunscripción*:</b> <select name="circunscripcion" id="circunscripcion" required="required">
-			<option value="">-</option>
-			<option value="1">Ayuntamiento de Madrid</option>
-			<option value="2">Comunidad de Madrid</option>
-	</select></p>
-	<p><b>Tipo de candidatura*:</b> <select name="tipo" id="tipo" required="required">
-			<option value="">-</option>
-			<option value="1">Lista con responsabilidades de gobierno (sólo personas que conformen equipos con candidat@ y programa)</option>
-			<option value="2">Lista sin responsabilidades de gobierno</option>
-	</select></p>
-	<p><b>Biografía*:</b></p>
-	<p><textarea id="bio" name="bio" required="required" cols="60" rows="6" maxlength="1000"><?php echo @$_POST['bio']?></textarea></p>
-<?php } ?>
-	<p><b>Motivaciones*:</b></p>
-	<p><textarea id="motivaciones" name="motivaciones" required="required" cols="60" rows="6" maxlength="1000"><?php echo @$_POST['motivaciones']?></textarea></p>
-	<p><b>Enlace a vídeo de Youtube:</b> <input id="yt" name="yt" type="text" value="<?php echo @$_POST['yt']?>" /></p>
-	<p><b>Redes sociales:</b> <input id="rs" name="rs" type="text" value="<?php echo @$_POST['rs']?>" /></p>
-	
-<?php if($type == 2){ ?>
-	<p><b>PDF:</b> <input type="file" required="required" accept=".pdf" id="pdf" name="pdf"></p>
-	
-	<?php for($i=1;$i<41;$i++){?>
-		<p><b>Candidato <?php echo $i; ?></b></p>
-		<p>Nombre y apellidos: <input type="text" id="nombre_<?php echo $i; ?>" name="nombre_<?php echo $i; ?>" value="<?php echo @$_POST['nombre_'.$i]?>" /></p>
-		<p>Documento: <select name="doc_type_<?php echo $i; ?>" id="doc_type_<?php echo $i; ?>">
-			<option value="">-</option>
-			<option value="1">DNI</option>
-			<option value="2">NIE</option>
-			<option value="3">Pasaporte</option>
-		</select> <input id="doc_<?php echo $i; ?>" name="doc_<?php echo $i; ?>" type="text" value="<?php echo @$_POST['doc_'.$i]?>" />
-	</p>
-	<input type="hidden" id="lista" name="lista" value="si" />
-<?php } } ?>
+			<form id="form-candidaturas" name="form-candidaturas" action="#" method="POST" enctype="multipart/form-data">
+		<?php if($type == 2){ ?>
+			<legend>Tus datos de inscrito en participa.masmadrid.org:</legend>
+		<?php } ?>
+			<div class="form-group"><label>Nombre y apellidos*:</label> <input id="nombre" name="nombre" required="required" autofocus="autofocus" type="text" value="<?php echo @$_POST['nombre']?>" /></div>
+			<div class="form-group"><label>Documento*:</label> <select name="doc_type" id="doc_type" required="required">
+					<option value="">-</option>
+					<option value="1">DNI</option>
+					<option value="2">NIE</option>
+					<option value="3">Pasaporte</option>
+				</select> <input id="doc" name="doc" required="required" type="text" value="<?php echo @$_POST['doc']?>" />
+			</div>
+			<div class="form-group"><label>Correo Electrónico*:</label> <input id="email" name="email" required="required" type="text" value="<?php echo @$_POST['email']?>" /></div>
+		<?php if($type == 2){ ?>
+			<legend>Los datos de la lista:</legend>
+			<div class="form-group"><label>Nombre*:</label> <input id="nombre_lista" name="nombre_lista" required="required" autofocus="autofocus" type="text" value="<?php echo @$_POST['nombre_lista']?>" /></div>
+			<div class="form-group"><label>Correo Electrónico*:</label> <input id="email_lista" name="email_lista" required="required" type="text" value="<?php echo @$_POST['email_lista']?>" /></div>
+		<?php } ?>
+			<div class="form-group"><label>Teléfono*:</label> <input id="telefono" name="telefono" required="required" type="text" value="<?php echo @$_POST['telefono']?>" /></div>
+			<div class="form-group"><label>Foto*:</label> <input type="file" required="required" accept=".gif,.jpg,.jpeg,.png" id="foto" name="foto"></div>
+		<?php if($type == 1){ ?>
+			<div class="form-group"><label>Circunscripción*:</label> <select name="circunscripcion" id="circunscripcion" required="required">
+					<option value="">-</option>
+					<option value="1">Ayuntamiento de Madrid</option>
+					<option value="2">Comunidad de Madrid</option>
+			</select></div>
+			<div class="form-group"><label>Tipo de candidatura*:</label> <select name="tipo" id="tipo" required="required">
+					<option value="">-</option>
+					<option value="1">Lista con responsabilidades de gobierno (sólo personas que conformen equipos con candidat@ y programa)</option>
+					<option value="2">Lista sin responsabilidades de gobierno</option>
+			</select></div>
+			<div class="form-group"><label>Biografía*:</label></div>
+			<div class="form-group"><textarea id="bio" name="bio" required="required" cols="60" rows="6" maxlength="1000"><?php echo @$_POST['bio']?></textarea></div>
+		<?php } ?>
+			<div class="form-group"><label>Motivaciones*:</label></div>
+			<div class="form-group"><textarea id="motivaciones" name="motivaciones" required="required" cols="60" rows="6" maxlength="1000"><?php echo @$_POST['motivaciones']?></textarea></div>
+			<div class="form-group"><label>Enlace a vídeo de Youtube:</label> <input id="yt" name="yt" type="text" value="<?php echo @$_POST['yt']?>" /></div>
+			<div class="form-group"><label>Redes sociales:</label> <input id="rs" name="rs" type="text" value="<?php echo @$_POST['rs']?>" /></div>
+			
+		<?php if($type == 2){ ?>
+			<div class="form-group"><label>PDF:</label> <input type="file" required="required" accept=".pdf" id="pdf" name="pdf"></div>
+			
+			<?php for($i=1;$i<41;$i++){?>
+				<div class="form-group"><legend class="candidato">Candidato <?php echo $i; ?></legend></div>
+				<div class="form-group"><label>Nombre y apellidos: </label><input type="text" id="nombre_<?php echo $i; ?>" name="nombre_<?php echo $i; ?>" value="<?php echo @$_POST['nombre_'.$i]?>" /></div>
+				<div class="form-group"><label>Documento:</label> <select name="doc_type_<?php echo $i; ?>" id="doc_type_<?php echo $i; ?>">
+					<option value="">-</option>
+					<option value="1">DNI</option>
+					<option value="2">NIE</option>
+					<option value="3">Pasaporte</option>
+				</select> <input id="doc_<?php echo $i; ?>" name="doc_<?php echo $i; ?>" type="text" value="<?php echo @$_POST['doc_'.$i]?>" />
+			</div>
+			<input type="hidden" id="lista" name="lista" value="si" />
+		<?php } } ?>
 
-	<p><input type="checkbox" name="cod_etico" value="cod_etico" id="cod_etico" required="required" /><label for="cod_etico"> Acepta el código ético</label></p>
-	<p><input type="checkbox" name="cod_carta" value="cod_carta" id="cod_carta" required="required" /><label for="cod_carta"> Acepta la carta financiera</label></p>
-	<?php echo $s_error; ?>
-	<p><input type="submit" value="Enviar"></p>
-	</form>
-<?php } ?>
-
-
-
+			<div class="form-group"><input type="checkbox" name="cod_etico" value="cod_etico" id="cod_etico" required="required" /><label class="check" for="cod_etico"> <a href="https://assets.nationbuilder.com/masmadrid/pages/182/attachments/original/1551220335/C%C3%B3digo-%C3%A9tico_MM.pdf?1551220335" target="_blank">Acepta el código ético</a></label></div>
+			<div class="form-group"><input type="checkbox" name="cod_carta" value="cod_carta" id="cod_carta" required="required" /><label class="check" for="cod_carta"> <a href="https://assets.nationbuilder.com/masmadrid/pages/182/attachments/original/1551220347/Carta-financiera_MM.pdf?1551220347" target="_blank">Acepta la carta financiera</a></label></div>
+			<?php echo $s_error; ?>
+			<div class="form-group"><input type="submit" value="Enviar"></div>
+			</form>
+		<?php } ?>
+	</body>
+</html>
 

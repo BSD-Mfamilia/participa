@@ -20,11 +20,11 @@ SimpleCaptcha.setup do |sc|
 
   # default: low
   # possible values: 'low', 'medium', 'high', 'random'
-  sc.distortion = 'medium'
+  sc.distortion = 'low'
 
   # default: medium
   # possible values: 'none', 'low', 'medium', 'high'
-  sc.implode = 'medium'
+  sc.implode = 'low'
 
   sc.image_style = 'simply_green'
   sc.add_image_style('simply_green', [
