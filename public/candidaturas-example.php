@@ -154,7 +154,7 @@ if($type == 0){ ?>
 			<div class="form-group"><label>Redes sociales:</label> <input id="rs" name="rs" type="text" value="<?php echo @$_POST['rs']?>" /></div>
 			
 		<?php if($type == 2){ ?>
-			<div class="form-group"><label>PDF:</label> <input type="file" required="required" accept=".pdf" id="pdf" name="pdf"></div>
+			<div class="form-group"><label>Programa (PDF):</label> <input type="file" required="required" accept=".pdf" id="pdf" name="pdf"></div>
 			
 			<?php for($i=1;$i<41;$i++){?>
 				<div class="form-group"><legend class="candidato">Candidato <?php echo $i; ?></legend></div>
