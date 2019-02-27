@@ -1033,8 +1033,8 @@ tools
 
 .box-vote{
   overflow:hidden;
-  background:#eaeaea image-url("ico.vote-box.png") 2em 1.5em no-repeat;
-  padding:1.5em 3em 1.5em 9em;
+  background:#eaeaea;
+  padding:1.5em 3em 1.5em 3em;
   margin:0 0 1.5em;
   min-height: 5em;
 }
@@ -1065,6 +1065,7 @@ tools
   margin-right:5%;
 }
 .content-content .box-poll div p{
+  color: #555;
   margin-bottom:0;
 }
 .content-content .box-poll div p.poll-q{
@@ -3182,4 +3183,33 @@ fieldset .collaboration-assignment .inputlabel-box .input-box {
 
 .privacy-policy .box p {
   color: #333;
+}
+
+h1.titulo-candidaturas {
+  font-family: Arial, sans-serif;
+  text-transform: capitalize;
+  color: #004732;
+  margin-bottom: 1em;
+}
+
+h1.titulo-candidaturas {
+  font-size: 1.6em;
+}
+      
+@media only screen and (max-width: 459px) {
+  h1.titulo-candidaturas {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 769px)  {
+  h1.titulo-candidaturas {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 978px) {
+  h1.titulo-candidaturas {
+      font-size: 2.4em;
+  }
 }
