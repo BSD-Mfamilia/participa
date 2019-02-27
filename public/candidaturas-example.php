@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Formulario Candidaturas</title>
-	<link rel="stylesheet" href="/candidaturas.css">
+	<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <?php
@@ -169,8 +169,8 @@ if($type == 0){ ?>
 			<input type="hidden" id="lista" name="lista" value="si" />
 		<?php } } ?>
 
-			<div class="form-group"><input type="checkbox" name="cod_etico" value="cod_etico" id="cod_etico" required="required" /><label class="check" for="cod_etico"> Acepta el código ético</label></div>
-			<div class="form-group"><input type="checkbox" name="cod_carta" value="cod_carta" id="cod_carta" required="required" /><label class="check" for="cod_carta"> Acepta la carta financiera</label></div>
+			<div class="form-group"><input type="checkbox" name="cod_etico" value="cod_etico" id="cod_etico" required="required" /><label class="check" for="cod_etico"> <a href="https://assets.nationbuilder.com/masmadrid/pages/182/attachments/original/1551220335/C%C3%B3digo-%C3%A9tico_MM.pdf?1551220335" target="_blank">Acepta el código ético</a></label></div>
+			<div class="form-group"><input type="checkbox" name="cod_carta" value="cod_carta" id="cod_carta" required="required" /><label class="check" for="cod_carta"> <a href="https://assets.nationbuilder.com/masmadrid/pages/182/attachments/original/1551220347/Carta-financiera_MM.pdf?1551220347" target="_blank">Acepta la carta financiera</a></label></div>
 			<?php echo $s_error; ?>
 			<div class="form-group"><input type="submit" value="Enviar"></div>
 			</form>
