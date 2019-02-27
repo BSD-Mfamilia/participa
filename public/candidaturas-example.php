@@ -136,7 +136,7 @@ if($type == 0){ ?>
 			<div class="form-group"><label>Foto*:</label> <input type="file" required="required" accept=".gif,.jpg,.jpeg,.png" id="foto" name="foto"></div>
 			<div class="form-group"><label>Tipo de candidatura:</label> <select name="tipo" id="tipo">
 					<option value="">-</option>
-					<option value="1">Lista con responsabilidades de gobierno (sólo personas que conformen equipos con candidat@ y programa)</option>
+					<option value="1">Con responsabilidades de gobierno (incluye a la cantidata o candidato)</option>
 					<option value="2">Lista sin responsabilidades de gobierno</option>
 			</select></div>
 		<?php if($type == 1){ ?>
@@ -154,7 +154,7 @@ if($type == 0){ ?>
 			<div class="form-group"><label>Redes sociales:</label> <input id="rs" name="rs" type="text" value="<?php echo @$_POST['rs']?>" /></div>
 			
 		<?php if($type == 2){ ?>
-			<div class="form-group"><label>Programa (PDF):</label> <input type="file" required="required" accept=".pdf" id="pdf" name="pdf"></div>
+			<div class="form-group"><label>Listado de áreas temáticas y territoriales por candidato/a (Solo Ayuntamiento) (PDF):</label> <input type="file" accept=".pdf" id="pdf" name="pdf"></div>
 			
 			<?php for($i=1;$i<41;$i++){?>
 				<div class="form-group"><legend class="candidato">Candidato <?php echo $i; ?></legend></div>
