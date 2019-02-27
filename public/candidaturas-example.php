@@ -111,7 +111,7 @@ function filtro($str){
 
 
 if($type == 0){ ?>
-	<p><input type="button" onClick="javascript:window.location='form-candidaturas.php?type=1'" value="Individual"> <input type="button" onClick="javascript:window.location='form-candidaturas.php?type=2'" value="Lista"></p>
+	<p><input type="button" class="btn-candidaturas" onClick="javascript:window.location='form-candidaturas.php?type=1'" value="Individual"> <input type="button" class="btn-candidaturas" onClick="javascript:window.location='form-candidaturas.php?type=2'" value="Lista"></p>
 <?php }else{ ?>
 	<?php echo $s_error; ?>
 			<form id="form-candidaturas" name="form-candidaturas" action="#" method="POST" enctype="multipart/form-data">

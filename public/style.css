@@ -105,7 +105,11 @@ form#form-candidaturas .form-group select {
     box-shadow: inset 0px -7px 20px -5px #ccc;
     font-size: 16px;
     height: 20px;
-    width: 200px;;
+    width: 200px;
+}
+
+form#form-candidaturas .form-group select option:hover {
+    background-color: #3cae6c;
 }
 
 form#form-candidaturas .form-group textarea {
@@ -113,4 +117,18 @@ form#form-candidaturas .form-group textarea {
     width: 100%;
     border: none;
     background: #eee;
+}
+
+.btn-candidaturas {
+    width: 200px;
+    display: block;
+    padding: 1em 3em;
+    background: #3cae6c;
+    opacity: 1;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin: 50px auto;
+    cursor: pointer;
 }
