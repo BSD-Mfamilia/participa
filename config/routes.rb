@@ -51,6 +51,7 @@ Rails.application.routes.draw do
 
     get '/privacy-policy', to: 'page#privacy_policy', as: 'page_privacy_policy'
     #get '/candidaturas', to: 'page#candidaturas', as: 'page_candidaturas'
+    get '/primarias', to: 'page#primarias', as: 'page_primarias'
     get '/preguntas-frecuentes', to: 'page#faq', as: 'faq'
 
     get '/comision-de-garantias-democraticas', to: 'page#guarantees', as: 'guarantees'
