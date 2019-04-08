@@ -247,6 +247,7 @@ ActiveAdmin.register Collaboration do
         status_tag("Activo", :ok) if collaboration.is_active?
         status_tag("Alertas", :warn) if collaboration.has_warnings?
         status_tag("Errores", :error) if collaboration.has_errors?
+        collaboration.deleted? and collaboration.frequency == 0 and collaboration.order.count == 1 ? status_tag("Colaboración exitosa", :ok) : ""
         collaboration.deleted? ? status_tag("Borrado", :error) : ""
         if collaboration.redsys_expiration
           if collaboration.redsys_expiration<Date.today
@@ -430,7 +431,7 @@ ActiveAdmin.register Collaboration do
   end
 
   action_item(:restore_collaboration, only: :show) do
-    link_to('Recuperar colaboración borrada', recover_admin_collaboration_path(collaboration), method: :post, data: { confirm: "¿Estas segura de querer recuperar esta colaboración?" }) if collaboration.deleted?
+    link_to('Recuperar colaboración borrada', recover_admin_collaboration_path(collaboration), method: :post, data: { confirm: "¿Estas segura de querer recuperar esta colaboración?" }) if collaboration.deleted? && collaboration.frequency != 0
   end
 
   member_action :recover, :method => :post do

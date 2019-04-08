@@ -7,7 +7,7 @@
       <div class="login-texto-contenedor">
         <article class="intro login-texto">
         <h1>Bienvenido a <br/> Más Madrid</h1>
-        <h4>Participa, suma, decide <br> Manuela e Íñigo, te necesitan</h4>
+        <h4>Participa, suma, decide, <br> Manuela e Íñigo te necesitan</h4>
         <p>Ya somos
           <span>
             <% cache("total_users", expires_in: 30.minutes) do %>
@@ -38,7 +38,7 @@
 
               <% if devise_mapping.rememberable? %>
                 <div class="remember">
-                  <%= f.check_box :remember_me, class: 'remember checkbox' %> 
+                  <%= f.check_box :remember_me, class: 'remember checkbox' %>
                   <%= f.label :remember_me %>
                 </div>
               <% end %>

@@ -2,7 +2,13 @@ class OrdersController < ApplicationController
   protect_from_forgery except: :callback_redsys
 
   def callback_redsys
-    request_params = params
+    if params["Ds_MerchantParameters"].present?
+      decoding_parameters = Base64.decode64(params["Ds_MerchantParameters"])
+      request_params = JSON.parse(decoding_parameters)
+      request_params["Ds_Signature"] = params["Ds_Signature"]
+    else
+      request_params = params
+    end
 
     soap = (not request_params or not request_params["Ds_Order"])
     if soap then

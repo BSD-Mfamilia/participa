@@ -3,6 +3,7 @@
     <div class="col-b-4a12">
       <% if @elections.count > 0 %>
         <%= render partial: 'elections' %>
+        <%= render partial: "other_tools" %>
       <% else %>
         <% if @upcoming_elections.count > 0 %>
           <%= render partial: 'election_upcoming', locals: { election: @upcoming_elections[-1] } %>

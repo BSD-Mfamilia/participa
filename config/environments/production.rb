@@ -10,7 +10,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local       = false
   config.action_controller.perform_caching = false
 
   config.active_record.raise_in_transactional_callbacks = true
@@ -53,8 +53,9 @@ Rails.application.configure do
     :authentication       => :login,
     :enable_starttls_auto => true
   }
-  
-  BetterErrors::Middleware.allow_ip! Rails.application.secrets.trusted_ip if Rails.application.secrets.trusted_ip
 
-  WebMock.disable!
+  # comentar estas lineas de abajo para entrar en modo producción, y copiar la bd con el nombre production
+  # BetterErrors::Middleware.allow_ip! Rails.application.secrets.trusted_ip if Rails.application.secrets.trusted_ip
+
+  # WebMock.disable!
 end

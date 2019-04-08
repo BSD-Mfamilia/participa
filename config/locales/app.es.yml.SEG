@@ -1,0 +1,1909 @@
+es:
+  meta:
+    language_name: "Español"
+    languages:
+      ca: "catalán"
+      es: "español"
+      eu: "vasco"
+      ga: "gallego"
+  errors:
+    show:
+      "404":
+        title: "Página no encontrada"
+        message_html: "No pudimos encontrar esa página. Vuelvelo a intentarlo más tarde o <a href='/'>prueba desde la página principal</a>."
+      "500":
+        title: "Error en el servidor"
+        message_html: "Hubo un error en el servidor. Puedes avisarnos en <a href='mailto:contacto@masmadrid.org'>el formulario de soporte</a>."
+    messages:
+      not_valid_spanish_vat: El número de identificación fiscal no es válido
+      not_valid_nif: El DNI no es válido
+      not_valid_cif: El CIF no es válido
+      not_valid_nie: El NIE no es válido
+      url: "no es una dirección web válida (debe comenzar con http:// o https://)"
+  activerecord:
+    models:
+      user: Usuario
+      users: Usuarios
+      spam_filter: Filtro anti-spam
+      spam_filters: Filtros anti-spam
+      collaboration: Colaboración económica
+      collaborations: Colaboraciónes económicas
+      order: Orden de pago
+      orders: Ordenes de pago
+      election: Elección
+      elections: Elecciones
+      proposal: Iniciativa ciudadana
+      proposals: Iniciativas ciudadanas
+      notice: Aviso
+      notices: Avisos
+      participation_team: Equipo de Acción Participativa
+      participation_teams: Equipos de Acción Participativa
+      report: Informe
+      reports: Informes
+      report_group: Parte de Informe
+      report_groups: Partes de Informe
+      microcredit: Microcrédito
+      microcredits: Microcréditos
+      microcredit_loan: Suscripción
+      microcredit_loans: Suscripciones
+      page: Formulario
+      pages: Formularios
+      category: Categoría
+      categories: Categorías
+      impulsa_edition: Edición de Impulsa
+      impulsa_editions: Ediciones de Impulsa
+      impulsa_edition_topic: Temática de Impulsa
+      impulsa_edition_topics: Temáticas de Impulsa
+      impulsa_edition_category: Categoría de Impulsa
+      impulsa_edition_categories: Categorías de Impulsa
+      impulsa_project: Proyecto de Impulsa
+      impulsa_projects: Proyectos de Impulsa
+      user_verification: Verificación de usuario
+      user_verifications: Verificación de usuarios
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank: "Tu nombre no puede estar en blanco"
+            last_name:
+              blank: "Tu apellido no puede estar en blanco"
+            gender:
+              blank: "Debes indicar tu genero"
+            document_type:
+              blank: "Tu tipo de documento no puede estar en blanco"
+            document_vatid:
+              blank: "Tu documento no puede estar en blanco"
+              taken: "Hubo un error al guardar este dato. Inténtalo de nuevo"
+            born_at:
+              blank: "Tu fecha de nacimiento no puede estar en blanco"
+              not_a_date: "No es una fecha válida. Comprueba que el formato con el que estás poniendo la fecha sea el correcto"
+            address:
+              blank: "Tu dirección no puede estar en blanco"
+            town:
+              blank: "Tu municipio no puede estar en blanco"
+            postal_code:
+              blank: "Tu código postal no puede estar en blanco"
+            province:
+              blank: "Tu provincia no puede estar en blanco"
+            country:
+              blank: "Tu país no puede estar en blanco"
+            email:
+              blank: "Tu correo electrónico no puede estar en blanco"
+              taken: "Hubo un error al guardar este dato. Inténtalo de nuevo"
+            password:
+              blank: "Tu contraseña no puede estar en blanco"
+            current_password:
+              blank: "Debes indicar tu contraseña para validar los cambios."
+            password_confirmation: "Contraseña (repetir)"
+            wants_newsletter: "Desmarca esta casilla si no quieres recibir nuestra newsletter. Sólo enviamos información importante."
+        impulsa_edition:
+          attributes:
+            terms_of_service: "Acepto las condiciones generales"
+    attributes:
+      impulsa_edition:
+        name: "Nombre"
+        start_at: "Fecha de inicio"
+        new_projects_until: "Cierre de inscripciones"
+        review_projects_until: "Fecha de fin revisiones"
+        validation_projects_until: "Fecha de fin validación"
+        votings_start_at: "Fecha de inicio de las votaciones"
+        ends_at: "Fecha de final de las votaciones"
+        publish_results_at: "Fecha de publicación de los resultados"
+        legal: "Bases"
+        schedule_model: "Modelo de cronograma"
+        activities_resources_model: "Modelo de actividades y recursos"
+        requested_budget_model: "Modelo de solicitud de presupuesto"
+        monitoring_evaluation_model: "Modelo de seguimiento y evaluación"
+        deleted_at: "Fecha de borrado"
+        created_at: "Fecha de creación"
+        updated_at: "Fecha de última modificación"
+      impulsa_edition_topic:
+        impulsa_edition: "Edición de Impulsa"
+        name: "Nombre"
+        deleted_at: "Fecha de borrado"
+        created_at: "Fecha de creación"
+        updated_at: "Fecha de última modificación"
+      impulsa_edition_category:
+        impulsa_edition: "Edición de Impulsa"
+        name: "Nombre"
+        category_type: "Tipo de categoría"
+        category_type_name: "Tipo de categoría"
+        winners: "Ganadores"
+        prize: "Premio"
+        only_authors: "Sólo autores"
+        coofficial_language: "Idioma cooficial"
+        coofficial_language_name: "Idioma cooficial"
+        territories: "Territorios"
+        deleted_at: "Fecha de borrado"
+        created_at: "Fecha de creación"
+        updated_at: "Fecha de última modificación"
+      impulsa_project:
+        impulsa_edition: "Edición de Impulsa"
+        impulsa_edition_category: "Categoría de Impulsa"
+        impulsa_edition_topics: "Temáticas"
+        impulsa_edition_topic_ids: "Temáticas"
+        name: "Título"
+        user: "Usuario"
+        status: "Estado"
+        status_name: "Estado"
+        additional_contact: "Información de contacto (nombre y apellidos, telefono, email)"
+        counterpart_information: "Información adicional sobre la contraparte"
+        authority: "Órgano que presenta la iniciativa"
+        authority_name: "Nombre y apellidos del representante del órgano"
+        authority_phone: "Teléfono del representante del órgano"
+        authority_email: "Email del representante del órgano"
+        organization_type: "Tipo de solicitante"
+        organization_name: "Nombre"
+        organization_address: "Dirección postal completa (vía, número, ciudad y código postal)"
+        organization_web: "Página web o blog"
+        organization_nif: "NIF"
+        scanned_nif: "Tarjeta del NIF"
+        organization_year: "Año de creación"
+        organization_legal_name: "Nombre y apellidos del representante legal"
+        organization_legal_nif: "DNI/NIE de la persona representante legal"
+        organization_mission: "Misión de la organización"
+        career: "Trayectoria"
+        counterpart: "Contrapartes"
+        short_description: "Descripción breve"
+        territorial_context: "Contexto territorial"
+        long_description: "Descripción"
+        aim: "Objetivos"
+        metodology: "Metodología y fomento de la participación"
+        population_segment: "Segmento poblacional objetivo"
+        video_link: "Enlace al vídeo"
+        coofficial_translation: "Traducir"
+        coofficial_name: "Título traducido"
+        coofficial_short_description: "Descripción breve traducida"
+        coofficial_video_link: "Enlace al vídeo traducido"
+        coofficial_territorial_context: "Contexto territorial traducido"
+        coofficial_long_description: "Descripción traducida"
+        coofficial_aim: "Objetivos traducidos"
+        coofficial_metodology: "Metodología y fomento de la participación traducidas"
+        coofficial_population_segment: "Segmento poblacional objetivo traducido"
+        coofficial_organization_mission: "Misión de la organización traducida"
+        coofficial_career: "Trayectoria traducida"
+        logo: "Foto o logo"
+        endorsement: "Aval de un Círculo, de un Consejo Ciudadano o de una Secretaría General de Más Madrid"
+        register_entry: "Inscripción de la entidad solicitante en el registro correspondiente"
+        statutes: "Copia de los Estatutos de la entidad solicitante debidamente registrados"
+        responsible_nif: "NIF del responsable (gestor de proyectos o solicitante)"
+        fiscal_obligations_certificate: "Certificado de la Agencia Tributaria de obligaciones fiscales al corriente"
+        labor_obligations_certificate: "Certificado de la Seguridad Social de obligaciones laborales al corriente"
+        last_fiscal_year_report_of_activities: "Memoria de actividades del último ejercicio"
+        last_fiscal_year_annual_accounts: "Cuentas anuales del último ejercicio"
+        home_certificate: "Certificado de inscripción en el Consulado español del país de su residencia actual"
+        bank_certificate: "Certificado bancario de titularidad de una cuenta en una entidad financiera resi­dente en España en la que se abonará la ayuda"
+        schedule: "Cronograma y fases"
+        activities_resources: "Actividades y Recursos"
+        total_budget: "Presupuesto total"
+        requested_budget: "Presupuesto solicitado"
+        monitoring_evaluation: "Seguimiento y evaluación"
+        deleted_at: "Fecha de borrado"
+        created_at: "Fecha de creación"
+        updated_at: "Fecha de última modificación"
+        terms_of_service: "Términos legales"
+        data_truthfulness: "Veracidad de los datos"
+        content_rights: "Propiedad intelectual"
+        votes: "Votos"
+      microcredit:
+        id: "Identificador"
+        starts_at: "Fecha de inicio"
+        ends_at: "Fecha de final"
+        reset_at: "Fecha último cambio de fase"
+        limits: "Montos y limites por fase"
+        deleted_at: "Fecha de borrado"
+        created_at: "Fecha de creación"
+        updated_at: "Fecha de última modificación"
+        account_number: "Número de cuenta"
+        agreement_link: "Enlace al contrato"
+        contact_phone: "Teléfono de contacto"
+        total_goal: "Objetivo final"
+        slug: "Dirección página"
+      microcredit_loan:
+        first_name: "Nombre"
+        last_name: "Apellidos"
+        document_vatid: "DNI o NIE"
+        address: "Dirección"
+        postal_code: "Código postal"
+        minimal_year_old: "Edad mínima requerida"
+        terms_of_service: "Acuerdo legal"
+        amount: "Importe"
+        microcredit: "Microcrédito"
+        microcredits: "Microcréditos"
+        user: "Usuario"
+        created_at: "Fecha de suscripción"
+        confirmed_at: "Fecha de confirmación"
+        counted_at: "Fecha de aparición en la web"
+        discarded_at: "Fecha de descarte"
+        returned_at: "Fecha de devolución"
+        original_loans: "Suscripción original"
+        transferred_to: "Transferido a"
+        transferred_to_id: "Transferido a"
+        all: "Todos"
+        id: "Identificador"
+        iban_account: "IBAN"
+        iban_bic: "BIC/SWIFT"
+      renewals:
+        loan_renewals: "Microcréditos suscritos"
+        renewal_terms: "Condiciones generales de extinción del anterior microcrédito y renovación de la suscripción"
+        terms_of_service: "Condiciones generales de la suscripción del nuevo microcrédito"
+      collaboration:
+        user: "Usuario"
+        created_at: "Creada el"
+        updated_at: "Actualizada el"
+        amount: "Importe"
+        frequency: "Frecuencia de pago"
+        frequency_name: "Frecuencia de pago"
+        minimal_year_old: "Edad mínima requerida"
+        terms_of_service: "Acuerdo legal"
+        order_id: "Número de orden en Redsys"
+        payment_type: "Método de pago"
+        payment_type_name: "Método de pago"
+        ccc_entity: "Entidad"
+        ccc_office: "Oficina"
+        ccc_dc: "DC"
+        ccc_account: "Número de cuenta"
+        iban_account: "Cuenta Bancaria (incluido el IBAN)"
+        iban_bic: "BIC/SWIFT <a href='https://www.iban.es/bic/espana.html' target='_blank' style='font-size:9pt;'>¿Qué es esto?</a>"
+      order:
+        status: "Estado"
+        status_name: "Estado"
+        collaboration: "Colaboración"
+        user: "Usuario"
+        payable_at: "A cobrarse el"
+        payed_at: "Cobrada el"
+        created_at: "Creada el"
+        deleted_at: "Borrada el"
+        updated_at: "Actualizada el"
+      election:
+        title: "Título"
+        agora_election_id: "ID en AgoraVoting"
+        starts_at: "Empieza"
+        ends_at: "Termina"
+        close_message: "Mensaje de cierre"
+      proposal:
+        title: "Título"
+        description: "Descripción"
+        image_url: "URL de la imagen"
+      notice:
+        title: "Título"
+        body: "Mensaje"
+      user:
+        login: "Correo electrónico o Nº de documento"
+        first_name: "Nombre"
+        last_name: "Apellidos"
+        gender: "Género"
+        document_type: "Tipo de documento"
+        document_vatid: "Nº de documento"
+        born_at: "Fecha de nacimiento"
+        email: "Correo electrónico"
+        email_confirmation: "Correo electrónico (repetir)"
+        phone: "Teléfono móvil"
+        unconfirmed_phone: "Teléfono móvil"
+        address: "Dirección"
+        town: "Municipio"
+        province: "Provincia"
+        vote_town: "Municipio de origen"
+        province_town: "Provincia de origen"
+        postal_code: "Código postal"
+        country: "País"
+        password: "Contraseña"
+        password_confirmation: "Contraseña (repetir)"
+        remember_me: "Recuérdame"
+        wants_newsletter: 'Newsletter'
+        terms_of_service: "He leído y acepto las condiciones generales"
+        over_18: "Declaro ser mayor de 18 años"
+        captcha: "Captcha"
+        current_password: "Contraseña actual"
+        circle: "Círculo"
+      user_verification:
+        front_vatid: "Primer adjunto"
+        back_vatid: "Segundo adjunto"
+        terms_of_service: "Términos y condiciones"
+      category:
+        name: "nombre"
+  podemos:
+    election:
+      no_location: "No puedes participar en esta votación."
+      close_message: "Ha llegado la fecha límite para votar. La votación está cerrada."
+    other_locales: "Otros idiomas"
+    home_address: "Domicilio"
+    unauthorized: "No tienes permisos para acceder a esa sección"
+    banned: "Gracias, %{full_name}. Lamentamos decirte que para poder participar debes enviarnos además una fotocopia de tu documento de identidad (o pasaporte, si no tienes DNI ni NIE) a la dirección protecciondedatos@masmadrid.org o, si te viene mejor, pasarte por cualquier Delegación del Partido. Si quieres más información puedes consultarnos también en contacto@masmadrid.org. Pero lo más eficaz para poder participar de forma inmediata es escanear tu documento y mandárnoslos al primer correo. Muchas gracias y perdona las molestias."
+    user:
+      general_data: "Datos generales"
+      collaborations: "Colaboraciones económicas"
+      personal_data: "Datos personales"
+      change_email: "Cambiar correo electrónico"
+      change_email_explain: "Si cambias tu correo electrónico te enviaremos otro correo para que lo confirmes."
+      change_phone: "Cambiar teléfono móvil"
+      change_phone_explain_html: "Ahora mismo tienes el móvil <b> %{phone} </b>"
+      change_password: "Cambiar contraseña"
+      location_change_blocked: "El cambio de ubicación está bloqueado durante las votaciones. Por favor, espera a que estas acaben para cambiar tu domicilio o lugar de participación."
+      recover_password: "Recuperar contraseña"
+      cancel_account: "Darme de baja"
+      cancel_account_explain_html: "<p>Al pulsar el botón ‘Darme de baja’ dejarás de ser miembro de Más Madrid y cancelaremos tus datos personales de conformidad con lo dispuesto en la Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal.</p>
+<p> A partir de este momento tu cuenta de acceso al portal de participación de Más Madrid quedará eliminada.</p>
+<p>
+De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Protección de Datos, la cancelación dará lugar al bloqueo de los datos, conservándose únicamente a disposición de las Administraciones públicas, Jueces y Tribunales, para la atención de las posibles responsabilidades nacidas del tratamiento, durante el plazo de prescripción de éstas. Cumplido el citado plazo se procederá a la supresión de los datos.
+</p>
+"
+    devise:
+      mailer:
+        hello: "Hola"
+        welcome: "Bienvenida"
+        lock:
+          p1: "Tu cuenta ha sido bloqueada por un número excesivo de intentos de inicio de sesión fallidos. Si no has sido tú, <a href='mailto:ayuda-tecnica@masmadrid.org'>reporta la incidencia</a> para recibir ayuda."
+          p2: "Haz click en el link de aquí abajo para desbloquear tu cuenta:"
+          p3: "Si no funciona el enlace prueba copiando y pegándolo en la barra de direcciones de tu navegador."
+        confirm:
+          p1: "Te has dado de alta o has cambiado tu correo electrónico en el entorno Más Madrid. Si no es ese el caso, ignora este correo. Puedes confirmar que esta es tu dirección de correo a través del siguiente enlace:"
+          p2: "Si no funciona el enlace prueba copiando y pegándolo en la barra de direcciones de tu navegador."
+        password:
+          p1: "Alguien ha pedido que cambies tu contraseña. Puedes hacerlo a través del siguiente enlace:"
+          p2: "Si no has sido tú, por favor ignora este correo."
+          p3: "Si no funciona el enlace prueba copiando y pegándolo en la barra de direcciones de tu navegador."
+          p4: "Tu contraseña no cambiará hasta que accedas a este enlace y crees una nueva."
+    navbar:
+      tools: "Herramientas"
+      profile: "Perfil"
+      notice: "Avisos"
+    home:
+      button: "¿No estás inscripto? ¡Inscríbete!"
+      p1: "Más Madrid nace con la voluntad de construir una forma nueva de hacer política, y para ello necesitamos desarrollar estructuras organizativas diferentes de las tradicionales, para no repetir errores del pasado, para avanzar hacia una sociedad más democrática. Estamos construyendo una estructura transparente, ciudadana, abierta, democrática, eficaz. Una organización que responda al impulso democratizador de Más Madrid, en la que discutamos, debatamos y decidamos entre todos. "
+      p2: "Pasar a formar parte del censo de inscritos de Más Madrid, desde el que se realizarán a partir de ahora todas las votaciones. Es un procedimiento sencillo y rápido que te permitirá ser parte activa de la comunidad."
+    valid:
+      phone:
+        p1: "Introduce tu nuevo número de teléfono móvil."
+        p2: "Recibirás el código de verificación para validar el nuevo número en unos segundos."
+        p3: "Si ya has participado en alguna votación de Más Madrid, te enviaremos el código por e-mail."
+        p4: "Introduce el texto que aparece en la imagen."
+        p5: "Introduce el código que hayas recibido por SMS para confirmarlo"
+        valid: "Has validado correctamente."
+        invalid: "El código que has puesto no corresponde con el que te enviamos por SMS."
+        captcha: "Validar Captcha"
+        token: Código SMS
+        button: "Comprobar"
+        captcha_invalid: "Captcha invalido"
+    collaboration:
+      title: "Colaboración económica"
+      p1: "Colaborando con Más Madrid nos permites hacer este camino sin ataduras. Nuestro compromiso es exclusivamente con Madrid y con los madrileños y madrileñas.  Convirtamos la indignación en cambio. Contigo vamos a hacer de Madrid de nuevo el 'rompeolas de todas las Españas'."
+      ok:
+        p1: Tu donación se ha dado de alta correctamente.
+        p2: Gracias por colaborar con Más Madrid.
+      ko:
+        title: Hubo un error con tu colaboración.
+        contact: Por favor intenta realizar el pago nuevamente. Si continúas teniendo problemas contacta a contacto@masmadrid.org.
+      terms_of_service:
+        title: Condiciones Generales
+        p1_title: "Relación entre Más Madrid y el colaborador."
+        p1: '
+La realización de aportaciones económicas es totalmente voluntaria, no implica la vinculación
+del colaborador con el partido político Más Madrid ni le confiere la condición legal de afiliado o
+simpatizante, ni de derechos frente al partido, ni queda obligado por sus estatutos y demás normas internas.
+
+Para colaborar económicamente con Más Madrid y poder cumplimentar el formulario de alta como colaborador es
+imprescindible disponer de DNI o NIE y estar inscrito en la web http://participa.masmadrid.org.
+
+Conforme a lo dispuesto en el artículo 8 de la Ley Orgánica 8/2007 de 4 de julio sobre
+Financiación de los Partidos Políticos, su donativo tendrá la consideración de “aportación
+privada”, distinta de las cuotas de afiliados, adheridos y simpatizantes.'
+        p2_title: "Protección de datos de carácter personal."
+        p2: '
+Más Madrid Partido Político, de acuerdo con la Ley Orgánica 15/1999 de Protección de
+Datos de Carácter Personal, le informa de que sus datos serán incorporados al fichero
+“APORTACIONES”, del que es responsable Más Madrid, que los utilizará para tramitar su
+colaboración, gestionar los adeudos bancarios, cumplir con la normativa de financiación
+de partidos políticos, para fines estadísticos y hacerle llegar periódicamente información
+sobre sus actividades.
+
+Para ejercer sus derechos de acceso, rectificación, cancelación y oposición, como
+cancelar su suscripción, modificar los datos de cobro o el importe y frecuencia de su
+aportación, podrá utilizar la web participa.masmadrid.org accediendo a su perfil personal
+mediante su nombre de usuario y contraseña.
+
+También podrá ejercer sus derechos solicitándolo por correo electrónico a la dirección
+contacto@masmadrid.org, indicando tu nombre, apellidos y adjuntando copia de su
+DNI o documento legal de identificación.'
+        p3_title: "Consentimiento cesión de datos y orden de domiciliación y cargos en tarjeta de crédito o débito"
+        p3: '
+A los efectos previstos en la Ley 16/2009, de 13 de Noviembre, de Servicios de Pago, al
+confirmar el alta de la colaboración económica el colaborador autoriza expresamente a
+Más Madrid partido político y a su entidad bancaria para efectuar las operaciones de cobro
+mediante adeudos y cargos en la cuenta bancaria o en la tarjeta financiera, por el importe
+y con la frecuencia de pago que ha indicado en el formulario.
+
+Los adeudos domiciliados y los cargos en tarjeta se realizarán entre el día 1 y 15 de cada
+mes, trimestre o año, dependiendo de la frecuencia de pago elegida.'
+    registration:
+      message:
+        dni: "El formato deben ser 8 números y una letra, sin guiones ni espacios."
+        nie: "El formato deben ser una letra, 7 números y una letra, sin guiones ni espacios."
+        passport: "Envía una copia de tu pasaporte a contacto@masmadrid.org para validar la inscripción."
+        existing_user_location: "Se ha recuperado tu lugar de participación de un usuario anterior."
+      p1_html: "<p> Rellenando este formulario con tus datos pasarás a formar parte del censo de inscritos de Más Madrid y podrás participar en todas las votaciones. Es un procedimiento sencillo que te permitirá ser parte activa de Más Madrid.  </p>
+<p> Tus datos se asociarán a un teléfono móvil, en el que recibirás un SMS con tu código de verificación para validar la inscripción.  </p>
+<p><b> ¿Es seguro el sistema de inscripción? </b> </p>
+<p> Totalmente. Hemos intentado buscar el equilibrio entre seguridad y facilidad del proceso, cada inscripción es asociada a un teléfono móvil al que se envía automáticamente el código de verificación personal. Nuestros equipos informáticos han trabajado en el desarrollo de un sistema seguro, fiable y de fácil acceso para todas y todos.  </p>
+<p> *El usuario y contraseña de este portal de votaciones es distinto al de Más Madrid.  </p>
+<p><a href='/soporte-votaciones/'>¿Problemas con la inscripción?</a></p>
+<p><strong>Si no recibes el correo electrónico para completar la inscripción, recuerda comprobar
+si ha llegado a la carpeta de <em>correo electrónico no deseado</em>, <em>promociones</em> o <em>spam</em>.</strong></p>
+"
+      p1_html: "<p>Si completas este formulario con tus datos personales pasarás a formar parte del censo de participantes de Más Madrid y podrás participar en todos los procesos de votación de manera sencilla e intuitiva.</p>
+<p><b>¿En qué consiste el procedimiento?</b></p>
+<p>Tus datos se asociarán a un teléfono móvil, en el que recibirás un SMS con tu código de verificación que te permitirá validar la inscripción y pasar a formar parte de Más Madrid.</p>
+<p><b>¿Es seguro el sistema de inscripción?</b></p>
+<p>Absolutamente. Hemos trabajado para que el proceso sea sencillo, eficaz y seguro al mismo tiempo. Por ello cada inscripción está asociada a un teléfono móvil al que se envía automáticamente el código de verificación personal. Nuestros equipos informáticos se han esforzado para implementar un sistema seguro, fiable y de fácil acceso para todos y todas.</p>
+<p><b>¿Qué hacer si tienes problemas con la inscripción?</b></p>
+<p>En el caso de que no recibas un correo electrónico que te permita completar el proceso de inscripción recuerda comprobar las carpetas de correo no deseado, promociones y spam por si hubiera llegado a alguna de ellas.</p>
+<p>El censo de participantes será verificado de forma paulatina para cumplir con los estándares antifraude.</p>
+<p>Más Madrid es una plataforma ciudadana que de forma instrumental se constituye en partido político. Tus datos formarán parte del censo del Partido Político Más Madrid con CIF G88309315.</p>"
+      terms_of_service:
+        title: 'Condiciones generales'
+        p1_html: '<p style="margin-bottom: 0.28cm; line-height: 108%">AVISO LEGAL CON
+PROTECCIÓN DE DATOS MÁS MADRID</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">CONDICIONES
+GENERALES DE USO</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El sitio web
+www.masmadrid.org (en adelante, el “Sitio Web”) es propiedad de
+Más Madrid con domicilio social en Calle Cristóbal Bordiú, 10,
+1ºF, 28003, Madrid y C.I.F nº G88309315.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid le da
+la bienvenida y le invita a leer atentamente las Condiciones
+Generales de Uso de este Sito Web (en adelante, las “Condiciones
+Generales de Uso”) que describen los términos y condiciones que
+serán aplicables a su navegación por el mismo, de conformidad con
+lo establecido en la normativa española de aplicación. Dado que Más
+Madrid podría modificar en el futuro estas Condiciones de Uso, le
+recomendamos que las visite periódicamente para estar debidamente
+informado de los cambios realizados.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Con el ánimo de
+que el uso del Sitio Web se ajuste a criterios de transparencia,
+claridad y sencillez, Más Madrid informa al Usuario que cualquier
+sugerencia, duda o consulta sobre las Condiciones Generales de Uso
+será recibida y solucionada contactando con nosotros a través de un
+escrito por correo postal a Más Madrid (Calle Cristóbal Bordiú,
+10, 1ºF, 28003, Madrid) o bien por medio de un correo electrónico a
+privacidad@masmadrid.org, acompañando una fotocopia del documento
+que acredite su identidad.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">1. Objeto</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid
+suministra el contenido y los servicios que están disponibles en el
+Sitio Web, con sujeción a las presentes Condiciones Generales de Uso
+así como a la política sobre tratamiento de datos personales (en
+adelante, la “Política de Protección de Datos”) y las
+obligaciones dispuestas en la Ley 34/2002, de Servicios de la
+Sociedad de la Información y del Comercio Electrónico (LSSI-CE),
+así como informar a todos los usuarios del sitio web respecto a
+cuáles son las condiciones de uso del sitio web. El acceso a este
+Sitio Web o su utilización en cualquier forma le otorga la
+calificación de “Usuario” e implica la aceptación sin reservas
+de todas y cada una de las presentes Condiciones Generales de Uso,
+reservándose Más Madrid el derecho a modificarlos en cualquier
+momento. En consecuencia, será responsabilidad de todo Usuario, la
+atenta lectura de las Condiciones Generales de Uso vigente en cada
+una de las ocasiones en que acceda a este Sitio Web, por lo que si
+éste no está de acuerdo con cualquiera de los mismos aquí
+dispuestos, deberá abstenerse respecto al uso del presente Sitio
+Web.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Asimismo, queda
+advertido de que, en ocasiones, se podrán establecer condiciones
+particulares para la utilización en el Sitio Web de contenidos y/o
+servicios específicos, la utilización de dichos contenidos o
+servicios implicará la aceptación de las condiciones particulares
+en ellos especificadas.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">2. Servicios</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">A través del
+Sitio Web, Más Madrid facilita a los Usuarios la posibilidad de
+acceder a toda la información de la candidatura de Más Madrid así
+como otros tipos de servicios vinculados al citado movimiento.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">3. Privacidad y
+Tratamiento de Datos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Cuando para el
+acceso a determinados contenidos o servicios sea necesario facilitar
+datos de carácter personal, los Usuarios garantizarán su veracidad,
+exactitud, autenticidad y vigencia. Más Madrid dará a dichos datos
+el tratamiento automatizado que corresponda en función de su
+naturaleza o finalidad, en los términos indicados en la sección de
+Política de Protección de Datos.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">4. Propiedad
+Industrial e Intelectual</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El Usuario
+reconoce y acepta que todos los contenidos que se muestran en el
+Sitio Web y en especial, diseños, textos, imágenes, logos, iconos,
+botones, software, nombres comerciales, marcas, o cualesquiera otros
+signos susceptibles de utilización industrial y/o comercial están
+sujetos a derechos de Propiedad Intelectual y todas las marcas,
+nombres comerciales o signos distintivos, todos los derechos de
+propiedad industrial e intelectual, sobre los contenidos y/o
+cualesquiera otros elementos insertados en el página, que son
+propiedad exclusiva de Más Madrid y/o de terceros, quienes tienen el
+derecho exclusivo de utilizarlos en el tráfico económico. Por todo
+ello el Usuario se compromete a no reproducir, copiar, distribuir, po</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">ner a disposición
+o de cualquier otra forma comunicar públicamente, transformar o
+modificar tales contenidos manteniendo indemne a Más Madrid de
+cualquier reclamación que se derive del incumplimiento de tales
+obligaciones. En ningún caso el acceso al Sitio Web implica ningún
+tipo de renuncia, transmisión, licencia o cesión total ni parcial
+de dichos derechos, salvo que se establezca expresamente lo
+contrario. Las presentes Condiciones Generales de Uso del Sitio Web
+no confieren a los Usuarios ningún otro derecho de utilización,
+alteración, explotación, reproducción, distribución o
+comunicación pública del Sitio Web y/o de sus Contenidos distintos
+de los aquí expresamente previstos. Cualquier otro uso o explotación
+de cualesquiera derechos estará sujeto a la previa y expresa
+autorización específicamente otorgada a tal efecto por Más Madrid
+o el tercero titular de los derechos afectados.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Los contenidos,
+textos, fotografías, diseños, logotipos, imágenes, programas de
+ordenador, códigos fuente y, en general, cualquier creación
+intelectual existente en este sitio, así como el propio sitio en su
+conjunto, como obra artística multimedia, están protegidos como
+derechos de autor por la legislación en materia de propiedad
+intelectual. Más Madrid es titular de los elementos que integran el
+diseño gráfico del Sitio Web, lo menús, botones de navegación, el
+código HTML, los textos, imágenes, texturas, gráficos y cualquier
+otro contenido del Sitio Web o, en cualquier caso dispone de la
+correspondiente autorización para la utilización de dichos
+elementos. El contenido dispuesto en el Sitio Web no podrá ser
+reproducido ni en todo ni en parte, ni transmitido, ni registrado por
+ningún sistema de recuperación de información, en ninguna forma ni
+en ningún medio, a menos que se cuente con la autorización previa,
+por escrito, de la citada Entidad.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Asimismo queda
+prohibido suprimir, eludir y/o manipular el &quot;copyright&quot; así
+como los dispositivos técnicos de protección, o cualesquiera
+mecanismos de información que pudieren contener los contenidos. El
+Usuario de este Sitio Web se compromete a respetar los derechos
+enunciados y a evitar cualquier actuación que pudiera perjudicarlos,
+reservándose en todo caso Más Madrid el ejercicio de cuantos medios
+o acciones legales le correspondan en defensa de sus legítimos
+derechos de propiedad intelectual e industrial.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">5. Obligaciones y
+Responsabilidades del Usuario del Sitio Web</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El Usuario se
+compromete a:</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • a) Hacer
+un uso adecuado y lícito del Sitio Web así como de los contenidos y
+servicios, de conformidad con: 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (i)
+la legislación aplicable en cada momento; 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (ii)
+las Condiciones Generales de Uso del Sitio Web; 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (iii)
+la moral y buenas costumbres generalmente aceptadas; 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (iv)
+el orden público. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • b)
+Proveerse de todos los medios y requerimientos técnicos que se
+precisen para acceder al Sitio Web. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • c)
+Facilitar información veraz al cumplimentar con sus datos de
+carácter personal los formularios contenidos en el Sitio Web y a
+mantenerlos actualizados en todo momento de forma que responda, en
+cada momento, a la situación real del Usuario. El Usuario será el
+único responsable de las manifestaciones falsas o inexactas que
+realice y de los perjuicios que cause a Más Madrid o a terceros por
+la información que facilite. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">No obstante lo
+establecido en el apartado anterior el Usuario deberá asimismo
+abstenerse de:</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • a) Hacer
+un uso no autorizado o fraudulento del Sitio Web y/o de los
+contenidos con fines o efectos ilícitos, prohibidos en las presentes
+Condiciones Generales de Uso, lesivos de los derechos e intereses de
+terceros, o que de cualquier forma puedan dañar, inutilizar,
+sobrecargar, deteriorar o impedir la normal utilización de los
+servicios o los documentos, archivos y toda clase de contenidos
+almacenados en cualquier equipo informático. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • b)
+Acceder o intentar acceder a recursos o áreas restringidas del Sitio
+Web, sin cumplir las condiciones exigidas para dicho acceso. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • c)
+Provocar daños en los sistemas físicos o lógicos del Sitio Web, de</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><a name="_GoBack"></a>
+<br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">sus proveedores o
+de terceros. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • d)
+Introducir o difundir en la red virus informáticos o cualesquiera
+otros sistemas físicos o lógicos que sean susceptibles de provocar
+daños en los sistemas físicos o lógicos de Más Madrid, de sus
+proveedores o de terceros. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • e)
+Intentar acceder, utilizar y/o manipular los datos de Más Madrid,
+terceros, proveedores y otros Usuarios. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • f)
+Reproducir o copiar, distribuir, permitir el acceso del público a
+través de cualquier modalidad de comunicación pública, transformar
+o modificar los contenidos, a menos que se cuente con la autorización
+del titular de los correspondientes derechos o ello resulte
+legalmente permitido. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • g)
+Suprimir, ocultar o manipular las notas sobre derechos de propiedad
+intelectual o industrial y demás datos identificativos de los
+derechos de Más Madrid o de terceros incorporados a los contenidos,
+así como los dispositivos técnicos de protección o cualesquiera
+mecanismos de información que puedan insertarse en los contenidos. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • h)
+Obtener e intentar obtener los contenidos empleando para ello medios
+o procedimientos distintos de los que, según los casos, se hayan
+puesto a su disposición a este efecto o se hayan indicado
+expresamente en las páginas web donde se encuentren los contenidos
+o, en general, de los que se empleen habitualmente en Internet por no
+entrañar un riesgo de daño o inutilización del sitio web y/o de
+los contenidos. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • i) En
+particular, y a título meramente indicativo y no exhaustivo, el
+Usuario se compromete a no transmitir, difundir o poner a disposición
+de terceros informaciones, datos, contenidos, mensajes, gráficos,
+dibujos, archivos de sonido y/o imagen, fotografías, grabaciones,
+software y, en general, cualquier clase de material que: 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (i)
+De cualquier forma sea contrario, menosprecie o atente contra los
+derechos fundamentales y las libertades públicas reconocidas
+constitucionalmente, en los Tratados Internacionales y en el resto de
+la legislación vigente. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (ii)
+Induzca, incite o promueva actuaciones delictivas, denigratorias,
+difamatorias, violentas o, en general, contrarias a la ley, a la
+moral, a las buenas costumbres generalmente aceptadas o al orden
+público. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (iii)
+Induzca, incite o promueva actuaciones, actitudes o pensamientos
+discriminatorios por razón de sexo, raza, religión, creencias, edad
+o condición. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (iv)
+Incorpore, ponga a disposición o permita acceder a productos,
+elementos, mensajes y/o servicios delictivos, violentos, ofensivos,
+nocivos, degradantes o, en general, contrarios a la ley, a la moral y
+a las buenas costumbres generalmente aceptadas o al orden público. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (v)
+Induzca o pueda inducir a un estado inaceptable de ansiedad o temor. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (vi)
+Induzca o incite a involucrarse en prácticas peligrosas, de riesgo o
+nocivas para la salud y el equilibrio psíquico. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (vii)
+Se encuentra protegido por la legislación en materia de protección
+intelectual o industrial perteneciente a Más Madrid o a terceros sin
+que haya sido autorizado el uso que se pretenda realizar. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦
+(viii) Sea contrario al honor, a la intimidad personal y familiar o a
+la propia imagen de las personas. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (ix)
+Constituya cualquier tipo de publicidad. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (x)
+Incluya cualquier tipo de virus o programa que impida el normal
+funcionamiento del Sitio Web. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Si para acceder a
+algunos de los servicios y/o contenidos del Sitio Web, se le
+proporcionara una contraseña, se obliga a usarla de manera
+diligente, manteniéndola en todo momento en secreto. En
+consecuencia, será responsable de su adecuada custodia y
+confidencialidad, comprometiéndose a no cederla a terceros, de
+manera temporal o permanente, ni a permitir el acceso a los
+mencionados servicios y/o contenidos por parte de personas ajenas.
+Igualmente, se obliga a notificar a Más Madrid cualquier hecho que
+pueda suponer un uso indebido de su contraseña, como, a título
+enunciativo, su robo, extravío o el acceso no autorizado, con el fin
+de proceder a su inmediata cancelación. En consecuencia, mientras no
+efect</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">úe la
+notificación anterior, Más Madrid quedará eximido de cualquier
+responsabilidad que pudiera derivarse del uso indebido de su
+contraseña, siendo de su responsabilidad cualquier utilización
+ilícita de los contenidos y/o servicios del Sitio Web por cualquier
+tercero ilegítimo.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Si de manera
+negligente o dolosa incumpliera cualquiera de las obligaciones
+establecidas en las presentes Condiciones Generales de Uso,
+responderá por todos los daños y perjuicios que de dicho
+incumplimiento pudieran derivarse para Más Madrid.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">6.
+Responsabilidades</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid no
+garantiza el acceso continuado, ni la correcta visualización,
+descarga o utilidad de los elementos e informaciones contenidas en
+las páginas de www.masmadrid.org que pueden verse impedidos,
+dificultados o interrumpidos por factores o circunstancias que están
+fuera de su control.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid no se
+hace responsable de las decisiones que pudieran adoptarse como
+consecuencia del acceso a los contenidos o informaciones ofrecidas.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid podrá
+interrumpir el servicio o resolver de modo inmediato la relación con
+el Usuario si detecta que un uso de su Sitio Web o de cualquiera de
+los servicios ofertados en el mismo son contrarios a las presentes
+Condiciones Generales de Uso. Más Madrid no se hace responsable por
+daños, perjuicios, pérdidas, reclamaciones o gastos derivados del
+uso del Sitio Web. Únicamente será responsable de eliminar, lo
+antes posible, los contenidos que puedan generar tales perjuicios,
+siempre que así se notifique. En especial no será responsable de
+los perjuicios que se pudieran derivar, entre otros, de:</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • (i)
+interferencias, interrupciones, fallos, omisiones, averías
+telefónicas, retrasos, bloqueos o desconexiones en el funcionamiento
+del sistema electrónico, motivadas por deficiencias, sobrecargas y
+errores en las líneas y redes de telecomunicaciones, o por cualquier
+otra causa ajena al control Más Madrid.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • (ii)
+intromisiones ilegítimas mediante el uso de programas malignos de
+cualquier tipo y a través de cualquier medio de comunicación, tales
+como virus informáticos o cualesquiera otros. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • (iii)
+abuso indebido o inadecuado del Sitio Web. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • (iv)
+errores de seguridad o navegación producidos por un mal
+funcionamiento del navegador o por el uso de versiones no
+actualizadas del mismo. Los administradores de Más Madrid se
+reservan el derecho de retirar, total o parcialmente, cualquier
+contenido o información presente en el Sitio Web. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid
+excluye cualquier responsabilidad por los daños y perjuicios de toda
+naturaleza que pudieran deberse a la mala utilización de los
+servicios de libre disposición y uso por parte de los Usuarios de
+Sitio Web. Asimismo, Más Madrid queda exonerado de cualquier
+responsabilidad por el contenido e informaciones que puedan ser
+recibidas como consecuencia de los formularios de recogida de datos,
+estando los mismos únicamente para la prestación de los servicios
+de información, convocatorias, consultas y dudas sobre Más Madrid.
+Por otro lado, en caso de causar daños y perjuicios por un uso
+ilícito o incorrecto de dichos servicios, podrá ser el Usuario
+reclamado por Más Madrid de los daños o perjuicios causados.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Usted defenderá,
+indemnizará y mantendrá a Más Madrid indemne frente a cualesquiera
+daños y perjuicios que se deriven de reclamaciones, acciones o
+demandas de terceros como consecuencia de su acceso o uso del Sitio
+Web. Asimismo, usted se obliga a indemnizar Más Madrid frente a
+cualesquiera daños y perjuicios, que se deriven del uso por su parte
+de “robots”, “spiders”, “crawlers” o herramientas
+similares empleadas con el fin de recabar o extraer datos o de
+cualquier otra actuación por su parte que imponga una carga
+irrazonable sobre el funcionamiento del Sitio Web.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">7. Hipervínculos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El Usuario se
+obliga a no reproducir de ningún modo, ni siquiera mediante un
+hiperenlace o hipervínculo, el Sitio Web www.masmadrid.org, así
+como ninguno de sus contenidos, salvo autorización expresa y por
+escrito de Más Madrid 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El Sitio Web
+www.masmadrid.org, incluye enlaces a otras sitios web gestionados por
+terceros, con obj</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">eto de facilitar
+el acceso del Usuario a la información de entidades colaboradoras
+y/o patrocinadoras. Conforme con ello, Más Madrid no se
+responsabiliza del contenido de dichos sitios web, ni se sitúa en
+una posición de garante ni/o de parte ofertante de los servicios y/o
+información que se puedan ofrecer a terceros a través de los
+enlaces de terceros.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Se concede al
+Usuario un derecho limitado, revocable y no exclusivo a crear enlaces
+a la página principal del Sitio Web exclusivamente para uso privado
+y no comercial. Los sitios web que incluyan enlace a nuestro Sitio
+Web (i) no podrán dar a entender que Más Madrid recomienda ese
+sitio web o sus servicios; (ii) no podrán falsear su relación con
+Más Madrid ni afirmar que Más Madrid ha autorizado tal enlace, ni
+incluir marcas, denominaciones, nombres comerciales, logotipos u
+otros signos distintivos de Más Madrid; (iii) no podrán incluir
+contenidos que puedan considerarse de mal gusto, obscenos, ofensivos,
+controvertidos, que inciten a la violencia o la discriminación por
+razón de sexo, raza o religión, contrarios al orden público o
+ilícitos; (iv) no podrán enlazar a ninguna página del Sitio Web
+distinta de la página principal; (v) deberá enlazar con la propia
+dirección del Sitio Web, sin permitir que el sitio web que realice
+el enlace reproduzca el Sitio Web como parte de su web o dentro de
+uno de sus “frames” o crear un “browser” sobre cualquiera de
+las páginas del Sitio Web. Más Madrid podrá solicitar, en
+cualquier momento, que elimine cualquier enlace al Sitio Web, después
+de lo cual deberá proceder de inmediato a su eliminación. Más
+Madrid no puede controlar la información, contenidos, productos o
+servicios facilitados por otros sitios web que tengan establecidos
+enlaces con destino al Sitio Web.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">En consecuencia,
+Más Madrid no asume ningún tipo de responsabilidad por cualquier
+aspecto relativo a tales sitios web.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">8. Protección de
+datos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">A efectos del
+cumplimiento con lo dispuesto en el Reglamento (UE) 2016/679, Más
+Madrid informa de que todos los datos de carácter personal que
+nuestros usuarios aporten a www.masmadrid.org incluida la dirección
+IP del equipo desde el que accede, bien sea a través de cualquier
+registro o suscripción a los servicios del sitio web bien mediante
+el envío de comentarios u observaciones por correo electrónico,
+web, formularios, etc., serán incluidos en un fichero debidamente
+inscrito en el Registro de la Agencia de Protección de Datos, cuyo
+titular y responsable es el Más Madrid, y serán tratados con la
+máxima confidencialidad.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Los datos que se
+pidan a los usuarios de www.masmadrid.org tendrán como finalidad
+prestar los servicios para los que se soliciten, gestionar la
+administración del website, realizar estudios estadísticos o enviar
+a través de cualquier canal (correo postal o electrónico, teléfono
+fijo o móvil, SMS, MMS, Internet, etc.) información promocional y
+noticias de todas las actividades inherentes a la acción del Más
+Madrid, en particular las relacionadas a campañas, candidaturas,
+convocatorias, acciones del partido y sus líderes, etc.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid ha
+implementado las medidas de seguridad requeridas por la normativa
+vigente para la protección de los datos de carácter personal y ha
+desarrollado los requisitos técnicos necesarios para garantizar el
+tratamiento confidencial de los datos, evitar su pérdida, alteración
+y acceso. No obstante, el usuario debe ser consciente de que las
+medidas de seguridad en Internet no son inexpugnables.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid
+prohíbe el uso de los servicios de su sitio web a menores de 14
+años. Además, el Más Madrid aconseja que los menores de edad (de
+14 a 18 años) consulten con sus padres antes de proporcionar
+cualquier dato de carácter personal e informa de que, en ningún
+caso, se recabarán datos relativos a otros miembros de su familia
+sin el consentimiento de los titulares de los mismos.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Si no se
+facilitan los datos personales requeridos (bien para el registro o
+suscripción a cualquier tipo de envío bien para la realización de
+comentarios, etc.) o no se acepta la presente política de privacidad
+supone la impos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">ibilidad de
+recibir los servicios mencionados.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Derechos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    1. El
+interesado puede ejercer los siguientes derechos: 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        1.
+Derecho a solicitar el acceso a sus datos personales. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        2.
+Derecho a solicitar su rectificación o supresión. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        3.
+Derecho a solicitar la limitación de su tratamiento. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        4.
+Derecho a oponerse al tratamiento. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        5.
+Derecho a la portabilidad de los datos. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        6.
+Derecho a retirar el consentimiento prestado. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    2. Cualquier
+persona tiene derecho a obtener confirmación sobre s, estamos
+tratando datos personales que les conciernan, o no. Las personas
+interesadas tienen derecho a acceder a sus datos personales, así
+como a solicitar la rectificación de los datos inexactos o, en su
+caso, solicitar su supresión cuando, entre otros motivos, los datos
+ya no sea necesario para los fines que fueron recogidos. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    3. En
+determinadas circunstancias, los interesados podrán solicitar la
+limitación del tratamiento de sus datos, en cuyo caso únicamente
+los conservaremos para el ejercicio o la defensa de reclamaciones. En
+determinadas circunstancias y por motivos relacionados con su
+situación particular, los interesados podrán oponerse al
+tratamiento de sus datos. En este caso, Más Madrid, dejará de
+tratar los datos, salvo por motivos legítimos imperiosos, o el
+ejercicio o la defensa de posibles reclamaciones. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    4. Si ha
+otorgado su consentimiento para alguna finalidad concreta, tiene
+derecho a retirar el consentimiento otorgado en cualquier momento,
+sin que ello afecte a la licitud del tratamiento basado en el
+consentimiento previo a su retirada. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    5. En caso de
+que sienta vulnerados sus derechos en lo concerniente a la protección
+de sus datos personales, especialmente cuando no haya obtenido
+satisfacción en el ejercicio de sus derechos, puede presentar una
+reclamación ante la Autoridad de Control en materia de Protección
+de Datos competente a través de su sitio web: http://www.agpd.es. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    6. En
+cumplimiento de lo prevenido en el artículo 21 de la Ley 34/2002 de
+servicios de la sociedad de la información y comercio electrónico,
+si usted no desea recibir más información sobre nuestros servicios,
+puede darse de baja en la siguiente dirección de correo electrónico
+de la entidad privacidad@masmadrid.org, indicando en el asunto “No
+enviar correos”. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">9. Cookies</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid se
+reserva el derecho de utilizar la tecnología “cookie” en el
+Sitio Web, a fin de reconocerlo como Usuario frecuente y personalizar
+el uso que realice del Sitio Web mediante la preselección de su
+idioma, o contenidos más deseados o específicos. Las “cookies”
+utilizadas por el Sitio Web, o el tercero que actúe en su nombre, se
+asocian únicamente con un usuario anónimo y su ordenador, y no
+proporcionan por sí los datos personales del usuario.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Las cookies son
+ficheros enviados a un navegador por medio de un servidor Web para
+registrar la navegación del Usuario en el Sitio Web, cuando el
+Usuario permita su recepción. A su vez podrá eliminar las “cookies”
+para lo cual deberá consultar las instrucciones de uso de su
+navegador.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Gracias a las
+cookies, resulta posible que www.masmadrid.org reconozca el navegador
+del ordenador utilizado por el Usuario con la finalidad de facilitar
+contenidos y ofrecer las preferencias de navegación u publicitarias
+que el Usuario, a los perfiles demográficos de los Usuarios así
+como para medir las visitas y parámetros del tráfico, controlar el
+progreso y número de entradas.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">10. Duración y
+terminación</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">La prestación
+del servicio del presente Sitio Web y los demás servicios tienen en
+principio una duración indefinida. No obstante, Más Madrid podrá
+dar por terminada o suspender cualquiera de los servicios del portal.
+Cuando sea ello posible, Más Madrid anunciará la terminación o
+suspensión de la prestación del servicio determinado.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">11. Declaraciones
+y Garantías</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">En general, los
+contenidos y servicios ofrecidos en el Sitio Web tienen carácter
+meramente informativo. Por consiguiente, al ofrecerlos, Más Madrid
+no otorga garantía ni declaración alguna en relación con los
+contenidos y servicios of</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%"><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">recidos en el
+Sitio web, incluyendo, a título enunciativo, garantías de licitud,
+fiabilidad, utilidad, veracidad, exactitud, o comerciabilidad, salvo
+en la medida en que por ley no puedan excluirse tales declaraciones y
+garantías.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">12. Fuerza mayor</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid no
+será responsable en todo en caso de imposibilidad de prestar
+servicio, si ésta se debe a interrupciones prolongadas del
+suministro eléctrico, líneas de telecomunicaciones, conflictos
+sociales, huelgas, rebelión, explosiones, inundaciones, actos y
+omisiones del Gobierno, y en general todos los supuestos de fuerza
+mayor o de caso fortuito.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">13. Resolución
+de controversias. Ley aplicable y jurisdicción</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Las presentes
+Condiciones Generales de Uso, así como el uso del Sitio Web, se
+regirán por la legislación española. Cualquier controversia será
+resuelta ante los tribunales de Madrid.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">En el supuesto de
+que cualquier estipulación de las presentes Condiciones Generales de
+Uso resultara inexigible o nula en virtud de la legislación
+aplicable o como consecuencia de una resolución judicial o
+administrativa, dicha inexigibilidad o nulidad no hará que las
+presentes Condiciones Generales de Uso resulten inexigibles o nulas
+en su conjunto. En dichos casos, Más Madrid procederá a la
+modificación o sustitución de dicha estipulación por otra que sea
+válida y exigible y que, en la medida de lo posible, consiga el
+objetivo y pretensión reflejados en la estipulación original.</p>'
+    legacy:
+      password:
+        title: "Cambiar contraseña antigua"
+        explain: "Por motivos de seguridad tienes que cambiar la contraseña."
+        changed: "Has cambiado tu contraseña"
+    guarantees:
+      title: "Comisión de Garantías"
+    legal:
+      title1: "WEB PARTICIPA.MASMADRID.ORG"
+      title2: "Aviso legal"
+      title3: "CONDICIONES GENERALES DE ACCESO, EMPLEO DE COOKIES Y POLÍTICA DE PRIVACIDAD"
+      text_html: '
+<p style="margin-bottom: 0.28cm; line-height: 108%">AVISO LEGAL CON
+PROTECCIÓN DE DATOS MÁS MADRID</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">CONDICIONES
+GENERALES DE USO</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El sitio web
+www.masmadrid.org (en adelante, el “Sitio Web”) es propiedad de
+Más Madrid con domicilio social en Calle Cristóbal Bordiú, 10,
+1ºF, 28003, Madrid y C.I.F nº G88309315.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid le da
+la bienvenida y le invita a leer atentamente las Condiciones
+Generales de Uso de este Sito Web (en adelante, las “Condiciones
+Generales de Uso”) que describen los términos y condiciones que
+serán aplicables a su navegación por el mismo, de conformidad con
+lo establecido en la normativa española de aplicación. Dado que Más
+Madrid podría modificar en el futuro estas Condiciones de Uso, le
+recomendamos que las visite periódicamente para estar debidamente
+informado de los cambios realizados.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Con el ánimo de
+que el uso del Sitio Web se ajuste a criterios de transparencia,
+claridad y sencillez, Más Madrid informa al Usuario que cualquier
+sugerencia, duda o consulta sobre las Condiciones Generales de Uso
+será recibida y solucionada contactando con nosotros a través de un
+escrito por correo postal a Más Madrid (Calle Cristóbal Bordiú,
+10, 1ºF, 28003, Madrid) o bien por medio de un correo electrónico a
+privacidad@masmadrid.org, acompañando una fotocopia del documento
+que acredite su identidad.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">1. Objeto</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid
+suministra el contenido y los servicios que están disponibles en el
+Sitio Web, con sujeción a las presentes Condiciones Generales de Uso
+así como a la política sobre tratamiento de datos personales (en
+adelante, la “Política de Protección de Datos”) y las
+obligaciones dispuestas en la Ley 34/2002, de Servicios de la
+Sociedad de la Información y del Comercio Electrónico (LSSI-CE),
+así como informar a todos los usuarios del sitio web respecto a
+cuáles son las condiciones de uso del sitio web. El acceso a este
+Sitio Web o su utilización en cualquier forma le otorga la
+calificación de “Usuario” e implica la aceptación sin reservas
+de todas y cada una de las presentes Condiciones Generales de Uso,
+reservándose Más Madrid el derecho a modificarlos en cualquier
+momento. En consecuencia, será responsabilidad de todo Usuario, la
+atenta lectura de las Condiciones Generales de Uso vigente en cada
+una de las ocasiones en que acceda a este Sitio Web, por lo que si
+éste no está de acuerdo con cualquiera de los mismos aquí
+dispuestos, deberá abstenerse respecto al uso del presente Sitio
+Web.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Asimismo, queda
+advertido de que, en ocasiones, se podrán establecer condiciones
+particulares para la utilización en el Sitio Web de contenidos y/o
+servicios específicos, la utilización de dichos contenidos o
+servicios implicará la aceptación de las condiciones particulares
+en ellos especificadas.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">2. Servicios</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">A través del
+Sitio Web, Más Madrid facilita a los Usuarios la posibilidad de
+acceder a toda la información de la candidatura de Más Madrid así
+como otros tipos de servicios vinculados al citado movimiento.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">3. Privacidad y
+Tratamiento de Datos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Cuando para el
+acceso a determinados contenidos o servicios sea necesario facilitar
+datos de carácter personal, los Usuarios garantizarán su veracidad,
+exactitud, autenticidad y vigencia. Más Madrid dará a dichos datos
+el tratamiento automatizado que corresponda en función de su
+naturaleza o finalidad, en los términos indicados en la sección de
+Política de Protección de Datos.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">4. Propiedad
+Industrial e Intelectual</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El Usuario
+reconoce y acepta que todos los contenidos que se muestran en el
+Sitio Web y en especial, diseños, textos, imágenes, logos, iconos,
+botones, software, nombres comerciales, marcas, o cualesquiera otros
+signos susceptibles de utilización industrial y/o comercial están
+sujetos a derechos de Propiedad Intelectual y todas las marcas,
+nombres comerciales o signos distintivos, todos los derechos de
+propiedad industrial e intelectual, sobre los contenidos y/o
+cualesquiera otros elementos insertados en el página, que son
+propiedad exclusiva de Más Madrid y/o de terceros, quienes tienen el
+derecho exclusivo de utilizarlos en el tráfico económico. Por todo
+ello el Usuario se compromete a no reproducir, copiar, distribuir, poner a disposición
+o de cualquier otra forma comunicar públicamente, transformar o
+modificar tales contenidos manteniendo indemne a Más Madrid de
+cualquier reclamación que se derive del incumplimiento de tales
+obligaciones. En ningún caso el acceso al Sitio Web implica ningún
+tipo de renuncia, transmisión, licencia o cesión total ni parcial
+de dichos derechos, salvo que se establezca expresamente lo
+contrario. Las presentes Condiciones Generales de Uso del Sitio Web
+no confieren a los Usuarios ningún otro derecho de utilización,
+alteración, explotación, reproducción, distribución o
+comunicación pública del Sitio Web y/o de sus Contenidos distintos
+de los aquí expresamente previstos. Cualquier otro uso o explotación
+de cualesquiera derechos estará sujeto a la previa y expresa
+autorización específicamente otorgada a tal efecto por Más Madrid
+o el tercero titular de los derechos afectados.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Los contenidos,
+textos, fotografías, diseños, logotipos, imágenes, programas de
+ordenador, códigos fuente y, en general, cualquier creación
+intelectual existente en este sitio, así como el propio sitio en su
+conjunto, como obra artística multimedia, están protegidos como
+derechos de autor por la legislación en materia de propiedad
+intelectual. Más Madrid es titular de los elementos que integran el
+diseño gráfico del Sitio Web, lo menús, botones de navegación, el
+código HTML, los textos, imágenes, texturas, gráficos y cualquier
+otro contenido del Sitio Web o, en cualquier caso dispone de la
+correspondiente autorización para la utilización de dichos
+elementos. El contenido dispuesto en el Sitio Web no podrá ser
+reproducido ni en todo ni en parte, ni transmitido, ni registrado por
+ningún sistema de recuperación de información, en ninguna forma ni
+en ningún medio, a menos que se cuente con la autorización previa,
+por escrito, de la citada Entidad.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Asimismo queda
+prohibido suprimir, eludir y/o manipular el &quot;copyright&quot; así
+como los dispositivos técnicos de protección, o cualesquiera
+mecanismos de información que pudieren contener los contenidos. El
+Usuario de este Sitio Web se compromete a respetar los derechos
+enunciados y a evitar cualquier actuación que pudiera perjudicarlos,
+reservándose en todo caso Más Madrid el ejercicio de cuantos medios
+o acciones legales le correspondan en defensa de sus legítimos
+derechos de propiedad intelectual e industrial.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">5. Obligaciones y
+Responsabilidades del Usuario del Sitio Web</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El Usuario se
+compromete a:</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • a) Hacer
+un uso adecuado y lícito del Sitio Web así como de los contenidos y
+servicios, de conformidad con: 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (i)
+la legislación aplicable en cada momento; 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (ii)
+las Condiciones Generales de Uso del Sitio Web; 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (iii)
+la moral y buenas costumbres generalmente aceptadas; 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (iv)
+el orden público. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • b)
+Proveerse de todos los medios y requerimientos técnicos que se
+precisen para acceder al Sitio Web. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • c)
+Facilitar información veraz al cumplimentar con sus datos de
+carácter personal los formularios contenidos en el Sitio Web y a
+mantenerlos actualizados en todo momento de forma que responda, en
+cada momento, a la situación real del Usuario. El Usuario será el
+único responsable de las manifestaciones falsas o inexactas que
+realice y de los perjuicios que cause a Más Madrid o a terceros por
+la información que facilite. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">No obstante lo
+establecido en el apartado anterior el Usuario deberá asimismo
+abstenerse de:</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • a) Hacer
+un uso no autorizado o fraudulento del Sitio Web y/o de los
+contenidos con fines o efectos ilícitos, prohibidos en las presentes
+Condiciones Generales de Uso, lesivos de los derechos e intereses de
+terceros, o que de cualquier forma puedan dañar, inutilizar,
+sobrecargar, deteriorar o impedir la normal utilización de los
+servicios o los documentos, archivos y toda clase de contenidos
+almacenados en cualquier equipo informático. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • b)
+Acceder o intentar acceder a recursos o áreas restringidas del Sitio
+Web, sin cumplir las condiciones exigidas para dicho acceso. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • c)
+Provocar daños en los sistemas físicos o lógicos del Sitio Web, de sus proveedores o
+de terceros. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • d)
+Introducir o difundir en la red virus informáticos o cualesquiera
+otros sistemas físicos o lógicos que sean susceptibles de provocar
+daños en los sistemas físicos o lógicos de Más Madrid, de sus
+proveedores o de terceros. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • e)
+Intentar acceder, utilizar y/o manipular los datos de Más Madrid,
+terceros, proveedores y otros Usuarios. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • f)
+Reproducir o copiar, distribuir, permitir el acceso del público a
+través de cualquier modalidad de comunicación pública, transformar
+o modificar los contenidos, a menos que se cuente con la autorización
+del titular de los correspondientes derechos o ello resulte
+legalmente permitido. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • g)
+Suprimir, ocultar o manipular las notas sobre derechos de propiedad
+intelectual o industrial y demás datos identificativos de los
+derechos de Más Madrid o de terceros incorporados a los contenidos,
+así como los dispositivos técnicos de protección o cualesquiera
+mecanismos de información que puedan insertarse en los contenidos. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • h)
+Obtener e intentar obtener los contenidos empleando para ello medios
+o procedimientos distintos de los que, según los casos, se hayan
+puesto a su disposición a este efecto o se hayan indicado
+expresamente en las páginas web donde se encuentren los contenidos
+o, en general, de los que se empleen habitualmente en Internet por no
+entrañar un riesgo de daño o inutilización del sitio web y/o de
+los contenidos. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • i) En
+particular, y a título meramente indicativo y no exhaustivo, el
+Usuario se compromete a no transmitir, difundir o poner a disposición
+de terceros informaciones, datos, contenidos, mensajes, gráficos,
+dibujos, archivos de sonido y/o imagen, fotografías, grabaciones,
+software y, en general, cualquier clase de material que: 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (i)
+De cualquier forma sea contrario, menosprecie o atente contra los
+derechos fundamentales y las libertades públicas reconocidas
+constitucionalmente, en los Tratados Internacionales y en el resto de
+la legislación vigente. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (ii)
+Induzca, incite o promueva actuaciones delictivas, denigratorias,
+difamatorias, violentas o, en general, contrarias a la ley, a la
+moral, a las buenas costumbres generalmente aceptadas o al orden
+público. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (iii)
+Induzca, incite o promueva actuaciones, actitudes o pensamientos
+discriminatorios por razón de sexo, raza, religión, creencias, edad
+o condición. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (iv)
+Incorpore, ponga a disposición o permita acceder a productos,
+elementos, mensajes y/o servicios delictivos, violentos, ofensivos,
+nocivos, degradantes o, en general, contrarios a la ley, a la moral y
+a las buenas costumbres generalmente aceptadas o al orden público. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (v)
+Induzca o pueda inducir a un estado inaceptable de ansiedad o temor. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (vi)
+Induzca o incite a involucrarse en prácticas peligrosas, de riesgo o
+nocivas para la salud y el equilibrio psíquico. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (vii)
+Se encuentra protegido por la legislación en materia de protección
+intelectual o industrial perteneciente a Más Madrid o a terceros sin
+que haya sido autorizado el uso que se pretenda realizar. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦
+(viii) Sea contrario al honor, a la intimidad personal y familiar o a
+la propia imagen de las personas. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (ix)
+Constituya cualquier tipo de publicidad. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        ◦ (x)
+Incluya cualquier tipo de virus o programa que impida el normal
+funcionamiento del Sitio Web. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Si para acceder a
+algunos de los servicios y/o contenidos del Sitio Web, se le
+proporcionara una contraseña, se obliga a usarla de manera
+diligente, manteniéndola en todo momento en secreto. En
+consecuencia, será responsable de su adecuada custodia y
+confidencialidad, comprometiéndose a no cederla a terceros, de
+manera temporal o permanente, ni a permitir el acceso a los
+mencionados servicios y/o contenidos por parte de personas ajenas.
+Igualmente, se obliga a notificar a Más Madrid cualquier hecho que
+pueda suponer un uso indebido de su contraseña, como, a título
+enunciativo, su robo, extravío o el acceso no autorizado, con el fin
+de proceder a su inmediata cancelación. En consecuencia, mientras no
+efectúe la
+notificación anterior, Más Madrid quedará eximido de cualquier
+responsabilidad que pudiera derivarse del uso indebido de su
+contraseña, siendo de su responsabilidad cualquier utilización
+ilícita de los contenidos y/o servicios del Sitio Web por cualquier
+tercero ilegítimo.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Si de manera
+negligente o dolosa incumpliera cualquiera de las obligaciones
+establecidas en las presentes Condiciones Generales de Uso,
+responderá por todos los daños y perjuicios que de dicho
+incumplimiento pudieran derivarse para Más Madrid.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">6.
+Responsabilidades</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid no
+garantiza el acceso continuado, ni la correcta visualización,
+descarga o utilidad de los elementos e informaciones contenidas en
+las páginas de www.masmadrid.org que pueden verse impedidos,
+dificultados o interrumpidos por factores o circunstancias que están
+fuera de su control.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid no se
+hace responsable de las decisiones que pudieran adoptarse como
+consecuencia del acceso a los contenidos o informaciones ofrecidas.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid podrá
+interrumpir el servicio o resolver de modo inmediato la relación con
+el Usuario si detecta que un uso de su Sitio Web o de cualquiera de
+los servicios ofertados en el mismo son contrarios a las presentes
+Condiciones Generales de Uso. Más Madrid no se hace responsable por
+daños, perjuicios, pérdidas, reclamaciones o gastos derivados del
+uso del Sitio Web. Únicamente será responsable de eliminar, lo
+antes posible, los contenidos que puedan generar tales perjuicios,
+siempre que así se notifique. En especial no será responsable de
+los perjuicios que se pudieran derivar, entre otros, de:</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • (i)
+interferencias, interrupciones, fallos, omisiones, averías
+telefónicas, retrasos, bloqueos o desconexiones en el funcionamiento
+del sistema electrónico, motivadas por deficiencias, sobrecargas y
+errores en las líneas y redes de telecomunicaciones, o por cualquier
+otra causa ajena al control Más Madrid.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • (ii)
+intromisiones ilegítimas mediante el uso de programas malignos de
+cualquier tipo y a través de cualquier medio de comunicación, tales
+como virus informáticos o cualesquiera otros. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • (iii)
+abuso indebido o inadecuado del Sitio Web. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    • (iv)
+errores de seguridad o navegación producidos por un mal
+funcionamiento del navegador o por el uso de versiones no
+actualizadas del mismo. Los administradores de Más Madrid se
+reservan el derecho de retirar, total o parcialmente, cualquier
+contenido o información presente en el Sitio Web. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid
+excluye cualquier responsabilidad por los daños y perjuicios de toda
+naturaleza que pudieran deberse a la mala utilización de los
+servicios de libre disposición y uso por parte de los Usuarios de
+Sitio Web. Asimismo, Más Madrid queda exonerado de cualquier
+responsabilidad por el contenido e informaciones que puedan ser
+recibidas como consecuencia de los formularios de recogida de datos,
+estando los mismos únicamente para la prestación de los servicios
+de información, convocatorias, consultas y dudas sobre Más Madrid.
+Por otro lado, en caso de causar daños y perjuicios por un uso
+ilícito o incorrecto de dichos servicios, podrá ser el Usuario
+reclamado por Más Madrid de los daños o perjuicios causados.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Usted defenderá,
+indemnizará y mantendrá a Más Madrid indemne frente a cualesquiera
+daños y perjuicios que se deriven de reclamaciones, acciones o
+demandas de terceros como consecuencia de su acceso o uso del Sitio
+Web. Asimismo, usted se obliga a indemnizar Más Madrid frente a
+cualesquiera daños y perjuicios, que se deriven del uso por su parte
+de “robots”, “spiders”, “crawlers” o herramientas
+similares empleadas con el fin de recabar o extraer datos o de
+cualquier otra actuación por su parte que imponga una carga
+irrazonable sobre el funcionamiento del Sitio Web.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">7. Hipervínculos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El Usuario se
+obliga a no reproducir de ningún modo, ni siquiera mediante un
+hiperenlace o hipervínculo, el Sitio Web www.masmadrid.org, así
+como ninguno de sus contenidos, salvo autorización expresa y por
+escrito de Más Madrid 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">El Sitio Web
+www.masmadrid.org, incluye enlaces a otras sitios web gestionados por
+terceros, con objeto de facilitar
+el acceso del Usuario a la información de entidades colaboradoras
+y/o patrocinadoras. Conforme con ello, Más Madrid no se
+responsabiliza del contenido de dichos sitios web, ni se sitúa en
+una posición de garante ni/o de parte ofertante de los servicios y/o
+información que se puedan ofrecer a terceros a través de los
+enlaces de terceros.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Se concede al
+Usuario un derecho limitado, revocable y no exclusivo a crear enlaces
+a la página principal del Sitio Web exclusivamente para uso privado
+y no comercial. Los sitios web que incluyan enlace a nuestro Sitio
+Web (i) no podrán dar a entender que Más Madrid recomienda ese
+sitio web o sus servicios; (ii) no podrán falsear su relación con
+Más Madrid ni afirmar que Más Madrid ha autorizado tal enlace, ni
+incluir marcas, denominaciones, nombres comerciales, logotipos u
+otros signos distintivos de Más Madrid; (iii) no podrán incluir
+contenidos que puedan considerarse de mal gusto, obscenos, ofensivos,
+controvertidos, que inciten a la violencia o la discriminación por
+razón de sexo, raza o religión, contrarios al orden público o
+ilícitos; (iv) no podrán enlazar a ninguna página del Sitio Web
+distinta de la página principal; (v) deberá enlazar con la propia
+dirección del Sitio Web, sin permitir que el sitio web que realice
+el enlace reproduzca el Sitio Web como parte de su web o dentro de
+uno de sus “frames” o crear un “browser” sobre cualquiera de
+las páginas del Sitio Web. Más Madrid podrá solicitar, en
+cualquier momento, que elimine cualquier enlace al Sitio Web, después
+de lo cual deberá proceder de inmediato a su eliminación. Más
+Madrid no puede controlar la información, contenidos, productos o
+servicios facilitados por otros sitios web que tengan establecidos
+enlaces con destino al Sitio Web.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">En consecuencia,
+Más Madrid no asume ningún tipo de responsabilidad por cualquier
+aspecto relativo a tales sitios web.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">8. Protección de
+datos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">A efectos del
+cumplimiento con lo dispuesto en el Reglamento (UE) 2016/679, Más
+Madrid informa de que todos los datos de carácter personal que
+nuestros usuarios aporten a www.masmadrid.org incluida la dirección
+IP del equipo desde el que accede, bien sea a través de cualquier
+registro o suscripción a los servicios del sitio web bien mediante
+el envío de comentarios u observaciones por correo electrónico,
+web, formularios, etc., serán incluidos en un fichero debidamente
+inscrito en el Registro de la Agencia de Protección de Datos, cuyo
+titular y responsable es el Más Madrid, y serán tratados con la
+máxima confidencialidad.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Los datos que se
+pidan a los usuarios de www.masmadrid.org tendrán como finalidad
+prestar los servicios para los que se soliciten, gestionar la
+administración del website, realizar estudios estadísticos o enviar
+a través de cualquier canal (correo postal o electrónico, teléfono
+fijo o móvil, SMS, MMS, Internet, etc.) información promocional y
+noticias de todas las actividades inherentes a la acción del Más
+Madrid, en particular las relacionadas a campañas, candidaturas,
+convocatorias, acciones del partido y sus líderes, etc.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid ha
+implementado las medidas de seguridad requeridas por la normativa
+vigente para la protección de los datos de carácter personal y ha
+desarrollado los requisitos técnicos necesarios para garantizar el
+tratamiento confidencial de los datos, evitar su pérdida, alteración
+y acceso. No obstante, el usuario debe ser consciente de que las
+medidas de seguridad en Internet no son inexpugnables.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid
+prohíbe el uso de los servicios de su sitio web a menores de 14
+años. Además, el Más Madrid aconseja que los menores de edad (de
+14 a 18 años) consulten con sus padres antes de proporcionar
+cualquier dato de carácter personal e informa de que, en ningún
+caso, se recabarán datos relativos a otros miembros de su familia
+sin el consentimiento de los titulares de los mismos.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Si no se
+facilitan los datos personales requeridos (bien para el registro o
+suscripción a cualquier tipo de envío bien para la realización de
+comentarios, etc.) o no se acepta la presente política de privacidad
+supone la imposibilidad de
+recibir los servicios mencionados.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Derechos</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    1. El
+interesado puede ejercer los siguientes derechos: 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        1.
+Derecho a solicitar el acceso a sus datos personales. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        2.
+Derecho a solicitar su rectificación o supresión. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        3.
+Derecho a solicitar la limitación de su tratamiento. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        4.
+Derecho a oponerse al tratamiento. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        5.
+Derecho a la portabilidad de los datos. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">        6.
+Derecho a retirar el consentimiento prestado. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    2. Cualquier
+persona tiene derecho a obtener confirmación sobre s, estamos
+tratando datos personales que les conciernan, o no. Las personas
+interesadas tienen derecho a acceder a sus datos personales, así
+como a solicitar la rectificación de los datos inexactos o, en su
+caso, solicitar su supresión cuando, entre otros motivos, los datos
+ya no sea necesario para los fines que fueron recogidos. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    3. En
+determinadas circunstancias, los interesados podrán solicitar la
+limitación del tratamiento de sus datos, en cuyo caso únicamente
+los conservaremos para el ejercicio o la defensa de reclamaciones. En
+determinadas circunstancias y por motivos relacionados con su
+situación particular, los interesados podrán oponerse al
+tratamiento de sus datos. En este caso, Más Madrid, dejará de
+tratar los datos, salvo por motivos legítimos imperiosos, o el
+ejercicio o la defensa de posibles reclamaciones. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    4. Si ha
+otorgado su consentimiento para alguna finalidad concreta, tiene
+derecho a retirar el consentimiento otorgado en cualquier momento,
+sin que ello afecte a la licitud del tratamiento basado en el
+consentimiento previo a su retirada. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    5. En caso de
+que sienta vulnerados sus derechos en lo concerniente a la protección
+de sus datos personales, especialmente cuando no haya obtenido
+satisfacción en el ejercicio de sus derechos, puede presentar una
+reclamación ante la Autoridad de Control en materia de Protección
+de Datos competente a través de su sitio web: http://www.agpd.es. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">    6. En
+cumplimiento de lo prevenido en el artículo 21 de la Ley 34/2002 de
+servicios de la sociedad de la información y comercio electrónico,
+si usted no desea recibir más información sobre nuestros servicios,
+puede darse de baja en la siguiente dirección de correo electrónico
+de la entidad privacidad@masmadrid.org, indicando en el asunto “No
+enviar correos”. 
+</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">9. Cookies</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid se
+reserva el derecho de utilizar la tecnología “cookie” en el
+Sitio Web, a fin de reconocerlo como Usuario frecuente y personalizar
+el uso que realice del Sitio Web mediante la preselección de su
+idioma, o contenidos más deseados o específicos. Las “cookies”
+utilizadas por el Sitio Web, o el tercero que actúe en su nombre, se
+asocian únicamente con un usuario anónimo y su ordenador, y no
+proporcionan por sí los datos personales del usuario.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Las cookies son
+ficheros enviados a un navegador por medio de un servidor Web para
+registrar la navegación del Usuario en el Sitio Web, cuando el
+Usuario permita su recepción. A su vez podrá eliminar las “cookies”
+para lo cual deberá consultar las instrucciones de uso de su
+navegador.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Gracias a las
+cookies, resulta posible que www.masmadrid.org reconozca el navegador
+del ordenador utilizado por el Usuario con la finalidad de facilitar
+contenidos y ofrecer las preferencias de navegación u publicitarias
+que el Usuario, a los perfiles demográficos de los Usuarios así
+como para medir las visitas y parámetros del tráfico, controlar el
+progreso y número de entradas.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">10. Duración y
+terminación</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">La prestación
+del servicio del presente Sitio Web y los demás servicios tienen en
+principio una duración indefinida. No obstante, Más Madrid podrá
+dar por terminada o suspender cualquiera de los servicios del portal.
+Cuando sea ello posible, Más Madrid anunciará la terminación o
+suspensión de la prestación del servicio determinado.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">11. Declaraciones
+y Garantías</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">En general, los
+contenidos y servicios ofrecidos en el Sitio Web tienen carácter
+meramente informativo. Por consiguiente, al ofrecerlos, Más Madrid
+no otorga garantía ni declaración alguna en relación con los
+contenidos y servicios ofrecidos en el
+Sitio web, incluyendo, a título enunciativo, garantías de licitud,
+fiabilidad, utilidad, veracidad, exactitud, o comerciabilidad, salvo
+en la medida en que por ley no puedan excluirse tales declaraciones y
+garantías.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">12. Fuerza mayor</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Más Madrid no
+será responsable en todo en caso de imposibilidad de prestar
+servicio, si ésta se debe a interrupciones prolongadas del
+suministro eléctrico, líneas de telecomunicaciones, conflictos
+sociales, huelgas, rebelión, explosiones, inundaciones, actos y
+omisiones del Gobierno, y en general todos los supuestos de fuerza
+mayor o de caso fortuito.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">13. Resolución
+de controversias. Ley aplicable y jurisdicción</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">Las presentes
+Condiciones Generales de Uso, así como el uso del Sitio Web, se
+regirán por la legislación española. Cualquier controversia será
+resuelta ante los tribunales de Madrid.</p>
+<p style="margin-bottom: 0.28cm; line-height: 108%">En el supuesto de
+que cualquier estipulación de las presentes Condiciones Generales de
+Uso resultara inexigible o nula en virtud de la legislación
+aplicable o como consecuencia de una resolución judicial o
+administrativa, dicha inexigibilidad o nulidad no hará que las
+presentes Condiciones Generales de Uso resulten inexigibles o nulas
+en su conjunto. En dichos casos, Más Madrid procederá a la
+modificación o sustitución de dicha estipulación por otra que sea
+válida y exigible y que, en la medida de lo posible, consiga el
+objetivo y pretensión reflejados en la estipulación original.</p>
+'
+      
+    impulsa:
+      title: "IMPULSA"
+      upcoming: "La próxima edición de IMPULSA comenzará el %{start_at}."
+      noupcoming: "La convocatoria de una nueva edición de IMPULSA se realizará próximamente, mantente informado."
+      text_limit: "máximo %{limit} caracteres"
+      model_link: "Utiliza este fichero como modelo."
+      file_validation: "el fichero subido debe ser %{file_type} y su tamaño no puede superar %{file_size}"
+      file_type_image: "una imagen (ficheros .jpeg, .jpg, .png o .gif)"
+      file_type_spreadsheet: "una hoja de cálculo Excel (ficheros .xls, .xlsx o .ods)"
+      file_type_document: "un documento Word (ficheros .doc, .docx o .odt)"
+      file_type_pdf: "un documento PDF (ficheros .pdf)"
+      admin_section: "Datos para administración"
+      project_data_section: "Datos del proyecto"
+      organization_data_section: "Datos de la organización que desarrollará el proyecto"
+      organization_data_internal_section: "Datos de la organización premiada"
+      documents_section: "Documentos solicitados"
+      project_progress_section: "Desarrollo del proyecto"
+      impulsa_edition_category_extra: "En esta edición de IMPULSA puedes presentar tu proyecto a diferentes categorías, comprueba los requisitos y condiciones en las %{legal} para saber en cual hacerlo."
+      legal: "bases de la convocatoria"
+      organization_mission_extra: "Describe cuál es la misión de la organización y las actividades principales a las que se dedica."
+      short_description_extra: "En este apartado deberá aparecer la descripción que se desee exponer en la página web de Impulsa para dar a conocer el proyecto."
+      short_description_internal_extra: "En este apartado deberá aparecer la descripción que se desee exponer en la página web de Impulsa para dar a conocer la iniciativa premiada."
+      last_year_extra: "Sólo en el caso de que la entidad tenga una antigüedad de más de un año."
+      counterpart_extra: "Si el proyecto se realiza junto a otras entidades, se solicitará también información sobre dichas entidades para confirmar el cumplimiento del código ético."
+      territorial_context_extra: "Indicar nombre del municipio, provincia y/ o comunidad autónoma en que se desarrolla (en caso de desarrollarse en un barrio o distrito específico, indicar también), número de habitantes de la zona en que se realizará el proyecto y contexto general en la zona de realización del proyecto (prestando atención a elementos de desigualdad social, exclusión,...)"
+      long_description_extra: "Describe las necesidades que atiende el proyecto, las razones por las que es importante atender estas necesidades y cómo va a responder el proyecto a estas necesidades."
+      aim_extra: "Describe el objetivo general, que es la situación deseable a cuya realización contribuirá el proyecto a largo plazo, y los objetivos específicos, que se derivan del objetivo general y lo concretan, señalando el camino que hay que seguir para conseguirlos y expresando los cambios o efectos más concretos que se pretenden alcanzar."
+      metodology_extra: "Describe cómo se va a desarrollar el proyecto y qué estrategias se pondrían en marcha para fomentar la participación dentro del mismo."
+      population_segment_extra: "Especifica si el proyecto se dirige a un grupo concreto de población, cuáles son las razones de dicha elección y qué tipo de estrategias se utilizarán para asegurar la comunicación con ese grupo (o grupos)."
+      schedule_extra: "Indica las fechas de inicio y finalización del proyecto, sus fases y duración, y los principales hitos a cumplir, mediante un cuadro o cronograma. Recuerda que el periodo de ejecución del proyecto es de %{limit} meses, aunque en casos excepcionales y justificados se podrá alargar el periodo de duración de un proyecto."
+      activities_resources_extra: "Según la planificación presentada en el cronograma, detalla las actividades que prevéis desarrollar durante el periodo de ejecución del proyecto. Para cada actividad, indica los recursos materiales y humanos que serán necesarios para llevarla a cabo."
+      requested_budget_extra: "Basándote en el cuadro de actividades y recursos, establece el presupuesto de gastos e ingresos utilizando la plantilla adjunta. Asegúrate de rellenar las dos pestañas de la hoja de cálculo: Gastos e Ingresos. Recuerda que el presupuesto máximo son %{limit}."
+      monitoring_evaluation_extra: "Detalla los indicadores que se utilizarán para la evaluación, especificando el objetivo al que responden, el tiempo estimado para alcanzarlo, el valor esperado al final del proyecto para cada indicador y la fuente de verificación que se utilizará para su medición."
+      coofficial_translation_extra: "Si quieres que, para la fase de votaciones, tu proyecto se pueda ver en %{lang} marca esta casilla y rellena los siguientes campos en ese idioma."
+      authority_section: "Órgano que presenta la iniciativa"
+      translation_section: "Traducciones a idioma cooficial"
+      next_step: "Continuar"
+      next_step_text: "Introduce los datos básicos del proyecto y presiona '%{next_step}' para cargar el resto de información."
+      choose_user_text: "Al dar de alta el proyecto con tu usuario serás la persona de contacto para hacer correcciones en el proyecto. Si crees que hay otra persona más adecuada para esto, por favor comunícalo para que sea quien cargue el proyecto utilizando su usuario del portal de participación."
+      save_draft_text: "Puedes utilizar el botón '%{save_draft}' en cualquier momento para guardar la información que has cargado hasta el momento. Esto te permitirá buscar la información que no tengas a mano o revisar con algún compañero los datos ingresados antes de enviárnoslos."
+      fixes_text: "Hemos revisado el proyecto que has presentado a IMPULSA y hemos detectado algunos puntos que necesitan subsanación."
+      non_fixes_text: "No hemos recibido, en plazo, la subsanación de los errores indicados en el proyecto que has presentado a esta edición de IMPULSA. El plazo de subsanación ha finalizado, por lo que lamentamos comunicarte que tu proyecto no pasa a la fase de validación."
+      mark_for_review_text: "Cuando hayas completado todos los datos del proyecto y consideres que son correctos utiliza el botón '%{mark_for_review}' para indicarnos que podemos revisarlo (aunque podrás seguir haciendo correcciones hasta que lo hagamos)."
+      reviewing_text: "Hemos recibido tu proyecto y estamos revisando que todos los datos sean correctos. En cuanto terminemos este proceso te avisaremos."
+      validable_text: "Hemos recibido correctamente el proyecto que has presentado, está completo y pasa a la fase de revisión."
+      invalidated_text: "Lamentamos comunicarte que el proyecto que has presentado a IMPULSA ha sido invalidado por las siguientes razones: %{invalid_reasons}"
+      validated1_text: "Una vez realizada la revisión de los proyectos presentados a la edición actual de IMPULSA, tenemos el placer de informarte de que tu proyecto ha sido validado. Esto implica que participarás en la fase de pre-selección en la que un Jurado compuesto por el Equipo técnico de IMPULSA, miembros de la Comisión de Garantías Democráticas, miembros del Consejo Ciudadano Estatal, y las Senadoras de Más Madrid, valorarán los proyectos validados en función de los criterios establecidos en las bases de la convocatoria y preseleccionarán un máximo de %{prewinners} proyectos. Los resultados de la preselección se harán públicos en la página web: <a href='http://masmadrid.info/impulsa'>http://masmadrid.info/impulsa</a>. En el caso de que tu proyecto sea preseleccionado, te informaremos por correo electrónico. Del %{voting_dates}, se abrirá un proceso de votaciones en el que las personas inscritas en Más Madrid podrán elegir %{winners} proyectos ganadores entre los %{prewinners} preseleccionados."
+      validated2_text: "Una vez realizada la valoración de los proyectos presentados a esta edición de IMPULSA, tenemos el placer de informarte de que tu proyecto ha sido validado. Esto implica que participarás, del %{voting_dates}, en la fase de votaciones con los demás proyectos validados de tu territorio, dependiendo de la categoría donde te hayas presentado."
+      terms_of_service: "He leído y acepto <a href='%{link}'>las condiciones generales del proyecto IMPULSA y la política de privacidad</a>."
+      data_truthfulness: "Declaro la veracidad de los datos facilitados y de los documentos aportados en la solicitud de la presente convocatoria."
+      content_rights: "Declaro ser titular de todos los derechos de propiedad intelectual, industrial y derechos de imagen, de las obras, textos, imágenes, vídeos, música, logotipos e ideas incluidos en este formulario y que forman parte del proyecto, eximiendo a Más Madrid de cualquier responsabilidad que pudiera derivarse de las infracciones de estos derechos."
+      translated: "en %{lang}"
+      save_draft: "Guardar borrador"
+      mark_for_review: "Marcar para revisión"
+      choose_impulsa_category: "Debes elegir una categoría para que aparezca el resto de campos."
+      authority_hint: "nombre del Grupo parlamentario, Consejo Ciudadano Autonómico, Grupo juntero (País Vasco) o Grupo Europarlamentario"
+      impulsa_edition_topics_hint: "señalar un máximo de dos entre las diferentes temáticas propuestas"
+      video_link_hint: "debe ser un enlace a un video subido en YouTube"
+      project_status:
+        new: "Nuevo"
+        review: "Revisar"
+        fixes: "Correcciones"
+        review_fixes: "Revisar correcciones"
+        validate: "Validar"
+        invalidated: "Invalidado"
+        validated: "Validado"
+        discarded: "Descartado"
+        resigned: "Renuncia"
+        winner: "Premiado"
+        spam: "Spam"
+        dissent: "Disenso"
+      category_type_name:
+        internal: "Interna"
+        state: "Estatal"
+        territorial: "Territorial"
+      organization_type:
+        organization: "Entidad constituida"
+        people: "Grupo de personas que no tienen una entidad constituida legalmente"
+        foreign_people: "Residentes en el extranjero"
+      responsible_nif:
+        organization: "NIF de la persona que representa a la entidad en la gestión de proyectos o, en el caso de que no exista, del representante legal de la entidad"
+        people: "DNI/NIE de la persona solicitante del proyecto"
+        foreign_people: "DNI o pasaporte español en vigor de la persona solicitante"
+      fiscal_obligations_certificate:
+        local: "Certificado de la Agencia Tributaria de obligaciones fiscales al corriente en el momento de la presentación del proyecto"
+        foreign: "Certificado de la Agencia Tributaria española según el cual la persona solicitante está al corriente de las obligaciones fiscales en el momento de la presentación del proyecto"
+      labor_obligations_certificate:
+        local: "Certificado de la Seguridad Social de obligaciones laborales al corriente en el momento de la presentación del proyecto"
+        foreign: "Certificado de la Seguridad Social española de obligaciones laborales al corriente en el momento de la presentación del proyecto"
+      career:
+        internal: "Trayectoria del colectivo"
+        territorial: "Trayectoria formativa y profesional de las personas solicitantes del proyecto"
+      career_extra:
+        internal: "Incluir cuándo se formó, qué causas sociales defienden y qué hitos han logrado."
+        territorial: "Indica brevemente la formación y experiencia profesional de las personas que desarrollarán el proyecto, incidiendo en las relacionadas con el ámbito del proyecto presentado."
+      coofficial_translation: "Traducir al %{lang}"
+      total_price: "Importe del premio concedido"
+    user_verification:
+      title: "Verificación de identidad"
+      directions: "Pincha en las imágenes de ejemplo para subir fotos de tu documento, así podremos verificar tu identidad."
+      dni:
+        sample1_description: "Anverso del DNI"
+        sample2_description: "Reverso del DNI"
+      nie:
+        sample1_description: "Anverso de la tarjeta de residencia. Comunitarios: Certificado de registro de ciudadano de la Unión"
+        sample2_description: "Reverso de la tarjeta de residencia. Comunitarios: pasaporte o carnet de identificación nacional"
+      pasaporte:
+        sample1_description: "Página principal del pasaporte"
+        sample2_description: "Página adicional del pasaporte (opcional)"
+      terms_of_service:
+        title: "Términos y condiciones"
+        full_text: "<h4>INFORMACIÓN SOBRE EL PROCESO DE VERIFICACIÓN</h4>
+                    <p>Te recordamos que tus datos personales están registrados en el fichero de personas inscritas del partido político Más Madrid, con CIF G88309315, y que al tramitar tu inscripción aceptaste expresamente el tratamiento de tus datos personales y la recepción de mensajes y comunicaciones electrónicas para los fines indicados.</p>
+                    <p>El artículo 5.1.d) del Reglamento General de Protección de Datos dispone que los datos personales serán “exactos” y, si fuera necesario, “actualizados”, y se adoptarán todas las medidas razonables para que se supriman o rectifiquen sin dilación los datos personales que sean inexactos con respecto a los fines para los que se tratan.</p>
+                    <p>Los documentos que nos envíes serán utilizados para verificar tu identidad y la exactitud de tus datos personales, de conformidad con lo dispuesto en el Reglamento General de Protección de Datos.</p>
+                    <p>Estos documentos quedarán incorporados a tu ficha personal y no serán cedidos a terceras personas ni organismos públicos sin tu consentimiento expreso, excepto cuando la ley establezca la obligación de ceder estos datos a las autoridades.</p>
+                    <p>Declaras y garantizas que los documentos que nos adjuntas son verdaderos, exactos, completos y actualizados, que has leído este aviso legal sobre protección de datos personales y que estás conforme con su contenido.</p>
+                    <p>Como persona inscrita en Más Madrid puedes acceder a la web de participación <a href='https://participa.masmadrid.org' target='_blank'>participa.masmadrid.org</a> y consultar y modificar directamente algunos de tus datos personales.</p>
+                    <p>También puedes solicitar modificaciones, recibir información sobre el tratamiento de tus datos personales y ejercitar tus derechos enviando personalmente una petición, detallando el derecho que quieres ejercitar, por correo electrónico a la dirección <a href='mailto:protecciondedatos@masmadrid.org'>protecciondedatos@masmadrid.org</a> o por correo postal al domicilio social de Más Madrid, en la calle Zurita, núm. 21, CP 28012 MADRID.
+                    <p>En ambos casos deberás acreditar tu identidad adjuntando una copia del documento legal de identificación que hayas utilizado para tu inscripción (DNI, NIE o pasaporte) o cualquier otro documento legal que permita acreditar de forma inequívoca tu identidad.</p>
+                    <p>Si tienes alguna duda sobre el tratamiento de tus datos personales o quieres formular alguna reclamación puedes ponerte en contacto con el Delegado de Protección de Datos de Más Madrid a través de la dirección de correo electrónico <a href='mailto:protecciondedatos@masmadrid.org'>protecciondedatos@masmadrid.org</a></p>
+                    <p>Si no estás satisfecho con el ejercicio de tus derechos puedes presentar una reclamación ante la Agencia Española de Protección de Datos en la web <a href='https://www.agpd.es' target='_blank'>www.agpd.es</a></p>
+                    <p>Puedes consultar información completa en materia de protección de datos en el enlace sobre <a href='https://files.masmadrid.info/tbsEDpJwi7.pdf' target='_blank'>Condiciones generales de inscripción en Más Madrid, uso del portal de participación, empleo de cookies y política de privacidad de Más Madrid.</a></p>
+                    <p></p>"
+        accept: "He leído y acepto los términos y condiciones"
+      submit: "Solicitar verificación"
+      pending: "Ya hemos recibido una solicitud de verificación de tu usuario que aún no ha sido procesada. Si lo deseas puedes envíar nuevamente este formulario para corregir lo que has enviado anteriormente."
+      upload: "Subir"
+      wants_card: "Me gustaría recibir la Credencial de Compañero/a de Más Madrid."
+      please_check_details: "Por favor, verifica tu ficha para asegurarte que la credencial llega a tu domicilio y con los datos correctos."
+      documentation_received: "Ya hemos recibido tu documentación y la procesaremos próximamente."
+      user_already_verified: "Tu usuario ya está verificado."
+      user_not_valid_to_verify: "Gracias por tu interés pero, de momento, no es necesario que verifiques tu identidad."
+      format_directions_1: "Puedes hacer las fotos directamente con tu teléfono móvil intentado ajustar los bordes del documento dentro de la pantalla."
+      format_directions_2: "Si decides no hacerlo así ten encuenta que sólo admitimos imágenes en formato '.jpg' o '.png'"
+      support: "Si tienes cualquier problema, puedes ponerte en contacto con nosotros enviando un email a <a href='mailto:contacto@masmadrid.org'>contacto@masmadrid.org</a>"
+      full_directions: "<p>Pincha en las imágenes de ejemplo para subir fotos de tu documento, así podremos verificar tu identidad.</p>
+          <p>Puedes hacer las fotos directamente con tu teléfono móvil intentado ajustar los bordes del documento dentro de la pantalla.
+          <br>Si decides no hacerlo así ten encuenta que sólo admitimos imágenes en formato '.jpg' o '.png'</p>
+          <p>Si tienes cualquier problema, puedes ponerte en contacto con nosotros enviando un email a <a href='mailto:contacto@masmadrid.org'>contacto@masmadrid.org</a></p>"
+      get_card_text: "Todas las personas que participen en las próximas votaciones podrán solicitar gratuitamente la Credencial de Compañero/a de Más Madrid."
+      get_card: "Recibe tu Credencial de Compañero/a de Más Madrid"
+      status:
+        pending: Pendiente
+        accepted: Verificado
+        accepted_by_email: Verificado por Email
+        issues: Con problemas
+        rejected: Rechazada
+      no_pending_verifications: "Todos los usuarios pendientes de verificar estan siendo procesados por alguien. Por favor, vuelve más tarde cuando haya nuevas verificaciones pendientes."
+  issues:
+    confirm_sms: "Por seguridad, debes confirmar tu teléfono."
+    legacy_password: "Por seguridad, debes cambiar tu contraseña."
+    born_at: "Debes indicar tu fecha de nacimiento."
+    location: "Por favor, verifica que los datos de tu domicilio son correctos y guarda los datos."
+    country: "Debes indicar el país donde resides."
+    province: "Debes indicar la provincia donde resides."
+    town: "Debes indicar el municipio donde resides."
+    vote_town: "Si lo deseas, puedes indicar el municipio en España donde deseas votar."
+  recaptcha:
+    errors:
+      incorrect-captcha-sol: "Hubo un error con el captcha, por favor completalo de nuevo"
+      verification_failed: "Hubo un error con el captcha, por favor completalo de nuevo"
+      recaptcha_unreachable: "Hubo un error con el captcha, por favor completalo de nuevo"
+  active_admin:
+    scopes:
+      created: "Creados"
+      confirmed: "Confirmados"
+      deleted: "Borrados"
+      unconfirmed_mail: "Email sin confirmar"
+      unconfirmed_phone: "Teléfono sin confirmar"
+      confirmed_mail: "Email confirmado"
+      confirmed_phone: "Teléfono confirmado"
+      legacy_password: "Contraseña antigua (legacy)"
+      signed_in: "Ha iniciado sesión"
+      not_signed_in: "No ha iniciado sesión"
+      has_collaboration: "Con colaboración económica"
+      has_collaboration_credit_card: "Con colaboración económica (tarjeta de crédito)"
+      has_collaboration_bank_national: "Con colaboración económica (banco nacional)"
+      has_collaboration_bank_international: "Con colaboración económica (banco internacional)"
+      participation_team: "En equipos de participación"
+      has_circle: "En Círculo"
+  microcredit:
+    common:
+      title: "Microcréditos %{name}"
+      help_us: "Ayúdanos a financiar las campañas electorales suscribiendo un microcrédito %{name}. Cuando nos ingresen la subvención electoral te devolveremos la cantidad aportada."
+      more_info: "Más información"
+      has_finished: "La campaña de microcréditos ha acabado"
+      campaign_results: "Hemos recaudado %{total}.<br/>¡Muchas gracias por colaborar con el cambio!"
+      choose_province: "Elige una provincia"
+      no_province: "Ninguna"
+      choose_town: "Elige un municipio"
+      amount: "Importe"
+      sure: "Seguros"
+      doubts: "Dudas"
+      confirmed: "Confirmados"
+      empty: "No detectados"
+    mailing:
+      title: 'Campaña "Papeletas con futuro"'
+      help_us: "Para este 26J abrimos esta campaña dirigida especialmente a financiar el  envío de papeletas en todas las provincias. Elige la tuya y colabora para que los sobres con el voto de Más Madrid llegue al mayor número de hogares.  Cuando nos ingresen la subvención electoral te devolveremos la cantidad aportada."
+    index:
+      will_start: "La próxima campaña de microcréditos comenzará en unos momentos"
+      will_start_at: "Podrás suscribir un microcrédito %{name} a partir de las %{hour} del día %{date}."
+      no_campaigns: "En este momento no hay campañas de microcréditos activas."
+      no_campaigns_message: "No te preocupes, te avisaremos cuando abramos la próxima campaña."
+      success: "Objetivo alcanzado"
+      remaining: "Restante"
+      current_phase: "Fase actual:"
+      accumulated: "Acumulado:"
+      want_to_collaborate: "Quiero colaborar"
+      Detail: "Detalle"
+    new_loan:
+      user_access: "Te recomendamos que %{link} para que no tengas que rellenar nuevamente estos datos y para que puedas consultar el estado del préstamo en el futuro."
+      user_access_link: "accedas con tu usuario del Portal de Participación"
+      nologin: "Continuar sin identificarse"
+      login: "Acceder con tu usuario"
+      help_phone: "Si necesitas ayuda contacta al <strong>%{phone}</strong>."
+      info: "Información"
+      has_microcredit: "Ya has suscrito un microcrédito para esta campaña por un importe de %{total}."
+      has_microcredits: "Ya has suscrito %{count} microcréditos para esta campaña por un importe total de %{total}."
+      required: "requerido"
+      home_address: "Domicilio"
+      country: "País"
+      province: "Provincia"
+      town: "Municipio"
+      remaining_count: "(quedan %{total})"
+      over_age_message: "Declaro ser mayor de 18 años."
+      terms_of_service_message: "Acepto la suscripción de un contrato civil de préstamo por el importe indicado, según las condiciones generales que se indican en el siguiente enlace, que declaro haber leído y estar conforme con su contenido."
+      terms_of_service_link: "Condiciones generales del contrato civil de préstamo y política de privacidad"
+      will_receive_email: "En unos segundos recibirás un correo electrónico con toda la información necesaria para finalizar el proceso de suscripción del microcrédito %{name}. Por favor, ten en cuenta que es posible que el contador no se actualice de forma inmediata. ¡Gracias por colaborar!"
+      tweet_campaign: "Si quieres ayudarnos a difundir esta campaña, <a href='http://twitter.com/intent/tweet?text=He%20suscrito%20un%20microcr%C3%A9dito%20%{twitter_account}%20para%20financiar%20la%20campa%C3%B1a.%20Apoya%20el%20cambio%20en%20%{main_url}%20%23YoInviertoEnUnFuturoMejor'>compártelo en Twitter</a>."
+      subscribe: "Suscribir"
+    loans_renewal:
+      renew: "Renovar"
+      renewal_terms_message: "He leído y acepto las condiciones particulares de extinción del anterior microcrédito y la renovación de la suscripción."
+      renewal_terms_link: "Condiciones particulares sobre extinción de microcréditos y depósito para nueva suscripción."
+      terms_of_service_message: "He leído y acepto las condiciones generales de la suscripción del microcrédito %{name} %{campaign}."
+      terms_of_service_link: "Condiciones generales del contrato civil de préstamo y política de privacidad del microcrédito %{name} %{campaign}"
+      renewal_success: "Has renovado microcréditos por valor de %{amount} para la campaña %{campaign}. ¡Muchas gracias por colaborar con el cambio!"
+      none_selected: "Debes elegir al menos una suscripción para renovar"
+    email:
+      subject: "Confirmación microcréditos %{name}"
+      intro: "Para formalizar el microcrédito es necesario efectuar la siguiente transferencia en las próximas 48 horas con los siguientes datos:"
+      recipient: "Beneficiario"
+      bank: "Banco"
+      account_number: "Número de cuenta"
+      concept: "Concepto del ingreso"
+      thanks: "Muchas gracias por colaborar. El cambio empieza gracias a ti."
+  formtastic:
+    labels:
+      first_name: "Nombre"
+      last_name: "Apellidos"
+      document_vatid: "Nº de documento"
+      email: "Correo electrónico"
+      address: "Dirección"
+      postal_code: "Código postal"
+      loan_renewals: "Microcréditos confirmados"
+      renewal_terms: "Condiciones generales de extinción del microcrédito y renovación de la suscripción"
+      terms_of_service: "Condiciones generales de la suscripción del nuevo microcrédito"
+  simple_captcha:
+    placeholder: "texto"
+    label: "Introduce el texto que se ve en la imagen"
+    refresh_button_text: "Regenerar"
+    message:
+      default: "El texto introducido no corresponde con el de la imagen"
+  microcredit_options_detail:
+    title: "Desglose del Microcrédito"

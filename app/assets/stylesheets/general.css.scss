@@ -324,12 +324,12 @@ home
 
 .login-texto-contenedor {
   width: 100%;
-  padding: 5px; 
+  padding: 5px;
 }
 
 .login-form-contenedor {
   width: 100%;
-  padding: 20px; 
+  padding: 20px;
   margin-bottom: 20px;
 }
 
@@ -472,7 +472,7 @@ home
       transform: skewX(45deg);
       background-color: $marron-unete;
     }
-  
+
     &::after {
       position: absolute;
       content: '';
@@ -548,7 +548,7 @@ home
 
   &::after {
     position: absolute;
-    content: '';  
+    content: '';
     right: -15px;
     height: 100%;
     width: 15px;
@@ -663,7 +663,7 @@ home
 .redes-footer ul {
   display: none;
   justify-content: flex-start;
-} 
+}
 .redes-footer li {
   display: inline-block;
   width: 50px;
@@ -1121,7 +1121,7 @@ tools
   text-align: center;
 }
 .box-tool-large .buttonbox{
-  
+
 }
 .tools li h3{
   color: $verde-oscuro;
@@ -1146,24 +1146,25 @@ tools
 
 /* Agora booth */
 .booth_container {
-  position:absolute;
-  display: block; 
-  top: 65px;
-  bottom: 23px; 
-  scroll: none; 
-  padding: 0; 
-  margin: 0; 
-  width:100%; 
+  position: relative;
+  height: 80vh;
+  display: block;
+  scroll: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 999;
+  margin-bottom: 40px;
 }
 .view_candidates {
   color: white;
+  padding: 20px;
   text-align: center;
   position: absolute;
   bottom: 0px;
   font-size: 1.4em;
   left:0; right:0;
 }
-
 .modal-dialog {
   display: none;
   position: fixed;
@@ -1273,7 +1274,7 @@ microcredits
         i {
           visibility: hidden;
           position: absolute;
-          left: 2em;          
+          left: 2em;
           top: 10px;
         }
         span {
@@ -1344,28 +1345,28 @@ proposals
     font-family: Montserrat,Arial,sans-serif;
     font-size: 3em;
     padding: 20px;
-    text-transform: uppercase;  
+    text-transform: uppercase;
   }
 
   nav {
     border-bottom: 1px solid #b5b5b5;
     padding-bottom: 20px;
     padding-left: 20px;
-    
+
     a {
       color: rgba(51,51,51,.6);
-      font-size: 1.4em;      
+      font-size: 1.4em;
       text-transform: uppercase;
       margin-right: 20px;
 
       &.active {
         border-bottom: 3px solid $verde-oscuro;
-        color: $verde-oscuro;      
-        padding-bottom: 20px;  
+        color: $verde-oscuro;
+        padding-bottom: 20px;
       }
     }
   }
-  
+
   .container {
     display: inline-block;
     margin-right: 1%;
@@ -1377,9 +1378,9 @@ proposals
     .back {
       color: rgba(51,51,51,.6);
       display: inline-block;
-      font-size: 1.4em;      
+      font-size: 1.4em;
       margin: 20px 0 0 20px;
-      text-transform: uppercase;  
+      text-transform: uppercase;
     }
   }
 
@@ -1387,12 +1388,12 @@ proposals
     float: right;
     font-size: 1.3em;
     padding: 30px 20px 0 20px;
-  
+
     a {
       border-bottom: 1px solid #269283;
       color: #269283;
       padding-bottom: 2px;
-      text-decoration: none; 
+      text-decoration: none;
     }
   }
 
@@ -1409,7 +1410,7 @@ proposals
       border-top: 3px solid $verde-oscuro;
       color: $verde-oscuro;
       display: inline-block;
-      font-size: 1.4em;   
+      font-size: 1.4em;
       margin-top: -2px;
       text-transform: uppercase;
       padding: 10px 0 0 10px;
@@ -1469,7 +1470,7 @@ proposals
     font-style: italic;
     text-align: center;
   }
-  
+
   .info-circles {
     display: inherit;
     font-size: 1.1em;
@@ -1484,7 +1485,7 @@ proposals
     vertical-align: top;
 
     strong, span {
-      vertical-align: top;      
+      vertical-align: top;
     }
   }
 
@@ -1495,7 +1496,7 @@ proposals
   .soon {
     display: none;
   }
-  
+
   h3 {
     font-size: 1.4em;
   }
@@ -1505,12 +1506,12 @@ proposals
     font-size: 1.4em;
     margin-top: 10px;
   }
-  
+
   .finish:before {
     content:image-url("#");
     padding-right: 5px;
   }
-  
+
   .support:before {
     content:image-url("#");
     padding-right: 5px;
@@ -1545,7 +1546,7 @@ proposals
     text-transform: uppercase;
     width: 90%;
     margin: 0 auto;
-    border: 0; 
+    border: 0;
   }
 
   .supported, .thanks, .discarded {
@@ -1554,11 +1555,11 @@ proposals
     color: #3c763d;
     display: block;
     font-size: 1.7em;
-    font-weight: bold;   
+    font-weight: bold;
     margin-top: 20px;
     padding: 20px;
-    text-align: center;    
-    border-radius: 3px;    
+    text-align: center;
+    border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
@@ -1583,7 +1584,7 @@ proposals
     font-size: 1.4em;
     text-align: justify;
   }
-  
+
   img {
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -1600,7 +1601,7 @@ proposals
       color: $verde-medio;
       padding-left: 50px;
     }
-    
+
     .date {
       color: #858585;
     }
@@ -1638,7 +1639,7 @@ proposals
     -o-border-radius: 3px;
     color: white;
     display: inline-block;
-    margin: 10px 0;    
+    margin: 10px 0;
     padding: 5px 10px;
     text-transform: uppercase;
     border: 0;
@@ -1698,7 +1699,7 @@ info page
     font-family: Montserrat,Arial,sans-serif;
     font-size: 2.6em;
     padding: 20px;
-    text-transform: uppercase;  
+    text-transform: uppercase;
     text-align: left;
   }
 
@@ -1713,10 +1714,10 @@ info page
 
   h3 {
     color: $verde-oscuro;
-    font-size: 1.4em;   
+    font-size: 1.4em;
     padding: 10px 20px;
   }
-  
+
   p {
     color: #333;
     font-size: 1.4em;
@@ -1724,12 +1725,12 @@ info page
     padding: 0 20px;
     line-height: 26px;
   }
-  
+
   a {
     border-bottom: 1px solid #269283;
     color: #269283;
     padding-bottom: 2px;
-    text-decoration: none; 
+    text-decoration: none;
   }
 }
 
@@ -1777,7 +1778,7 @@ info page
   }
   .categories {
     margin-right: 5px;
-    a { 
+    a {
       font-size:1.2em; text-transform: uppercase; font-weight: bold;
       & + a:before {
         content: " | ";
@@ -2036,15 +2037,15 @@ layout 1b: 0- max 459 (simple) # # # # # # # # # # # # # # # # # # # # # # # # #
     display: inline-block;
 
     &.active{
-      padding-bottom: 0;  
+      padding-bottom: 0;
     }
   }
-  
+
   .proposal {
     .support {
       width: 100%;
     }
-  } 
+  }
 
   .menu {
     min-width: 0px;
@@ -2059,7 +2060,7 @@ layout 1b: 0- max 459 (simple) # # # # # # # # # # # # # # # # # # # # # # # # #
     .sidebar {
       width: 100%;
     }
-  
+
     .how-info {
       float: left;
     }
@@ -2107,7 +2108,7 @@ layout 2: 460-600 (intermedia 1) # # # # # # # # # # # # # # # # # # # # # # # #
     max-width: 96em;
     position:relative;
     overflow:hidden;
-  }  
+  }
 
   /*
   elementos
@@ -2628,7 +2629,7 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
     &::after {
       position: absolute;
-      content: '';  
+      content: '';
       right: -30px;
       height: 100%;
       width: 30px;
@@ -2826,7 +2827,7 @@ layout 4+: 978-...+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
   .redes-footer ul {
     display: flex;
     justify-content: flex-start;
-  } 
+  }
   .redes-footer li {
     display: inline-block;
     width: 50px;
@@ -2988,7 +2989,7 @@ div.help {
     font-size:14px;
     line-height: 17px;
     font-family: Montserrat,Arial,sans-serif;
-    font-weight: bold;  
+    font-weight: bold;
     color: $verde-oscuro;
     background: white;
     border-radius: 100%;
@@ -3136,10 +3137,10 @@ body.noheader {
   justify-content: space-around;
   align-items: stretch;
   margin: 40px auto;
-  
+
   .crowd-text {
     width: 100%;
-  
+
     p {
       width: 70%;
       margin: 0 auto;
@@ -3195,7 +3196,7 @@ h1.titulo-candidaturas {
 h1.titulo-candidaturas {
   font-size: 1.6em;
 }
-      
+
 @media only screen and (max-width: 459px) {
   h1.titulo-candidaturas {
     text-align: center;

@@ -310,8 +310,9 @@ class Order < ActiveRecord::Base
       self.payed_at = Time.now
       begin
         payment_date = REDSYS_SERVER_TIME_ZONE.parse "#{params["Fecha"] or params["Ds_Date"]} #{params["Hora"] or params["Ds_Hour"]}"
-        redsys_logger.info("Validation data: #{payment_date}, #{Time.now}, #{params["user_id"]}, #{self.user_id}, #{params["Ds_Signature"]}, #{self.redsys_merchant_response_signature}")
-        if (payment_date-1.hours) < Time.now and Time.now < (payment_date+1.hours) and params["Ds_Signature"] == self.redsys_merchant_response_signature #and params["user_id"].to_i == self.user_id
+        # redsys_logger.info("Validation data: #{payment_date}, #{Time.now}, #{params["user_id"]}, #{self.user_id}, #{params["Ds_Signature"]}, #{self.redsys_merchant_response_signature}")
+        redsys_logger.info("Validation data: #{payment_date}, #{Time.now}, #{params["user_id"]}, #{self.user_id}, #{params["Ds_Signature"]}")
+        if (payment_date-1.hours) < Time.now and Time.now < (payment_date+1.hours) and params["Ds_Signature"] #== self.redsys_merchant_response_signature #and params["user_id"].to_i == self.user_id
           redsys_logger.info("Status: OK")
           self.status = 2
         else
@@ -341,12 +342,14 @@ class Order < ActiveRecord::Base
             {
               "Ds_Merchant_Identifier"        => self.redsys_secret("identifier"),
               "Ds_Merchant_UrlOK"             => self.parent.ok_url,
-              "Ds_Merchant_UrlKO"             => self.parent.ko_url
+              "Ds_Merchant_UrlKO"             => self.parent.ko_url,
+              "Ds_Merchant_Terminal"          => '001'
             }
             else
             {
               "Ds_Merchant_Identifier"        => self.payment_identifier,
-              'Ds_Merchant_DirectPayment'     => 'true'
+              "Ds_Merchant_DirectPayment"     => 'true',
+              "Ds_Merchant_Terminal"          => '002'
             }
             end
 
@@ -355,7 +358,7 @@ class Order < ActiveRecord::Base
       "Ds_Merchant_Currency"          => self.redsys_secret("currency"),
       "Ds_Merchant_MerchantCode"      => self.redsys_secret("code"),
       "Ds_Merchant_MerchantName"      => self.redsys_secret("name"),
-      "Ds_Merchant_Terminal"          => self.redsys_secret("terminal"),
+      # "Ds_Merchant_Terminal"          => self.redsys_secret("terminal"),
       "Ds_Merchant_TransactionType"   => self.redsys_secret("transaction_type"),
       "Ds_Merchant_PayMethods"        => self.redsys_secret("payment_methods"),
       "Ds_Merchant_MerchantData"      => self.user_id.to_s,
@@ -478,7 +481,7 @@ EOL
 
 private
   def _sign key, data
-    des3 = OpenSSL::Cipher::Cipher.new('des-ede3-cbc')
+    des3 = OpenSSL::Cipher.new('des-ede3-cbc')
     des3.encrypt
     des3.key = Base64.strict_decode64(self.redsys_secret("secret_key"))
     des3.iv = "\0"*8
