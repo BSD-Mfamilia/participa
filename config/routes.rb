@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   # Redirecciones añadidas para Más Madrid:
 	get '/registro-censo-militantes', to: redirect("/#{I18n.locale}")
 	get '/es/comision-de-garantias-democraticas', to: redirect("/#{I18n.locale}")
-	get '/es/financiacion', to: redirect("https://www.masmadrid.org/donaciones")
-	get '/es/colabora', to: redirect("https://www.masmadrid.org/donaciones")
+	get '/es/financiacion', to: redirect("https://participa.masmadrid.org/colabora")
+	#get '/es/colabora', to: redirect("https://www.masmadrid.org/donaciones")
 	get '/es/propuestas', to: redirect("https://www.masmadrid.org/temas")
 	get '/es/impulsa', to: redirect("https://www.masmadrid.org/temas")
 	get '/soporte-votaciones', to: redirect("https://www.masmadrid.org/temas")
@@ -122,6 +122,7 @@ Rails.application.routes.draw do
       sessions:      'sessions'
     }
 
+   
     get '/financiacion', to: 'page#funding', as: 'funding'
     get '/microcreditos', to: 'microcredit#index', as: 'microcredit'
     get '/microcréditos', to: redirect('/microcreditos')
@@ -137,6 +138,20 @@ Rails.application.routes.draw do
     get '/microcreditos/:id/renovar(/:loan_id/:hash)', to: 'microcredit#loans_renewal', as: :loans_renewal_microcredit_loan
     post '/microcreditos/:id/renovar/:loan_id/:hash', to: 'microcredit#loans_renew', as: :loans_renew_microcredit_loan
 
+#NO TOCAR scope colabora
+
+    scope :colabora do
+      delete 'baja', to: 'collaborations#destroy', as: 'destroy_collaboration'
+      get 'ver', to: 'collaborations#edit', as: 'edit_collaboration'
+      get '', to: 'collaborations#new', as: 'new_collaboration'
+      get 'confirmar', to: 'collaborations#confirm', as: 'confirm_collaboration'
+      post 'crear', to: 'collaborations#create', as: 'create_collaboration'
+      post 'modificar', to: 'collaborations#modify', as: 'modify_collaboration'
+      get 'OK', to: 'collaborations#OK', as: 'ok_collaboration'
+      get 'KO', to: 'collaborations#KO', as: 'ko_collaboration'
+      get 'payment_types', to: 'collaborations#payment_types_by_frequency'
+    end
+
     authenticate :user do
       scope :validator do
         scope :sms do
@@ -147,17 +162,6 @@ Rails.application.routes.draw do
           post :captcha, to: 'sms_validator#captcha', as: 'sms_validator_captcha'
           post :valid, to: 'sms_validator#valid', as: 'sms_validator_valid'
         end
-      end
-
-      scope :colabora do
-        delete 'baja', to: 'collaborations#destroy', as: 'destroy_collaboration'
-        get 'ver', to: 'collaborations#edit', as: 'edit_collaboration'
-        get '', to: 'collaborations#new', as: 'new_collaboration'
-        get 'confirmar', to: 'collaborations#confirm', as: 'confirm_collaboration'
-        post 'crear', to: 'collaborations#create', as: 'create_collaboration'
-        post 'modificar', to: 'collaborations#modify', as: 'modify_collaboration'
-        get 'OK', to: 'collaborations#OK', as: 'ok_collaboration'
-        get 'KO', to: 'collaborations#KO', as: 'ko_collaboration'
       end
 
       get 'verificacion-identidad(/:election_id)', to: 'user_verifications#new', as: 'new_user_verification'

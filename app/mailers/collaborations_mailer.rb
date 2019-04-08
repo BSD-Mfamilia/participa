@@ -49,4 +49,14 @@ class CollaborationsMailer < ActionMailer::Base
       format.text
       end
   end
+
+  def successful_collaboration(email)
+    mail(
+      from: 'informatica@masmadrid.org',
+      to: email,
+      subject: 'Gracias por su colaboración'
+    ) do |format|
+    format.text
+    end
+  end
 end

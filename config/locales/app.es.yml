@@ -252,7 +252,7 @@ es:
         user: "Usuario"
         created_at: "Creada el"
         updated_at: "Actualizada el"
-        amount: "Importe mensual"
+        amount: "Importe"
         frequency: "Frecuencia de pago"
         frequency_name: "Frecuencia de pago"
         minimal_year_old: "Edad mínima requerida"
@@ -264,8 +264,8 @@ es:
         ccc_office: "Oficina"
         ccc_dc: "DC"
         ccc_account: "Número de cuenta"
-        iban_account: "IBAN"
-        iban_bic: "BIC/SWIFT"
+        iban_account: "Cuenta Bancaria (incluido el IBAN)"
+        iban_bic: "BIC/SWIFT <a href='https://www.iban.es/bic/espana.html' target='_blank' style='font-size:9pt;'>¿Qué es esto?</a>"
       order:
         status: "Estado"
         status_name: "Estado"
@@ -388,7 +388,7 @@ De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Prot
         captcha_invalid: "Captcha invalido"
     collaboration:
       title: "Colaboración económica"
-      p1: "Colaborando con Más Madrid conseguirás que este proyecto siga creciendo mes a mes y garantizarás la independencia necesaria para un proyecto cuyas únicas lealtades van a estar del lado de la gente. Convirtamos la indignación en cambio. Es el momento, estamos preparados: Hagámoslo posible."
+      p1: "Colaborando con Más Madrid nos permites hacer este camino sin ataduras. Nuestro compromiso es exclusivamente con Madrid y con los madrileños y madrileñas.  Convirtamos la indignación en cambio. Contigo vamos a hacer de Madrid de nuevo el 'rompeolas de todas las Españas'."
       ok:
         p1: Tu donación se ha dado de alta correctamente.
         p2: Gracias por colaborar con Más Madrid.
@@ -399,43 +399,22 @@ De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Prot
         title: Condiciones Generales
         p1_title: "Relación entre Más Madrid y el colaborador."
         p1: '
-La realización de aportaciones económicas es totalmente voluntaria, no implica la vinculación
-del colaborador con el partido político Más Madrid ni le confiere la condición legal de afiliado o
-simpatizante, ni de derechos frente al partido, ni queda obligado por sus estatutos y demás normas internas.
+La realización de aportaciones económicas es totalmente voluntaria, no implica la vinculación del colaborador con el partido político Más Madrid ó con su Asociación Movimiento Ciudadano Madrid 2019, ni le confiere la condición legal de afiliado o simpatizante, ni de derechos frente al partido, ni queda obligado por sus estatutos y demás normas internas.
 
-Para colaborar económicamente con Más Madrid y poder cumplimentar el formulario de alta como colaborador es
-imprescindible disponer de DNI o NIE y estar inscrito en la web http://participa.masmadrid.org.
+Para colaborar económicamente con Más Madrid y poder cumplimentar el formulario de alta como colaborador es imprescindible disponer de DNI o NIE.
 
-Conforme a lo dispuesto en el artículo 8 de la Ley Orgánica 8/2007 de 4 de julio sobre
-Financiación de los Partidos Políticos, su donativo tendrá la consideración de “aportación
-privada”, distinta de las cuotas de afiliados, adheridos y simpatizantes.'
+Conforme a lo dispuesto en el artículo 8 de la Ley Orgánica 8/2007 de 4 de julio sobre Financiación de los Partidos Políticos, su donativo tendrá la consideración de “aportación privada”, distinta de las cuotas de afiliados, adheridos y simpatizantes.'
         p2_title: "Protección de datos de carácter personal."
         p2: '
-Más Madrid Partido Político, de acuerdo con la Ley Orgánica 15/1999 de Protección de
-Datos de Carácter Personal, le informa de que sus datos serán incorporados al fichero
-“APORTACIONES”, del que es responsable Más Madrid, que los utilizará para tramitar su
-colaboración, gestionar los adeudos bancarios, cumplir con la normativa de financiación
-de partidos políticos, para fines estadísticos y hacerle llegar periódicamente información
-sobre sus actividades.
+Más Madrid Partido Político, de acuerdo con la Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal, le informa de que sus datos serán incorporados al fichero “APORTACIONES”, del que es responsable Más Madrid, que los utilizará para tramitar su colaboración, gestionar los adeudos bancarios, cumplir con la normativa de financiación de partidos políticos, para fines estadísticos y hacerle llegar periódicamente información sobre sus actividades.
 
-Para ejercer sus derechos de acceso, rectificación, cancelación y oposición, como
-cancelar su suscripción, modificar los datos de cobro o el importe y frecuencia de su
-aportación, podrá utilizar la web participa.masmadrid.org accediendo a su perfil personal
-mediante su nombre de usuario y contraseña.
+Tiene Derecho de Acceso, Rectificación, Cancelación/Supresión, Oposición, Portabilidad y Limitación (ARCOPL) , pudiendo cancelar su suscripción y/o modificar los datos  de cobro o el importe y frecuencia de su aportación, podrá utilizar la web https://participa.masmadrid.org accediendo a su perfil personal mediante su nombre de usuario y contraseña. 
 
-También podrá ejercer sus derechos solicitándolo por correo electrónico a la dirección
-contacto@masmadrid.org, indicando tu nombre, apellidos y adjuntando copia de su
-DNI o documento legal de identificación.'
+También podrá ejercer sus derechos (indicando cual solicita) a través del siguiente correo electrónico: colaboraciones@masmadrid.org, indicando tu nombre, apellidos y adjuntando copia de su DNI o documento legal de identificación.'
         p3_title: "Consentimiento cesión de datos y orden de domiciliación y cargos en tarjeta de crédito o débito"
         p3: '
-A los efectos previstos en la Ley 16/2009, de 13 de Noviembre, de Servicios de Pago, al
-confirmar el alta de la colaboración económica el colaborador autoriza expresamente a
-Más Madrid partido político y a su entidad bancaria para efectuar las operaciones de cobro
-mediante adeudos y cargos en la cuenta bancaria o en la tarjeta financiera, por el importe
-y con la frecuencia de pago que ha indicado en el formulario.
-
-Los adeudos domiciliados y los cargos en tarjeta se realizarán entre el día 1 y 15 de cada
-mes, trimestre o año, dependiendo de la frecuencia de pago elegida.'
+A los efectos previstos en la Ley 16/2009, de 13 de Noviembre, de Servicios de Pago, al confirmar el alta de la colaboración económica el colaborador autoriza expresamente a Más Madrid partido político, su asociación vinculada Movimiento Ciudadano Madrid 2019 y a su entidad bancaria para efectuar las operaciones de cobro mediante adeudos y cargos en la cuenta bancaria o en la tarjeta financiera, por el importe y con la frecuencia de pago que ha indicado en el formulario.
+Los adeudos domiciliados y los cargos en tarjeta se realizarán entre el día 1 y 15 de cada mes, trimestre o año, dependiendo de la frecuencia de pago elegida.'
     registration:
       message:
         dni: "El formato deben ser 8 números y una letra, sin guiones ni espacios."

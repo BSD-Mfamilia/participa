@@ -6,7 +6,7 @@
 
       <%= content_tag(:h2, t("podemos.collaboration.title")) %>
 
-      <% if current_user.is_passport? %>
+      <% if current_user.try(:is_passport?) %>
         <%= info_box do %>
         <p>Según nuestra base de datos estás inscrito con un número de pasaporte.</p>
         <p>Dado que la Ley Orgánica 8/2007, de 4 de julio, sobre financiación de los partidos políticos, exige la identificación fiscal de los donantes, para poder colaborar económicamente con Más Madrid y poder cumplimentar el formulario de alta como colaborador es imprescindible disponer de DNI o NIE.</p>

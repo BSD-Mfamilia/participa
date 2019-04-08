@@ -16,6 +16,32 @@ class Collaboration < ActiveRecord::Base
   has_many :order, as: :parent
 
   attr_accessor :skip_queries_validations
+  attr_accessor :other_amount
+
+  validates :other_amount, presence: true, if: :assign_other_amount?
+
+  def assign_other_amount?
+    if !other_amount.blank? && self.amount == 0
+      self.amount = other_amount << "00"
+      if self.amount >= 500 && self.amount <= 1000000
+      true
+      else
+        errors.add(:amount, "debe ser mayor igual a 5 € y menor igual a 10.000 €")
+        true
+      end
+    else
+      false
+    end
+  end
+
+  validate :payment_type_by_frequency
+
+  def payment_type_by_frequency
+    if frequency == 0 && payment_type != 1
+      errors.add(:payment_type, "debe usar la Suscripción con Tarjeta de Crédito/Débito para este tipo de frecuencia de pago")
+    end
+  end
+
   validates :payment_type, :amount, :frequency, presence: true
   validates :terms_of_service, acceptance: true
   validates :minimal_year_old, acceptance: true
@@ -35,8 +61,9 @@ class Collaboration < ActiveRecord::Base
   validates :iban_account, presence: true, if: :has_iban_account?
   validate :validates_iban, if: :has_iban_account?
 
-  AMOUNTS = {"5 €" => 500, "10 €" => 1000, "20 €" => 2000, "30 €" => 3000, "50 €" => 5000, "100 €" => 10000, "200 €" => 20000, "500 €" => 50000}
-  FREQUENCIES = {"Mensual" => 1, "Trimestral" => 3, "Anual" => 12}
+  AMOUNTS = {"5 €" => 500, "10 €" => 1000, "20 €" => 2000, "50 €" => 5000, "100 €" => 10000, "500 €" => 50000, "Otra cantidad" => 0}
+  # FREQUENCIES = {"Mensual" => 1, "Trimestral" => 3, "Anual" => 12}
+  FREQUENCIES = { "Unico (un solo pago)" => 0, "Mensual" => 1, "Trimestral" => 3, "Anual" => 12}
   STATUS = {"Sin pago" => 0, "Error" => 1, "Sin confirmar" => 2, "OK" => 3, "Alerta" => 4,"Migración" =>9}
 
   scope :created, -> { all }
@@ -245,7 +272,11 @@ class Collaboration < ActiveRecord::Base
       o.parent = self
       o.reference = "Colaboración " + I18n.localize(date, :format => "%B %Y")
       o.first = is_first
-      o.amount = self.amount*self.frequency
+      if self.frequency == 0
+        o.amount = self.amount
+      else
+        o.amount = self.amount*self.frequency
+      end
       o.payable_at = date
       o.payment_type = self.is_credit_card? ? 1 : 3
       o.payment_identifier = self.payment_identifier
@@ -278,6 +309,7 @@ class Collaboration < ActiveRecord::Base
 
       if self.is_credit_card? and order.first
         self.update_attributes redsys_identifier: order.payment_identifier, redsys_expiration: order.redsys_expiration
+        self.destroy if self.frequency == 0
       end
     elsif self.has_payment?
       self.set_error! "Marcada como error porque se ha producido un error al procesar el pago."
@@ -374,7 +406,15 @@ class Collaboration < ActiveRecord::Base
       next_order = Date.today.unique_month if next_order<Date.today.unique_month  # update next order when a payment was missed
     end
 
-    (date.unique_month >= next_order) and (date.unique_month-next_order) % self.frequency == 0
+    if self.frequency != 0
+      (date.unique_month >= next_order) and (date.unique_month-next_order) % self.frequency == 0
+    else
+      if self.order.count < 2
+        (date.unique_month >= next_order) and (date.unique_month-next_order) % 12 == 0
+      else
+        return false
+      end
+    end
   end
 
   def get_orders date_start=Date.today, date_end=Date.today, create_orders = true
@@ -396,7 +436,7 @@ class Collaboration < ActiveRecord::Base
       valid_orders = month_orders.select {|o| not o.has_errors? }
       
       # if collaboration is active, should create orders, this month should have an order and it doesn't have a valid saved order, create it (not persistent)
-      if self.deleted_at.nil? and create_orders and self.must_have_order? current and valid_orders.empty?
+      if self.deleted_at.nil? and create_orders and self.must_have_order?(current) and valid_orders.empty?
         order = self.create_order current, orders.empty?
         month_orders << order if order
       end

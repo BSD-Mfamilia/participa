@@ -1,6 +1,5 @@
 <fieldset>
   <legend class="invisible">Datos de la colaboración</legend>
-
   <div class="inputlabel-box">
     <% if @collaboration.errors.include?(:amount) %>
         <%= field_notice_box %>
@@ -11,7 +10,11 @@
                 collection: Collaboration::AMOUNTS.to_a,
                 input_html: {required: true, class: 'js-collaboration-amount'} %>
   </div>
-
+  
+  <div class="inputlabel-box">
+    <%= f.number_field :other_amount, min: 5, max: 10000, class: 'js-collaboration-other-amount' %>
+  </div>
+  
   <div class="inputlabel-box">
     <% if @collaboration.errors.include?(:frequency) %>
         <%= field_notice_box %>
@@ -77,34 +80,79 @@
     <span class="no-input"><span id="js-collaboration-alert-amount"></span></span>
   </div>
 
-  <div class="collaboration-assignment">
-  <%= content_tag(:h3, "Financiación territorial") %>
+  <% if current_user.nil? %>
+  <fieldset class="with-tos">
+    <legend><span>Datos personales</span></legend>
+      <div class="inputlabel-box">
+        <%= label_tag 'Nombre completo*' %>
+        <%= text_field_tag 'non_user[full_name]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div class="inputlabel-box">
+        <%= label_tag 'Nº de documento*' %>
+        <%= text_field_tag 'collaboration[non_user_document_vatid]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div class="inputlabel-box">
+        <%= label_tag 'Correo electrónico*' %>
+        <%= email_field_tag 'collaboration[non_user_email]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div class="inputlabel-box">
+        <%= label_tag 'Teléfono*' %>
+        <%= text_field_tag 'non_user[phone]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div class="inputlabel-box">
+        <%= label_tag 'Provincia*' %>
+        <%= text_field_tag 'non_user[province]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div class="inputlabel-box">
+        <%= label_tag 'Municipio*' %>
+        <%= text_field_tag 'non_user[town_name]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div class="inputlabel-box">
+        <%= label_tag 'Código postal*' %>
+        <%= text_field_tag 'non_user[postal_code]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div class="inputlabel-box">
+        <%= label_tag 'Dirección postal*' %>
+        <%= text_field_tag 'non_user[address]', nil, class: 'form-control', required: true %>
+      </div>
+  </fieldset>
+  <% end %>
+
+  <!-- <div class="collaboration-assignment">
+  <%#= content_tag(:h3, "Financiación territorial") %>
     <p>Deseo colaborar con el Consejo Ciudadano</p>
     <div class="inputlabel-box">
       <div class="input-box js-collaboration-assignment-town">
         <label class="text-xl">
-        <%= f.radio_button :territorial_assignment, :town, class:"checkbox"%>
+        <%#= f.radio_button :territorial_assignment, :town, class:"checkbox"%>
         <p>Municipal donde estoy inscrito/a</p>
         </label>
       </div>
-        <% if current_user.vote_in_spanish_island? then%>
+        <%# if current_user.vote_in_spanish_island? then%>
       <div class="input-box js-collaboration-assignment-island">
         <label class="text-xl">
-        <%= f.radio_button :territorial_assignment, :island, class:"checkbox"%>
+        <%#= f.radio_button :territorial_assignment, :island, class:"checkbox"%>
         <p>Insular donde estoy inscrito/a</p>
         </label>
       </div>
-        <% end %>
+        <%# end %>
       <div class="input-box js-collaboration-assignment-autonomy">
-        <label class="text-xl"><%= f.radio_button :territorial_assignment, :autonomy, class:"checkbox"%>
+        <label class="text-xl"><%#= f.radio_button :territorial_assignment, :autonomy, class:"checkbox"%>
         <p>Autonómico donde estoy inscrito/a</p>
         </label>
       </div> 
       <div class="input-box js-collaboration-assignment-country">
-        <label class="text-xl"><%= f.radio_button :territorial_assignment, :country, class:"checkbox"%>
+        <label class="text-xl"><%#= f.radio_button :territorial_assignment, :country, class:"checkbox"%>
         <p>Estatal</p>
         </label>
       </div>
     </div>
-  </div>
+  </div> -->
 </fieldset>
