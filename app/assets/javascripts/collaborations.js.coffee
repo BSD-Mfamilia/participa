@@ -50,7 +50,7 @@ calculate_collaboration = () ->
       when "3"
         message = total + " € cada 3 meses, en total " + total * 4 + " € al año"
       when "12"
-        message = total * 12 + " € cada año en un pago único anual"
+        message = total + " € cada año en un pago único anual"
     $('.js-collaboration-alert').show()
     $('#js-collaboration-alert-amount').text(message)
   else
