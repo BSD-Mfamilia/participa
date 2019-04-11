@@ -272,11 +272,11 @@ class Collaboration < ActiveRecord::Base
       o.parent = self
       o.reference = "Colaboración " + I18n.localize(date, :format => "%B %Y")
       o.first = is_first
-      if self.frequency == 0
+      #if self.frequency == 0
         o.amount = self.amount
-      else
-        o.amount = self.amount*self.frequency
-      end
+      # else
+        # o.amount = self.amount*self.frequency
+      # end
       o.payable_at = date
       o.payment_type = self.is_credit_card? ? 1 : 3
       o.payment_identifier = self.payment_identifier
