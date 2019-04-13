@@ -9,10 +9,10 @@ class MicrocreditLoan < ActiveRecord::Base
   belongs_to :transferred_to, inverse_of: :original_loans, class_name: "MicrocreditLoan"
   has_many :original_loans, inverse_of: :transferred_to, class_name: "MicrocreditLoan", foreign_key: :transferred_to_id
 
-  attr_accessor :first_name, :last_name, :email, :address, :postal_code, :town, :province, :country
+  attr_accessor :first_name, :last_name, :email, :phone, :address, :postal_code, :town, :province, :country
 
   validates :document_vatid, valid_spanish_id: true, if: :has_not_user?
-  validates :first_name, :last_name, :email, :address, :postal_code, :town, :province, :country, presence: true, if: :has_not_user?
+  validates :first_name, :last_name, :email, :phone, :address, :postal_code, :town, :province, :country, presence: true, if: :has_not_user?
 
   validates :email, email: true, if: :has_not_user?
 
@@ -72,6 +72,7 @@ class MicrocreditLoan < ActiveRecord::Base
     self.first_name = _user[:first_name]
     self.last_name = _user[:last_name]
     self.email = _user[:email]
+    self.phone = _user[:phone]
     self.address = _user[:address]
     self.postal_code = _user[:postal_code]
     self.town = _user[:town]

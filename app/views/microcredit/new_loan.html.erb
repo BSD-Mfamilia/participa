@@ -77,6 +77,14 @@ input.button, a.button { background-color: <%=@brand_config["color2"]%> !importa
           <%= f.input :email,
                       required: true %>
         </div>
+
+        <div class="inputlabel-box">
+          <% if @loan.errors.include?(:phone) %>
+              <%= field_notice_box %>
+          <% end %>
+          <%= f.input :phone,
+                      required: true %>
+        </div>
       </fieldset>
       <fieldset>
         <legend><span><%= t '.home_address' %></span></legend>

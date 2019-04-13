@@ -1873,6 +1873,7 @@ objetivo y pretensión reflejados en la estipulación original.</p>
       last_name: "Apellidos"
       document_vatid: "Nº de documento"
       email: "Correo electrónico"
+      phone: "Teléfono"
       address: "Dirección"
       postal_code: "Código postal"
       loan_renewals: "Microcréditos confirmados"

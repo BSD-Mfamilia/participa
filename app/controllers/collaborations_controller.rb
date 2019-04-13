@@ -141,6 +141,6 @@ class CollaborationsController < ApplicationController
   end
 
   def non_user_params
-    params.require(:non_user).permit(:legacy_id, :full_name, :document_vatid, :email, :address, :town_name, :postal_code, :country, :province, :phone, :province_name, :island_name, :autonomy_name, :ine_town)
+    params.require(:non_user).permit(:legacy_id, :full_name, :document_vatid, :email, :phone, :address, :town_name, :postal_code, :country, :province, :province_name, :island_name, :autonomy_name, :ine_town)
   end
 end
