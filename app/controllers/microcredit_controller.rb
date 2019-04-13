@@ -75,7 +75,7 @@ class MicrocreditController < ApplicationController
     @loan.transaction do
       if (current_user or @loan.valid_with_captcha?) and @loan.save
         @loan.update_counted_at
-        UsersMailer.microcredit_email(@microcredit, @loan, @brand_config).deliver_now
+        UsersMailer.microcredit_email(@microcredit, @loan, @brand_config).deliver_now!
          
         notice = t('microcredit.new_loan.will_receive_email', name: @brand_config["name"])
         notice += "<br/>" + t('microcredit.new_loan.tweet_campaign', main_url: @brand_config["main_url"], twitter_account: @brand_config["twitter_account"]) if @brand_config["twitter_account"]
@@ -161,7 +161,7 @@ class MicrocreditController < ApplicationController
     if current_user
       params.require(:microcredit_loan).permit(:amount, :terms_of_service, :minimal_year_old, :iban_account, :iban_bic, :microcredit_option_id)
     else
-      params.require(:microcredit_loan).permit(:first_name, :last_name, :document_vatid, :email, :address, :postal_code, :town, :province, :country, :amount, :terms_of_service, :minimal_year_old, :captcha, :captcha_key, :iban_account, :iban_bic, :microcredit_option_id)
+      params.require(:microcredit_loan).permit(:first_name, :last_name, :document_vatid, :email, :phone, :address, :postal_code, :town, :province, :country, :amount, :terms_of_service, :minimal_year_old, :captcha, :captcha_key, :iban_account, :iban_bic, :microcredit_option_id)
     end
   end
 

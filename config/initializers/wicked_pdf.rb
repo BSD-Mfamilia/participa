@@ -1,3 +1,3 @@
 WickedPdf.config = {
-  exe_path: '/usr/bin/wkhtmltopdf-proxy'
+  exe_path: '/usr/bin/wkhtmltopdf'
 }
