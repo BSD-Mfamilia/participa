@@ -3,7 +3,7 @@
 <div class="content-content cols">
   <div class="row">
 
-  <% flash.each do |key, value| %>
+  <% flash.try(:each) do |key, value| %>
     <%= content_tag :div, value, class: "flash #{key}" %>
   <% end %>
 

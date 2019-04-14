@@ -326,9 +326,9 @@ class MicrocreditLoan < ActiveRecord::Base
 
   def set_and_send_sms_token!
     if self.user
-      phone_number = self.user.phone
+      phone_number = self.user.try(:phone)
     elsif self.user_data
-      phone_number = self.user_data.phone
+      phone_number = YAML.load(self.user_data).try(:[], :phone)
     end
     if not phone_number.nil?
       require 'sms'
