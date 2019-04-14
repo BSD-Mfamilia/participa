@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190117110813) do
+ActiveRecord::Schema.define(version: 20190414002106) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -384,11 +384,15 @@ ActiveRecord::Schema.define(version: 20190117110813) do
     t.string   "iban_account"
     t.string   "iban_bic"
     t.integer  "microcredit_option_id"
+    t.string   "sms_confirmation_token"
+    t.datetime "confirmation_sms_sent_at"
+    t.datetime "sms_confirmed_at"
   end
 
   add_index "microcredit_loans", ["document_vatid"], name: "index_microcredit_loans_on_document_vatid"
   add_index "microcredit_loans", ["ip"], name: "index_microcredit_loans_on_ip"
   add_index "microcredit_loans", ["microcredit_id"], name: "index_microcredit_loans_on_microcredit_id"
+  add_index "microcredit_loans", ["sms_confirmation_token"], name: "index_microcredit_loans_on_sms_confirmation_token", unique: true
 
   create_table "microcredit_options", force: :cascade do |t|
     t.integer "microcredit_id"
