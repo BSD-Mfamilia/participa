@@ -1,6 +1,7 @@
 class MicrocreditController < ApplicationController
   include CollaborationsHelper
   before_action :init_env
+  before_action :set_microcredit_loan, only: [:send_sms_check, :sms_check, :sms_code_validation]
   layout :external_layout
 
   def provinces
@@ -75,13 +76,11 @@ class MicrocreditController < ApplicationController
     @loan.transaction do
       if (current_user or @loan.valid_with_captcha?) and @loan.save
         @loan.update_counted_at
-        UsersMailer.microcredit_email(@microcredit, @loan, @brand_config).deliver_now!
-         
-        notice = t('microcredit.new_loan.will_receive_email', name: @brand_config["name"])
-        notice += "<br/>" + t('microcredit.new_loan.tweet_campaign', main_url: @brand_config["main_url"], twitter_account: @brand_config["twitter_account"]) if @brand_config["twitter_account"]
-        flash[:notice] = notice
-
-        redirect_to microcredit_path(brand:@brand) and return if !params[:reload]
+        
+        if @loan && @loan.set_and_send_sms_token!
+          redirect_to sms_check_microcredit_loan_path(@loan.id), flash: { info: "El código ha sido enviado a tu teléfono móvil." } and return
+        end
+      
       end
     end
     render :new_loan
@@ -155,7 +154,38 @@ class MicrocreditController < ApplicationController
     end
   end
 
+  def send_sms_check
+    if @loan && @loan.set_and_send_sms_token!
+      redirect_to sms_check_microcredit_loan_path(@loan.id), flash: { info: "El código ha sido enviado a tu teléfono móvil." }
+    end
+  end
+
+  def sms_check
+  end
+
+  def sms_code_validation
+    if params[:sms_check_token].nil?
+      redirect_to sms_check_microcredit_loan_path(@loan.id)
+    else
+      if @loan.check_sms_token(params[:sms_check_token]) == false
+        redirect_to sms_check_microcredit_loan_path(@loan.id), flash: { error: "El código introducido es incorrecto." }
+      else
+        UsersMailer.microcredit_email(@loan.microcredit, @loan, @brand_config).deliver_now!
+
+        notice = t('microcredit.new_loan.will_receive_email', name: @brand_config["name"])
+        notice += "<br/>" + t('microcredit.new_loan.tweet_campaign', main_url: @brand_config["main_url"], twitter_account: @brand_config["twitter_account"]) if @brand_config["twitter_account"]
+        flash[:notice] = notice
+
+        redirect_to microcredit_path(brand: @brand) and return
+      end
+    end
+  end
+
   private
+
+  def set_microcredit_loan
+    @loan = MicrocreditLoan.find_by(id: params[:loan_id])
+  end
 
   def loan_params
     if current_user

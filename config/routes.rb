@@ -137,6 +137,9 @@ Rails.application.routes.draw do
     post '/microcreditos/:id', to: 'microcredit#create_loan', as: :create_microcredit_loan
     get '/microcreditos/:id/renovar(/:loan_id/:hash)', to: 'microcredit#loans_renewal', as: :loans_renewal_microcredit_loan
     post '/microcreditos/:id/renovar/:loan_id/:hash', to: 'microcredit#loans_renew', as: :loans_renew_microcredit_loan
+    get '/microcreditos/send_sms_check/:loan_id', to: 'microcredit#send_sms_check', as: :send_sms_check_microcredit_loan
+    get '/microcreditos/sms_check/:loan_id', to: 'microcredit#sms_check', as: :sms_check_microcredit_loan
+    get '/microcreditos/sms_code_validation/:loan_id', to: 'microcredit#sms_code_validation', as: :sms_code_validation_microcredit_loan
 
 #NO TOCAR scope colabora
 

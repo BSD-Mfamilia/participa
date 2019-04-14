@@ -114,7 +114,7 @@ class MicrocreditLoan < ActiveRecord::Base
     if user
       self.user_data = nil
     else
-      self.user_data = {first_name: first_name, last_name: last_name, email: email, address: address, postal_code: postal_code, town: town, province: province, country: country}.to_yaml
+      self.user_data = {first_name: first_name, last_name: last_name, email: email, phone: phone, address: address, postal_code: postal_code, town: town, province: province, country: country}.to_yaml
     end
     if self.document_vatid
       self.document_vatid.upcase!
@@ -318,5 +318,35 @@ class MicrocreditLoan < ActiveRecord::Base
     self.confirmed_at = nil
     self.save!
     return true
+  end
+
+  def generate_sms_token
+    SecureRandom.hex(4).upcase
+  end
+
+  def set_and_send_sms_token!
+    if self.user
+      phone_number = self.user.phone
+    elsif self.user_data
+      phone_number = self.user_data.phone
+    end
+    if not phone_number.nil?
+      require 'sms'
+      self.update_attribute(:sms_confirmation_token, generate_sms_token)
+      self.update_attribute(:confirmation_sms_sent_at, DateTime.now)
+      SMS::Sender.send_message(phone_number, self.sms_confirmation_token)
+      true
+    else
+      false
+    end
+  end
+
+  def check_sms_token(token)
+    if token.upcase == self.sms_confirmation_token
+      self.update_attribute(:sms_confirmed_at, DateTime.now)
+      true
+    else
+      false
+    end
   end
 end
